@@ -12,8 +12,19 @@
 
   # Bootloader.
   boot.loader.grub.enable = true;
-  boot.loader.grub.device = "/dev/sda";
+  boot.loader.grub.efiSupport = true;
+  boot.loader.efi.canTouchEfiVariables = true;
+  boot.loader.efi.efiSysMountPoint = "/boot/efi";
+  boot.loader.grub.devices = ["nodev"];
+  boot.loader.grub.extraEntries = ''menuentry "ARCH" {
+	set root=(hd0,gpt2)
+	linux /boot/vmlinuz-linux root=/dev/nvme0n1p2
+	initrd /boot/initramfs-linux.img
+	boot
+
+  }'';
   boot.loader.grub.useOSProber = true;
+  boot.loader.grub.memtest86.enable = true;
 
   # Use latest kernel.
   boot.kernelPackages = pkgs.linuxPackages_latest;
@@ -58,6 +69,7 @@
     description = "fireye";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [];
+    shell=pkgs.zsh;
   };
 
 hardware.graphics.enable = true;
@@ -65,7 +77,7 @@ hardware.graphics.enable = true;
 # Allow unfree packages
 nixpkgs.config.allowUnfree = true;
 
-# nix.settings.experimental-features = ["nix-command" "flakes"];
+nix.settings.experimental-features = ["nix-command" "flakes"];
 
   # List packages installed in system profile. To search, run:
   environment.systemPackages = with pkgs; [
@@ -84,8 +96,22 @@ nixpkgs.config.allowUnfree = true;
   tofi
   firefox
   waybar
+  networkmanagerapplet
+  copyq
+  os-prober
+  arch-install-scripts
   ];
 
+fonts.packages = with pkgs; [
+  noto-fonts
+  noto-fonts-cjk-sans
+  noto-fonts-emoji
+  liberation_ttf
+  fira-code
+  fira-code-symbols
+  nerd-fonts.jetbrains-mono
+  nerd-fonts.noto
+];
 
 programs.neovim = {
     enable = true;
@@ -123,6 +149,6 @@ programs.zsh = {
   # this value at the release version of the first install of this system.
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "25.05"; # Did you read the comment?
+  system.stateVersion = "25.11"; # Did you read the comment?
 
 }
