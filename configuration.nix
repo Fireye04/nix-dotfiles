@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
   imports =
@@ -101,6 +101,11 @@ nix.settings.experimental-features = ["nix-command" "flakes"];
   copyq
   os-prober
   arch-install-scripts
+  rocmPackages.clang
+  blueman
+  bluez
+  pipewire
+  inputs.zen-browser.packages."${system}".specific
   ];
 
 fonts.packages = with pkgs; [
