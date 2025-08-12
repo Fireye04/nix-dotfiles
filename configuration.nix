@@ -84,6 +84,7 @@ nix.settings.experimental-features = ["nix-command" "flakes"];
   libgcc
   niri
   git
+  gh
   zsh
   oh-my-zsh
   autojump
