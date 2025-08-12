@@ -29,7 +29,7 @@
   # Use latest kernel.
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
-  networking.hostName = "nixos"; # Define your hostname.
+  networking.hostName = "nixlaptop"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
@@ -105,7 +105,8 @@ nix.settings.experimental-features = ["nix-command" "flakes"];
   blueman
   bluez
   pipewire
-  inputs.zen-browser.packages."${system}".specific
+  baobab
+  inputs.zen-browser.packages.${system}.default
   ];
 
 fonts.packages = with pkgs; [
