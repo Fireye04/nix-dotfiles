@@ -39,6 +39,28 @@
   # Enable networking
   networking.networkmanager.enable = true;
 
+  # Pipewire
+security.rtkit.enable = true;
+  services.pipewire = {
+    enable = true; # if not already enabled
+    alsa.enable = true;
+    alsa.support32Bit = true;
+    pulse.enable = true;
+    # If you want to use JACK applications, uncomment the following
+    #jack.enable = true;
+  };
+
+  #bluetooth
+  hardware.bluetooth = {
+  enable = true;
+  powerOnBoot = true;
+  settings = {
+    General = {
+      Experimental = true; # Show battery charge of Bluetooth devices
+    };
+    };
+    };
+services.blueman.enable = true;
   # Set your time zone.
   time.timeZone = "America/Phoenix";
 
@@ -68,45 +90,22 @@
     isNormalUser = true;
     description = "fireye";
     extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [];
+    packages = with pkgs; [
+    ];
     shell=pkgs.zsh;
   };
 
 hardware.graphics.enable = true;
 
-# Allow unfree packages
-nixpkgs.config.allowUnfree = true;
 
 nix.settings.experimental-features = ["nix-command" "flakes"];
 
   # List packages installed in system profile. To search, run:
   environment.systemPackages = with pkgs; [
-  libgcc
-  niri
   git
-  gh
   zsh
-  oh-my-zsh
-  autojump
-  zsh-autosuggestions
-  zsh-syntax-highlighting
-  zsh-powerlevel10k
-  neovim
-  kitty
-  xwayland-satellite
-  tofi
-  firefox
-  waybar
-  networkmanagerapplet
-  copyq
   os-prober
   arch-install-scripts
-  rocmPackages.clang
-  blueman
-  bluez
-  pipewire
-  baobab
-  inputs.zen-browser.packages.${system}.default
   ];
 
 fonts.packages = with pkgs; [
@@ -124,12 +123,11 @@ programs.neovim = {
     enable = true;
     defaultEditor = true;
 };
-programs.niri.enable = true;
-programs.firefox.enable = true;
 
 programs.zsh = {
   enable = true;
 };
+
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
