@@ -1,49 +1,68 @@
 {
-  description = "My personal hell";
+	description = "My personal hell";
 
-  inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
-    zen-browser.url = "github:youwen5/zen-browser-flake";
-    zen-browser.inputs.nixpkgs.follows = "nixpkgs";
-home-manager = {
-      url = "github:nix-community/home-manager";
-      # The `follows` keyword in inputs is used for inheritance.
-      # Here, `inputs.nixpkgs` of home-manager is kept consistent with
-      # the `inputs.nixpkgs` of the current flake,
-      # to avoid problems caused by different versions of nixpkgs.
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    niri.url = "github:sodiboo/niri-flake";
-  };
+	inputs = {
+		nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
+		zen-browser.url = "github:youwen5/zen-browser-flake";
+		zen-browser.inputs.nixpkgs.follows = "nixpkgs";
+		home-manager = {
+			url = "github:nix-community/home-manager";
+			# The `follows` keyword in inputs is used for inheritance.
+			# Here, `inputs.nixpkgs` of home-manager is kept consistent with
+			# the `inputs.nixpkgs` of the current flake,
+			# to avoid problems caused by different versions of nixpkgs.
+			inputs.nixpkgs.follows = "nixpkgs";
+		};
+		niri.url = "github:sodiboo/niri-flake";
+		nixvim = {
+			url = "github:nix-community/nixvim";
+			# If you are not running an unstable channel of nixpkgs, select the corresponding branch of nixvim.
+			# url = "github:nix-community/nixvim/nixos-25.05";
 
-  outputs = { self, nixpkgs, zen-browser, home-manager, niri, ...}@inputs:
-  let
-      system = "x86_64-linux";
-  pkgs= import nixpkgs {
-	inherit system;
-	config.allowUnfree=true;
-	overlays = [niri.overlays.niri];
-  };
-in {
-    nixosConfigurations = {
-    nixlaptop = nixpkgs.lib.nixosSystem {
-      inherit pkgs;
-      system = "x86_64-linux";
-      specialArgs = { inherit inputs; };
-      modules = [ ./configuration.nix 
-		niri.nixosModules.niri
-      	home-manager.nixosModules.home-manager {
-	home-manager.backupFileExtension = "backup";
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
+			inputs.nixpkgs.follows = "nixpkgs";
+		};
+	};
 
-            home-manager.users.fireye = import ./home.nix;
+	outputs = {
+		self,
+		nixpkgs,
+		zen-browser,
+		home-manager,
+		niri,
+		nixvim,
+		...
+	} @ inputs: let
+		system = "x86_64-linux";
+		pkgs =
+			import nixpkgs {
+				inherit system;
+				config.allowUnfree = true;
+				overlays = [niri.overlays.niri];
+			};
+	in {
+		nixosConfigurations = {
+			nixlaptop =
+				nixpkgs.lib.nixosSystem {
+					inherit pkgs;
+					system = "x86_64-linux";
+					specialArgs = {inherit inputs;};
+					modules = [
+						./configuration.nix
+						niri.nixosModules.niri
+						nixvim.nixosModules.nixvim
+						home-manager.nixosModules.home-manager
+						{
+							home-manager.backupFileExtension = "backup";
+							home-manager.useGlobalPkgs = true;
+							home-manager.useUserPackages = true;
 
-            # Optionally, use home-manager.extraSpecialArgs to pass arguments to home.nix
-	    home-manager.extraSpecialArgs = {inherit inputs;};
-          }
-	];
-    };
-    };
-  };
+							home-manager.users.fireye = import ./home;
+
+							# Optionally, use home-manager.extraSpecialArgs to pass arguments to home.nix
+							home-manager.extraSpecialArgs = {inherit inputs;};
+						}
+					];
+				};
+		};
+	};
 }
