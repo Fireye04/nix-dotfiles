@@ -135,6 +135,11 @@
 			number = true;
 			relativenumber = false;
 		};
+
+		globals = {
+			mapleader = " ";
+		};
+
 		colorschemes.catppuccin.enable = true;
 
 		dependencies.ripgrep.enable = true;
@@ -179,6 +184,13 @@
 		lsp.servers = {
 			nixd.enable = true;
 		};
+
+		keymaps = [
+			{
+				action = "<cmd>Neotree toggle<CR>";
+				key = "<leader>e";
+			}
+		];
 	};
 
 	# programs.neovim = {
