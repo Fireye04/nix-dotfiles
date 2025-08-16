@@ -103,7 +103,6 @@
 
 	# List packages installed in system profile. To search, run:
 	environment.systemPackages = with pkgs; [
-		git
 		gh
 		zsh
 		os-prober
@@ -122,6 +121,17 @@
 		nerd-fonts.jetbrains-mono
 		nerd-fonts.noto
 	];
+
+	programs.git = {
+		enable = true;
+		config = {
+			init = {
+				defaultBranch = "main";
+			};
+			user.name = "Fireye";
+			user.email = "codekai16@gmail.com";
+		};
+	};
 
 	programs.nixvim = {
 		enable = true;
@@ -192,11 +202,6 @@
 			}
 		];
 	};
-
-	# programs.neovim = {
-	#     enable = true;
-	#     defaultEditor = true;
-	# };
 
 	programs.zsh = {
 		enable = true;

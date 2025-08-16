@@ -1,12 +1,21 @@
 {
 	config,
 	pkgs,
+	lib,
 	inputs,
 	...
 }: {
 	home.username = "fireye";
 	home.homeDirectory = "/home/fireye";
 
+	home.activation = {
+		# https://github.com/philj56/tofi/issues/115#issuecomment-1701748297
+		regenerateTofiCache =
+			lib.hm.dag.entryAfter ["writeBoundary"] ''
+				tofi_cache=${config.xdg.cacheHome}/tofi-drun
+				[[ -f "$tofi_cache" ]] && rm "$tofi_cache"
+			'';
+	};
 	# link the configuration file in current directory to the specified location in home directory
 	# home.file.".config/i3/wallpaper.jpg".source = ./wallpaper.jpg;
 
@@ -45,9 +54,7 @@
 		zsh-powerlevel10k
 		xwayland-satellite
 		pwvucontrol
-		inputs.zen-browser.packages.${system}.default
-		# inputs.niri.packages.${system}.niri-unstable
-		niri-unstable
+		# inputs.zen-browser.packages.${system}.default
 		slack
 		spotify-player
 		baobab
@@ -84,6 +91,7 @@
 	imports = [
 		(import ./niri {inherit config pkgs;})
 		(import ./tofi {inherit config pkgs;})
+		(import ./zen {inherit config pkgs inputs;})
 	];
 
 	# basic configuration of git, please change to your own

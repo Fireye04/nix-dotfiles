@@ -11,7 +11,7 @@
 	};
 
 	programs.niri = {
-		# enable=true;
+		# enable = true;
 		package = pkgs.niri-unstable;
 
 		config = ''			// This config is in the KDL format: https://kdl.dev
@@ -277,7 +277,7 @@
 					place-within-column
 				}
 			}
-				
+					
 			prefer-no-csd
 
 			gestures {

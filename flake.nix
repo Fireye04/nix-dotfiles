@@ -3,14 +3,16 @@
 
 	inputs = {
 		nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
-		zen-browser.url = "github:youwen5/zen-browser-flake";
-		zen-browser.inputs.nixpkgs.follows = "nixpkgs";
 		home-manager = {
 			url = "github:nix-community/home-manager";
 			# The `follows` keyword in inputs is used for inheritance.
 			# Here, `inputs.nixpkgs` of home-manager is kept consistent with
 			# the `inputs.nixpkgs` of the current flake,
 			# to avoid problems caused by different versions of nixpkgs.
+			inputs.nixpkgs.follows = "nixpkgs";
+		};
+		zen-browser = {
+			url = "github:0xc000022070/zen-browser-flake";
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
 		niri.url = "github:sodiboo/niri-flake";
