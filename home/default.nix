@@ -93,6 +93,7 @@
 		(import ./zsh {inherit lib config pkgs;})
 		(import ./kitty {inherit config pkgs;})
 		(import ./swww {inherit config pkgs;})
+		(import ./waybar {inherit config pkgs;})
 	];
 
 	home.pointerCursor = {
@@ -123,13 +124,13 @@
 			includeIf."gitdir:~/Work/".path = "~/.gitconfig-work";
 		};
 		aliases = {
-		lg = "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit";
-		}
+			lg = "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit";
+		};
 	};
 
 	home.file = {
 		".gitconfig-work" = {
-			text = ''							
+			text = ''						
 				[user]
 					email = kkoehler@lsst.org
 					name = Kai Koehler'';
