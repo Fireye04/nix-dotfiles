@@ -3,6 +3,19 @@
 	pkgs,
 	...
 }: {
+	home.file = {
+		".config/waybar/colors/main.css" = {
+			source = ./colors/main.css;
+		};
+		".config/waybar/bin/tuned/change.sh" = {
+			source = ./bin/tuned/change.sh;
+			executable = true;
+		};
+		".config/waybar/bin/tuned/display.sh" = {
+			source = ./bin/tuned/display.sh;
+			executable = true;
+		};
+	};
 	programs.waybar = {
 		enable = true;
 		style = ./style.css;
