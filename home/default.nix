@@ -33,6 +33,8 @@
 	home.packages = with pkgs; [
 		# here is some command line tools I use frequently
 		# feel free to add your own or remove some of them
+		glib
+		gsettings-desktop-schemas
 
 		hyfetch
 		ranger
@@ -74,6 +76,7 @@
 		# it provides the command `nom` works just like `nix`
 		# with more details log output
 		nix-output-monitor
+		dconf
 
 		# productivity
 		hugo # static site generator
@@ -92,9 +95,23 @@
 		(import ./swww {inherit config pkgs;})
 	];
 
-	gtk.cursorTheme = {
+	home.pointerCursor = {
+		enable = true;
 		package = pkgs.bibata-cursors;
-		name = "Bibata-MC";
+		name = "Bibata-Modern-Classic";
+	};
+	dconf.settings = {
+		"org/gnome/desktop/interface" = {
+			cursor-theme = "Bibata-Modern-Classic";
+		};
+	};
+
+	gtk = {
+		enable = true;
+		cursorTheme = {
+			package = pkgs.bibata-cursors;
+			name = "Bibata-Modern-Classic";
+		};
 	};
 
 	# basic configuration of git, please change to your own
@@ -102,6 +119,21 @@
 		enable = true;
 		userName = "Fireye";
 		userEmail = "codekai16@gmail.com";
+		extraConfig = {
+			includeIf."gitdir:~/Work/".path = "~/.gitconfig-work";
+		};
+		aliases = {
+		lg = "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit";
+		}
+	};
+
+	home.file = {
+		".gitconfig-work" = {
+			text = ''							
+				[user]
+					email = kkoehler@lsst.org
+					name = Kai Koehler'';
+		};
 	};
 
 	# This value determines the home Manager release that your

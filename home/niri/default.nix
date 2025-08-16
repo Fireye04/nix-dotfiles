@@ -300,7 +300,7 @@
 			spawn-at-startup "xwayland-satellite"
 			spawn-at-startup "kitty" "spotify_player"
 			spawn-at-startup "tuned-adm" "profile" "balanced"
-			spawn-at-startup "swww" "/etc/nixos/green_cabin.jpg"
+			spawn-at-startup "sleep" "1;" "swww" "img" "/etc/nixos/wallpapers/green_cabin.jpg"
 			//spawn-at-startup "wbg" "/usr/share/backgrounds/waterfall.png"
 			environment {
 			    DISPLAY ":0"

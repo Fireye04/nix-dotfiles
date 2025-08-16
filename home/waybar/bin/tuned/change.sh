@@ -1,0 +1,1 @@
+if tuned-adm active | grep -q "accelerator-performance"; then tuned-adm profile laptop-battery-powersave; else if tuned-adm active | grep -q "balanced"; then tuned-adm profile accelerator-performance; else tuned-adm profile balanced; fi; fi
