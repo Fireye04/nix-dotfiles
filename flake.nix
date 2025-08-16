@@ -49,7 +49,7 @@
 					system = "x86_64-linux";
 					specialArgs = {inherit inputs;};
 					modules = [
-						./configuration.nix
+						./root
 						niri.nixosModules.niri
 						nixvim.nixosModules.nixvim
 						home-manager.nixosModules.home-manager

@@ -8,14 +8,6 @@
 	home.username = "fireye";
 	home.homeDirectory = "/home/fireye";
 
-	home.activation = {
-		# https://github.com/philj56/tofi/issues/115#issuecomment-1701748297
-		regenerateTofiCache =
-			lib.hm.dag.entryAfter ["writeBoundary"] ''
-				tofi_cache=${config.xdg.cacheHome}/tofi-drun
-				[[ -f "$tofi_cache" ]] && rm "$tofi_cache"
-			'';
-	};
 	# link the configuration file in current directory to the specified location in home directory
 	# home.file.".config/i3/wallpaper.jpg".source = ./wallpaper.jpg;
 
@@ -47,7 +39,6 @@
 		waybar
 		kitty
 		gh
-		oh-my-zsh
 		autojump
 		zsh-autosuggestions
 		zsh-syntax-highlighting
@@ -90,8 +81,10 @@
 
 	imports = [
 		(import ./niri {inherit config pkgs;})
-		(import ./tofi {inherit config pkgs;})
+		(import ./tofi {inherit lib config pkgs;})
 		(import ./zen {inherit config pkgs inputs;})
+		(import ./zsh {inherit lib config pkgs;})
+		(import ./kitty {inherit config pkgs;})
 	];
 
 	# basic configuration of git, please change to your own

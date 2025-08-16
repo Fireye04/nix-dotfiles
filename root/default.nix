@@ -13,20 +13,30 @@
 	];
 
 	# Bootloader.
-	boot.loader.grub.enable = true;
-	boot.loader.grub.efiSupport = true;
-	boot.loader.efi.canTouchEfiVariables = true;
-	boot.loader.efi.efiSysMountPoint = "/boot/efi";
-	boot.loader.grub.devices = ["nodev"];
-	#  boot.loader.grub.extraEntries = ''menuentry "ARCH" {
-	# set root=(hd0,gpt2)
-	# linux /boot/vmlinuz-linux root=/dev/nvme0n1p2
-	# initrd /boot/initramfs-linux.img
-	# boot
-	#
-	#  }'';
-	boot.loader.grub.useOSProber = true;
-	boot.loader.grub.memtest86.enable = true;
+	boot.loader = {
+		grub = {
+			enable = true;
+			efiSupport = true;
+			devices = ["nodev"];
+			useOSProber = true;
+			memtest86.enable = true;
+			extraEntries = ''				
+				menuentry "UEFI Settings" {fwsetup}'';
+
+			#  extraEntries = ''menuentry "ARCH" {
+			# set root=(hd0,gpt2)
+			# linux /boot/vmlinuz-linux root=/dev/nvme0n1p2
+			# initrd /boot/initramfs-linux.img
+			# boot
+			#
+			#  }'';
+		};
+
+		efi = {
+			canTouchEfiVariables = true;
+			efiSysMountPoint = "/boot/efi";
+		};
+	};
 
 	# Use latest kernel.
 	boot.kernelPackages = pkgs.linuxPackages_latest;
@@ -94,7 +104,6 @@
 		extraGroups = ["networkmanager" "wheel"];
 		packages = with pkgs; [
 		];
-		shell = pkgs.zsh;
 	};
 
 	hardware.graphics.enable = true;
@@ -104,7 +113,6 @@
 	# List packages installed in system profile. To search, run:
 	environment.systemPackages = with pkgs; [
 		gh
-		zsh
 		os-prober
 		arch-install-scripts
 		alejandra
@@ -121,6 +129,19 @@
 		nerd-fonts.jetbrains-mono
 		nerd-fonts.noto
 	];
+
+	environment.pathsToLink = ["/share/zsh"];
+	users.defaultUserShell = pkgs.zsh;
+	programs.zsh = {
+		enable = true;
+		shellAliases = {
+			update = "sudo nixos-rebuild switch";
+			gaa = "git add --all";
+			gc = "git commit";
+			gp = "git push";
+			gst = "git status";
+		};
+	};
 
 	programs.git = {
 		enable = true;
@@ -200,11 +221,11 @@
 				action = "<cmd>Neotree toggle<CR>";
 				key = "<leader>e";
 			}
+			{
+				action = "<cmd>nohl<CR>";
+				key = "<leader>q";
+			}
 		];
-	};
-
-	programs.zsh = {
-		enable = true;
 	};
 
 	# Some programs need SUID wrappers, can be configured further or are
