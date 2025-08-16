@@ -151,11 +151,13 @@
 			};
 			user.name = "Fireye";
 			user.email = "codekai16@gmail.com";
+			core.editor = "nvim";
 		};
 	};
 
 	programs.nixvim = {
 		enable = true;
+		defaultEditor = true;
 
 		opts = {
 			shiftwidth = 4;
