@@ -277,7 +277,7 @@
 					place-within-column
 				}
 			}
-					
+			
 			prefer-no-csd
 
 			gestures {
@@ -300,7 +300,8 @@
 			spawn-at-startup "xwayland-satellite"
 			spawn-at-startup "kitty" "spotify_player"
 			spawn-at-startup "tuned-adm" "profile" "balanced"
-			spawn-at-startup "wbg" "/usr/share/backgrounds/waterfall.png"
+			spawn-at-startup "swww" "/etc/nixos/green_cabin.jpg"
+			//spawn-at-startup "wbg" "/usr/share/backgrounds/waterfall.png"
 			environment {
 			    DISPLAY ":0"
 			}
@@ -386,7 +387,7 @@
 			layer-rule {
 			    // This is for swaybg; change for other wallpaper tools.
 			    // Find the right namespace by running niri msg layers.
-			    match namespace="wallpaper"
+			    match namespace="swww-daemon"
 			    place-within-backdrop true
 			}
 

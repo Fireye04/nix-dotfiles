@@ -46,12 +46,16 @@
 		xwayland-satellite
 		pwvucontrol
 		# inputs.zen-browser.packages.${system}.default
+		niri-unstable
 		slack
 		spotify-player
 		baobab
 		networkmanagerapplet
 		copyq
 		signal-desktop
+		tuned
+
+		bibata-cursors
 
 		# archives
 		zip
@@ -85,7 +89,13 @@
 		(import ./zen {inherit config pkgs inputs;})
 		(import ./zsh {inherit lib config pkgs;})
 		(import ./kitty {inherit config pkgs;})
+		(import ./swww {inherit config pkgs;})
 	];
+
+	gtk.cursorTheme = {
+		package = pkgs.bibata-cursors;
+		name = "Bibata-MC";
+	};
 
 	# basic configuration of git, please change to your own
 	programs.git = {
