@@ -63,6 +63,7 @@
 		# archives
 		zip
 		unzip
+		gparted
 
 		# networking tools
 		nmap # A utility for network discovery and security auditing
@@ -134,7 +135,7 @@
 
 	home.file = {
 		".gitconfig-work" = {
-			text = ''					
+			text = ''				
 				[user]
 					email = kkoehler@lsst.org
 					name = Kai Koehler'';
