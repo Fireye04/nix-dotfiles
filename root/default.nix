@@ -20,7 +20,7 @@
 			devices = ["nodev"];
 			useOSProber = true;
 			memtest86.enable = true;
-			extraEntries = ''							
+			extraEntries = ''						
 				menuentry "UEFI Settings" {fwsetup}'';
 
 			#  extraEntries = ''menuentry "ARCH" {
@@ -135,15 +135,13 @@
 		nerd-fonts.noto
 	];
 
-	# services.greetd = {
-	# 	enable = false;
-	# 	settings = {
-	# 		default_session = {
-	# 			command = "cage -s -mlast -- regreet";
-	# 			user = "greeter";
-	# 		};
-	# 	};
-	# };
+	programs.niri = {
+		enable = true;
+	};
+
+	services.greetd = {
+		enable = true;
+	};
 	programs.regreet = {
 		enable = true;
 		cursorTheme = {
@@ -156,13 +154,10 @@
 			package = pkgs.nerd-fonts.jetbrains-mono;
 		};
 		theme = {
-			name = "Canta";
+			name = "Canta-dark";
 			package = pkgs.canta-theme;
 		};
 		settings = {
-			env = {
-				SESSION_DIRS = "/etc/nixos/sessions";
-			};
 			background = {
 				# Path to the background image
 				path = "/etc/nixos/wallpapers/green_cabin.jpg";
@@ -177,7 +172,7 @@
 				application_prefer_dark_theme = true;
 			};
 			appearance = {
-				greeting_msg = "Remember to climb trees! :3";
+				greeting_msg = "Climb a tree! :3";
 			};
 		};
 	};

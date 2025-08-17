@@ -292,15 +292,15 @@
 			// See the binds section below for more spawn examples.
 
 			spawn-at-startup "waybar"
-			spawn-at-startup "niriusd"
+			//spawn-at-startup "niriusd"
 			spawn-at-startup "export" "ELECTRON_OZONE_PLATFORM_HINT=auto"
 			spawn-at-startup "systemctl" "--user" "start" "plasma-polkit-agent"
 			spawn-at-startup "copyq" "--start-server"
 			spawn-at-startup "gsettings" "set" "org.gnome.desktop.interface" "cursor-theme" "'Bibata-MC'"
 			spawn-at-startup "xwayland-satellite"
-			spawn-at-startup "kitty" "spotify_player"
+			//spawn-at-startup "kitty" "spotify_player"
 			spawn-at-startup "tuned-adm" "profile" "balanced"
-			// spawn-at-startup "sleep" "1;" "swww" "img" "/etc/nixos/wallpapers/green_cabin.jpg"
+			//spawn-at-startup "sleep" "1;" "swww" "img" "/etc/nixos/wallpapers/green_cabin.jpg"
 			//spawn-at-startup "wbg" "/usr/share/backgrounds/waterfall.png"
 			spawn-at-startup "sleep" "1;" "./.config/swww/bin/randomize_multi.sh" "/etc/nixos/wallpapers"
 			environment {
@@ -436,7 +436,8 @@
 			    Mod+O repeat=false { toggle-overview; }
 
 			    Mod+C { close-window; }
-			    Mod+Z { spawn "nirius" "focus-or-spawn" "-t" ".*Zen Browser" "zen-browser"; }
+			    //Mod+Z { spawn "nirius" "focus-or-spawn" "-t" ".*Zen Browser" "zen-browser"; }
+				Mod+Z {spawn "zen";}
 
 				Mod+P { spawn "nirius" "toggle-follow-mode"; }
 
