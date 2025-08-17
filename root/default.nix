@@ -20,7 +20,7 @@
 			devices = ["nodev"];
 			useOSProber = true;
 			memtest86.enable = true;
-			extraEntries = ''					
+			extraEntries = ''				
 				menuentry "UEFI Settings" {fwsetup}'';
 
 			#  extraEntries = ''menuentry "ARCH" {
@@ -118,7 +118,10 @@
 		alejandra
 		fd
 		gtk4
+		canta-theme
 		cage
+
+		bibata-cursors
 	];
 
 	fonts.packages = with pkgs; [
@@ -143,7 +146,23 @@
 	# };
 	programs.regreet = {
 		enable = true;
+		cursorTheme = {
+			name = "Bibata-Modern-Classic";
+			package = pkgs.bibata-cursors;
+		};
+		font = {
+			name = "JetBrainsMonoNerdFont";
+			size = 16;
+			package = pkgs.nerd-fonts.jetbrains-mono;
+		};
+		theme = {
+			name = "canta";
+			package = pkgs.canta-theme;
+		};
 		settings = {
+			env = {
+				SESSION_DIRS = "/etc/nixos/sessions";
+			};
 			background = {
 				# Path to the background image
 				path = "/etc/nixos/wallpapers/green_cabin.jpg";
@@ -153,6 +172,12 @@
 				# Refer to: https://docs.gtk.org/gtk4/enum.ContentFit.html
 				# NOTE: This is ignored if ReGreet isn't compiled with GTK v4.8 support.
 				fit = "Contain";
+			};
+			gtk = {
+				application_prefer_dark_theme = true;
+			};
+			appearance = {
+				greeting_msg = "Remember to climb trees! :3";
 			};
 		};
 	};
