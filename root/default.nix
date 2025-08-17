@@ -10,69 +10,20 @@
 	imports = [
 		# Include the results of the hardware scan.
 		./hardware-configuration.nix
+		(import ./boot.nix {inherit config pkgs;})
+		(import ./network.nix {inherit config pkgs;})
+		(import ./greeter.nix {inherit config pkgs;})
+		(import ./services/git.nix {inherit config pkgs;})
+		(import ./services/zsh.nix {inherit config pkgs;})
+		(import ./services/tuned.nix {inherit config pkgs;})
+		(import ./services/nvim.nix {inherit config pkgs;})
 	];
-
-	# Bootloader.
-	boot.loader = {
-		grub = {
-			enable = true;
-			efiSupport = true;
-			devices = ["nodev"];
-			useOSProber = true;
-			memtest86.enable = true;
-			extraEntries = ''						
-				menuentry "UEFI Settings" {fwsetup}'';
-
-			#  extraEntries = ''menuentry "ARCH" {
-			# set root=(hd0,gpt2)
-			# linux /boot/vmlinuz-linux root=/dev/nvme0n1p2
-			# initrd /boot/initramfs-linux.img
-			# boot
-			#
-			#  }'';
-		};
-
-		efi = {
-			canTouchEfiVariables = true;
-			efiSysMountPoint = "/boot/efi";
-		};
-	};
 
 	# Use latest kernel.
 	boot.kernelPackages = pkgs.linuxPackages_latest;
 
-	networking.hostName = "nixlaptop"; # Define your hostname.
-	# networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
+	nix.settings.experimental-features = ["nix-command" "flakes"];
 
-	# Configure network proxy if necessary
-	# networking.proxy.default = "http://user:password@proxy:port/";
-	# networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
-
-	# Enable networking
-	networking.networkmanager.enable = true;
-
-	# Pipewire
-	security.rtkit.enable = true;
-	services.pipewire = {
-		enable = true; # if not already enabled
-		alsa.enable = true;
-		alsa.support32Bit = true;
-		pulse.enable = true;
-		# If you want to use JACK applications, uncomment the following
-		#jack.enable = true;
-	};
-
-	#bluetooth
-	hardware.bluetooth = {
-		enable = true;
-		powerOnBoot = true;
-		settings = {
-			General = {
-				Experimental = true; # Show battery charge of Bluetooth devices
-			};
-		};
-	};
-	services.blueman.enable = true;
 	# Set your time zone.
 	time.timeZone = "America/Phoenix";
 
@@ -108,8 +59,6 @@
 
 	hardware.graphics.enable = true;
 
-	nix.settings.experimental-features = ["nix-command" "flakes"];
-
 	# List packages installed in system profile. To search, run:
 	environment.systemPackages = with pkgs; [
 		gh
@@ -134,183 +83,6 @@
 		nerd-fonts.jetbrains-mono
 		nerd-fonts.noto
 	];
-
-	programs.niri = {
-		enable = true;
-	};
-
-	services.greetd = {
-		enable = true;
-	};
-	programs.regreet = {
-		enable = true;
-		cursorTheme = {
-			name = "Bibata-Modern-Classic";
-			package = pkgs.bibata-cursors;
-		};
-		font = {
-			name = "JetBrainsMonoNerdFont";
-			size = 16;
-			package = pkgs.nerd-fonts.jetbrains-mono;
-		};
-		theme = {
-			name = "Canta-dark";
-			package = pkgs.canta-theme;
-		};
-		settings = {
-			background = {
-				# Path to the background image
-				path = "/etc/nixos/wallpapers/green_cabin.jpg";
-
-				# How the background image covers the screen if the aspect ratio doesn't match
-				# Available values: "Fill", "Contain", "Cover", "ScaleDown"
-				# Refer to: https://docs.gtk.org/gtk4/enum.ContentFit.html
-				# NOTE: This is ignored if ReGreet isn't compiled with GTK v4.8 support.
-				fit = "Contain";
-			};
-			gtk = {
-				application_prefer_dark_theme = true;
-			};
-			appearance = {
-				greeting_msg = "Climb a tree! :3";
-			};
-		};
-	};
-
-	services.tuned = {
-		enable = true;
-
-		ppdSettings = {
-			main = {
-				default = "balanced";
-			};
-			profiles = {
-				balanced = "balanced";
-				performance = "accelerator-performance";
-				power-saver = "powersave";
-			};
-		};
-		settings = {
-			daemon = true;
-		};
-	};
-
-	environment.pathsToLink = ["/share/zsh"];
-	users.defaultUserShell = pkgs.zsh;
-	programs.zsh = {
-		enable = true;
-		shellAliases = {
-			ninit = "cd /etc/nixos;nvim .";
-			update = "sudo nixos-rebuild switch";
-			gaa = "git add --all";
-			gc = "git commit";
-			gp = "git push";
-			gst = "git status";
-		};
-	};
-
-	programs.git = {
-		enable = true;
-		config = {
-			init = {
-				defaultBranch = "main";
-			};
-			user.name = "Fireye";
-			user.email = "codekai16@gmail.com";
-			core.editor = "nvim";
-		};
-	};
-
-	programs.nixvim = {
-		enable = true;
-		defaultEditor = true;
-
-		opts = {
-			shiftwidth = 4;
-			tabstop = 4;
-			wrap = true;
-			softtabstop = 4;
-			expandtab = false;
-			number = true;
-			relativenumber = false;
-		};
-
-		globals = {
-			mapleader = " ";
-		};
-
-		colorschemes.catppuccin.enable = true;
-
-		dependencies.ripgrep.enable = true;
-
-		clipboard.providers.wl-copy.enable = true;
-
-		plugins = {
-			lualine.enable = true;
-			gitsigns.enable = true;
-			treesitter.enable = true;
-			which-key.enable = true;
-			bufferline.enable = true;
-			neo-tree.enable = true;
-			nvim-surround = {
-				enable = true;
-				settings.keymaps = {
-					insert = "<C-g>s";
-					insert_line = "<C-g>S";
-					normal = "ys";
-					normal_cur = "yss";
-					normal_line = "yS";
-					normal_cur_line = "ySS";
-					visual = "S";
-					visual_line = "gS";
-					delete = "ds";
-					change = "cs";
-					change_line = "cS";
-				};
-			};
-
-			web-devicons.enable = true;
-			telescope.enable = true;
-			mini-pairs.enable = true;
-			lspconfig.enable = true;
-			conform-nvim = {
-				enable = true;
-				settings = {
-					formatters_by_ft = {
-						# cs = { "clang_format" };
-						python = ["ruff_format"];
-						css = ["prettier"];
-						nix = ["alejandra"];
-					};
-					format_on_save = {
-						timeout_ms = 500;
-					};
-					formatters = {
-						# clang_format = {
-						# 	prepend_args = { "-style={BasedOnStyle: LLVM, IndentWidth: 4}", "--fallback-style=LLVM" },}
-						# prettier = {
-						# 	prepend_args = { "--use-tabs", "--tab-width", "4" },
-						# },
-					};
-				};
-			};
-		};
-
-		lsp.servers = {
-			nixd.enable = true;
-		};
-
-		keymaps = [
-			{
-				action = "<cmd>Neotree toggle<CR>";
-				key = "<leader>e";
-			}
-			{
-				action = "<cmd>nohl<CR>";
-				key = "<leader>q";
-			}
-		];
-	};
 
 	# Some programs need SUID wrappers, can be configured further or are
 	# started in user sessions.
