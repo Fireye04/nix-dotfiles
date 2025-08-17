@@ -277,7 +277,7 @@
 					place-within-column
 				}
 			}
-			
+				
 			prefer-no-csd
 
 			gestures {
@@ -301,8 +301,8 @@
 			//spawn-at-startup "kitty" "spotify_player"
 			spawn-at-startup "tuned-adm" "profile" "balanced"
 			//spawn-at-startup "wbg" "/usr/share/backgrounds/waterfall.png"
-			spawn-at-startup "sleep" "1;" "swww" "img" "/etc/nixos/wallpapers/green_cabin.jpg"
-			spawn-at-startup "sleep" "1;" "./.config/swww/bin/randomize_multi.sh" "/etc/nixos/wallpapers"
+			spawn-at-startup "swww" "img" "/etc/nixos/wallpapers/green_cabin.jpg" "--transition-type" "center"
+			spawn-at-startup "~/.config/swww/bin/randomize_multi.sh" "/etc/nixos/wallpapers"
 			environment {
 			    DISPLAY ":0"
 			}

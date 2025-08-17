@@ -10,6 +10,7 @@
 		shellAliases = {
 			ninit = "cd /etc/nixos;nvim .";
 			update = "sudo nixos-rebuild switch";
+			gupdate = "sudo nixos-rebuild switch;git add --all;git commit -m 'rev';git push";
 			gaa = "git add --all";
 			gc = "git commit";
 			gp = "git push";
