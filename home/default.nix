@@ -47,11 +47,13 @@
 		zsh-powerlevel10k
 		xwayland-satellite
 		pwvucontrol
+		helvum
 		# inputs.zen-browser.packages.${system}.default
 		niri-unstable
 		slack
 		spotify-player
 		baobab
+		kdePackages.dolphin
 		networkmanagerapplet
 		copyq
 		signal-desktop
@@ -84,16 +86,19 @@
 		btop # replacement of htop/nmon
 		iotop # io monitoring
 		iftop # network monitoring
+		powertop
 	];
 
 	imports = [
 		(import ./niri {inherit config pkgs;})
-		(import ./tofi {inherit lib config pkgs;})
-		(import ./zen {inherit config pkgs inputs;})
 		(import ./zsh {inherit lib config pkgs;})
-		(import ./kitty {inherit config pkgs;})
 		(import ./swww {inherit config pkgs;})
 		(import ./waybar {inherit config pkgs;})
+
+		(import ./tofi.nix {inherit lib config pkgs;})
+		(import ./zen.nix {inherit config pkgs inputs;})
+		(import ./kitty.nix {inherit config pkgs;})
+		(import ./mako.nix {inherit config pkgs;})
 	];
 
 	home.pointerCursor = {
@@ -130,7 +135,7 @@
 
 	home.file = {
 		".gitconfig-work" = {
-			text = ''						
+			text = ''							
 				[user]
 					email = kkoehler@lsst.org
 					name = Kai Koehler'';

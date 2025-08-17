@@ -3,6 +3,8 @@
 
 	inputs = {
 		nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
+		niri.url = "github:sodiboo/niri-flake";
+
 		home-manager = {
 			url = "github:nix-community/home-manager";
 			# The `follows` keyword in inputs is used for inheritance.
@@ -11,16 +13,16 @@
 			# to avoid problems caused by different versions of nixpkgs.
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
+
 		zen-browser = {
 			url = "github:0xc000022070/zen-browser-flake";
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
-		niri.url = "github:sodiboo/niri-flake";
+
 		nixvim = {
 			url = "github:nix-community/nixvim";
 			# If you are not running an unstable channel of nixpkgs, select the corresponding branch of nixvim.
 			# url = "github:nix-community/nixvim/nixos-25.05";
-
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
 	};
@@ -28,9 +30,9 @@
 	outputs = {
 		self,
 		nixpkgs,
-		zen-browser,
-		home-manager,
 		niri,
+		home-manager,
+		zen-browser,
 		nixvim,
 		...
 	} @ inputs: let

@@ -20,7 +20,7 @@
 			devices = ["nodev"];
 			useOSProber = true;
 			memtest86.enable = true;
-			extraEntries = ''				
+			extraEntries = ''					
 				menuentry "UEFI Settings" {fwsetup}'';
 
 			#  extraEntries = ''menuentry "ARCH" {
@@ -117,6 +117,8 @@
 		arch-install-scripts
 		alejandra
 		fd
+		gtk4
+		cage
 	];
 
 	fonts.packages = with pkgs; [
@@ -130,11 +132,55 @@
 		nerd-fonts.noto
 	];
 
+	# services.greetd = {
+	# 	enable = false;
+	# 	settings = {
+	# 		default_session = {
+	# 			command = "cage -s -mlast -- regreet";
+	# 			user = "greeter";
+	# 		};
+	# 	};
+	# };
+	programs.regreet = {
+		enable = true;
+		settings = {
+			background = {
+				# Path to the background image
+				path = "/etc/nixos/wallpapers/green_cabin.jpg";
+
+				# How the background image covers the screen if the aspect ratio doesn't match
+				# Available values: "Fill", "Contain", "Cover", "ScaleDown"
+				# Refer to: https://docs.gtk.org/gtk4/enum.ContentFit.html
+				# NOTE: This is ignored if ReGreet isn't compiled with GTK v4.8 support.
+				fit = "Contain";
+			};
+		};
+	};
+
+	services.tuned = {
+		enable = true;
+
+		ppdSettings = {
+			main = {
+				default = "balanced";
+			};
+			profiles = {
+				balanced = "balanced";
+				performance = "accelerator-performance";
+				power-saver = "powersave";
+			};
+		};
+		settings = {
+			daemon = true;
+		};
+	};
+
 	environment.pathsToLink = ["/share/zsh"];
 	users.defaultUserShell = pkgs.zsh;
 	programs.zsh = {
 		enable = true;
 		shellAliases = {
+			ninit = "cd /etc/nixos;nvim .";
 			update = "sudo nixos-rebuild switch";
 			gaa = "git add --all";
 			gc = "git commit";
@@ -186,6 +232,22 @@
 			which-key.enable = true;
 			bufferline.enable = true;
 			neo-tree.enable = true;
+			nvim-surround = {
+				enable = true;
+				settings.keymaps = {
+					insert = "<C-g>s";
+					insert_line = "<C-g>S";
+					normal = "ys";
+					normal_cur = "yss";
+					normal_line = "yS";
+					normal_cur_line = "ySS";
+					visual = "S";
+					visual_line = "gS";
+					delete = "ds";
+					change = "cs";
+					change_line = "cS";
+				};
+			};
 
 			web-devicons.enable = true;
 			telescope.enable = true;

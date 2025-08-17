@@ -128,7 +128,7 @@
 					justify = "center";
 					format-alt = "{:%a\n%d\n%b\n%I\n%M\n%p}";
 					tooltip-format = "{:%a; %d. %b %I:%M %p}";
-					on-click-right = "zen-browser https://calendar.google.com/calendar/u/0/r";
+					on-click-right = "zen https://calendar.google.com/calendar/u/0/r";
 				};
 				"backlight" = {
 					reverse-scrolling = true;
