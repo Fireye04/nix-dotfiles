@@ -20,7 +20,7 @@
 			devices = ["nodev"];
 			useOSProber = true;
 			memtest86.enable = true;
-			extraEntries = ''				
+			extraEntries = ''							
 				menuentry "UEFI Settings" {fwsetup}'';
 
 			#  extraEntries = ''menuentry "ARCH" {
@@ -156,7 +156,7 @@
 			package = pkgs.nerd-fonts.jetbrains-mono;
 		};
 		theme = {
-			name = "canta";
+			name = "Canta";
 			package = pkgs.canta-theme;
 		};
 		settings = {
