@@ -19,9 +19,10 @@
 			"zen.workspaces.continue-where-left-off" = true;
 		};
 
-		# policies = {
-		# 	Preferences = {
-		# 	};
-		# };
+		policies = {
+			Preferences = {
+				"browser.aboutConfig.showWarning" = true;
+			};
+		};
 	};
 }
