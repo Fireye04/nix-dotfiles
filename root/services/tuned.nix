@@ -1,5 +1,5 @@
 {
-	system,
+	config,
 	pkgs,
 	...
 }: {
