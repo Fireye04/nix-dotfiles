@@ -80,6 +80,12 @@
 
 		lsp = {
 			inlayHints.enable = true;
+			keymaps = [
+				{
+					key = "K";
+					lspBufAction = "hover";
+				}
+			];
 			servers = {
 				nixd.enable = true;
 				ruff.enable = true;
