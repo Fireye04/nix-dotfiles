@@ -80,6 +80,7 @@
 
 		lsp.servers = {
 			nixd.enable = true;
+			ruff.enable = true;
 		};
 
 		keymaps = [
