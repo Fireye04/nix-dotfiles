@@ -12,6 +12,7 @@
 	};
 	programs.regreet = {
 		enable = true;
+		cageArgs = ["-s" "-m" "last"];
 		cursorTheme = {
 			name = "Bibata-Modern-Classic";
 			package = pkgs.bibata-cursors;
