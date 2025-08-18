@@ -70,8 +70,6 @@
 		canta-theme
 		cage
 
-		nix-ld
-
 		bibata-cursors
 	];
 
@@ -86,6 +84,9 @@
 		nerd-fonts.noto
 	];
 
+	programs.nix-ld = {
+		enable = true;
+	};
 	programs.steam.enable = true;
 	# Some programs need SUID wrappers, can be configured further or are
 	# started in user sessions.
