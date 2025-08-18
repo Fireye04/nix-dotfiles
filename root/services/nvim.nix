@@ -78,9 +78,12 @@
 			};
 		};
 
-		lsp.servers = {
-			nixd.enable = true;
-			ruff.enable = true;
+		lsp = {
+			inlayHints.enable = true;
+			servers = {
+				nixd.enable = true;
+				ruff.enable = true;
+			};
 		};
 
 		keymaps = [
