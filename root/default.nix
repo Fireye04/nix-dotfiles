@@ -70,6 +70,8 @@
 		canta-theme
 		cage
 
+		nix-ld
+
 		bibata-cursors
 	];
 
