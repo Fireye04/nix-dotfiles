@@ -277,7 +277,7 @@
 					place-within-column
 				}
 			}
-			
+					
 			prefer-no-csd
 
 			gestures {
@@ -358,7 +358,7 @@
 			    // This app-id regular expression will work for both:
 			    // - host Firefox (app-id is "firefox")
 			    // - Flatpak Firefox (app-id is "org.mozilla.firefox")
-			    match app-id=r#"zen$"# title="^Picture-in-Picture$"
+			    match app-id=r#"zen-beta$"# title="^Picture-in-Picture$"
 			    open-floating true
 				max-width 500
 				max-height 300
