@@ -72,6 +72,7 @@
 		canta-theme
 		cage
 		inputs.nix-alien.packages.${system}.default
+		inputs.slicer.packages.${system}.default
 
 		bibata-cursors
 	];
