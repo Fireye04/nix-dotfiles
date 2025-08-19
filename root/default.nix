@@ -5,6 +5,7 @@
 	config,
 	pkgs,
 	inputs,
+	options,
 	...
 }: {
 	imports = [
@@ -88,6 +89,7 @@
 
 	programs.nix-ld = {
 		enable = true;
+		libraries = options.programs.nix-ld.libraries.default ++ (with pkgs; [xorg.libSM]);
 	};
 	programs.steam.enable = true;
 	# Some programs need SUID wrappers, can be configured further or are
