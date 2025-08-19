@@ -52,7 +52,7 @@
 	users.users.fireye = {
 		isNormalUser = true;
 		description = "fireye";
-		extraGroups = ["networkmanager" "wheel"];
+		extraGroups = ["networkmanager" "wheel" "docker"];
 		packages = with pkgs; [
 		];
 	};
@@ -83,6 +83,7 @@
 		nerd-fonts.jetbrains-mono
 		nerd-fonts.noto
 	];
+	virtualisation.docker.enable = true;
 
 	programs.nix-ld = {
 		enable = true;
