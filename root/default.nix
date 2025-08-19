@@ -116,6 +116,7 @@
 					libpulseaudio
 					nss
 					alsa-lib
+					krb5
 					spr
 					nspr
 				]);
