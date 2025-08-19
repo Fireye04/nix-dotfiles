@@ -120,6 +120,7 @@
 					krb5
 					spr
 					nspr
+					vtkWithQt5
 					libsForQt5.qt5.qtmultimedia
 					libsForQt5.qt5.qtwayland
 					libsForQt5.qt5.qttools
