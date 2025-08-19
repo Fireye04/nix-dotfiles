@@ -1,6 +1,6 @@
 {lib, ...}: let
 	self = with self; {
-		callPackage = lib.callPackageWith self;
+		callPackage = lib.callPackageWith (self // pkgs);
 
 		nirius = callPackage ./nirius {lib = lib;};
 		slicer = callPackage ./slicer {lib = lib;};
