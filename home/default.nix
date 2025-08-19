@@ -60,6 +60,7 @@
 		signal-desktop
 		tuned
 		ffmpeg-full
+		gnome-calculator
 
 		lutris
 		gamemode
@@ -147,7 +148,7 @@
 
 	home.file = {
 		".gitconfig-work" = {
-			text = ''							
+			text = ''						
 				[user]
 					email = kkoehler@lsst.org
 					name = Kai Koehler'';
