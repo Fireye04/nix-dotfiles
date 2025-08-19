@@ -46,8 +46,8 @@
 				inherit system;
 				config.allowUnfree = true;
 				overlays = [niri.overlays.niri];
+				slicer = pkgs.callPackage ../utils/slicer.nix {};
 			};
-		slicer = pkgs.callPackage ../utils/slicer.nix {};
 	in {
 		nixosConfigurations = {
 			nixlaptop =
