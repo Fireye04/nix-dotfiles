@@ -126,7 +126,7 @@
 					libsForQt5.qt5.qtmultimedia
 					libsForQt5.qt5.qtwayland
 					libsForQt5.qt5.qttools
-					libsForQt5.qt5.xmlpatterns
+					libsForQt5.qt5.qtxmlpatterns
 					libsForQt5.qt5.qtsvg
 					libsForQt5.qt5.qtwebengine
 					libsForQt5.qt5.qtwebengine
