@@ -115,7 +115,7 @@
 					glib
 					libpulseaudio
 					nss
-					ocamlPackages.alsa
+					alsa-lib
 					spr
 					nspr
 				]);
