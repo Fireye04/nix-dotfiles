@@ -71,6 +71,7 @@
 		gtk4
 		canta-theme
 		cage
+		inputs.nix-alien.packages.${system}.default
 
 		bibata-cursors
 	];

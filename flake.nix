@@ -5,6 +5,7 @@
 		nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
 		niri.url = "github:sodiboo/niri-flake";
 		fix-python.url = "github:GuillaumeDesforges/fix-python";
+		nix-alien.url = "github:thiagokokada/nix-alien";
 
 		home-manager = {
 			url = "github:nix-community/home-manager";
@@ -33,6 +34,7 @@
 		nixpkgs,
 		niri,
 		fix-python,
+		nix-alien,
 		home-manager,
 		zen-browser,
 		nixvim,
@@ -40,21 +42,11 @@
 		...
 	} @ inputs: let
 		system = "x86_64-linux";
-		allPkgs = nixpkgs // pkgs;
-		callPackage = path: overrides: let
-			f = import path;
-		in
-			f ((builtins.intersectAttrs (builtins.functionArgs f) allPkgs) // overrides);
 		pkgs =
 			import nixpkgs {
 				inherit system;
 				config.allowUnfree = true;
 				overlays = [niri.overlays.niri];
-				callPackage = lib.callPackageWith pkgs;
-				packages = {
-					nirius = callPackage ./utils/nirius.nix {};
-					slicer = callPackage ./utils/slicer.nix {};
-				};
 			};
 	in {
 		nixosConfigurations = {
@@ -65,7 +57,6 @@
 					specialArgs = {inherit inputs;};
 					modules = [
 						./root
-						./utils
 						niri.nixosModules.niri
 						nixvim.nixosModules.nixvim
 						home-manager.nixosModules.home-manager
