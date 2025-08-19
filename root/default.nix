@@ -10,7 +10,6 @@
 	imports = [
 		# Include the results of the hardware scan.
 		./hardware-configuration.nix
-		./services/slicer.nix
 		(import ./boot.nix {inherit config pkgs;})
 		(import ./network.nix {inherit config pkgs;})
 		(import ./greeter.nix {inherit config pkgs;})
