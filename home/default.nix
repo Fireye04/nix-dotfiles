@@ -79,6 +79,8 @@
 		gnupg
 		tldr
 
+		xorg.libSM
+
 		# nix related
 		#
 		# it provides the command `nom` works just like `nix`
@@ -148,7 +150,7 @@
 
 	home.file = {
 		".gitconfig-work" = {
-			text = ''							
+			text = ''						
 				[user]
 					email = kkoehler@lsst.org
 					name = Kai Koehler'';
