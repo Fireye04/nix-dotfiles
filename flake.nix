@@ -38,7 +38,6 @@
 		home-manager,
 		zen-browser,
 		nixvim,
-		lib,
 		...
 	} @ inputs: let
 		system = "x86_64-linux";
