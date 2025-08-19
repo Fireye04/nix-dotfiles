@@ -90,6 +90,7 @@
 		gnumake
 		uv
 		gcc
+		docker
 
 		btop # replacement of htop/nmon
 		iotop # io monitoring
@@ -143,7 +144,7 @@
 
 	home.file = {
 		".gitconfig-work" = {
-			text = ''						
+			text = ''					
 				[user]
 					email = kkoehler@lsst.org
 					name = Kai Koehler'';
