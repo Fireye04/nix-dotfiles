@@ -39,7 +39,7 @@
 		...
 	} @ inputs: let
 		system = "x86_64-linux";
-		allPkgs = nixpkgs;
+		allPkgs = nixpkgs // pkgs;
 		callPackage = path: overrides: let
 			f = import path;
 		in
