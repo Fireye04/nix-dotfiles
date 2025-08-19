@@ -277,7 +277,7 @@
 					place-within-column
 				}
 			}
-					
+				
 			prefer-no-csd
 
 			gestures {
@@ -399,7 +399,7 @@
 			    match namespace="swww-daemon"
 			    place-within-backdrop true
 			}
-			layer-rule {
+			window-rule {
 				match title="^spotify_player$"
 
 				opacity 0.5
