@@ -277,7 +277,7 @@
 					place-within-column
 				}
 			}
-					
+				
 			prefer-no-csd
 
 			gestures {
@@ -362,6 +362,14 @@
 			    open-floating true
 				max-width 500
 				max-height 300
+			}
+			window-rule {
+			    // This app-id regular expression will work for both:
+			    // - host Firefox (app-id is "firefox")
+			    // - Flatpak Firefox (app-id is "org.mozilla.firefox")
+			    match app-id=r#"Calculator$"# title="^org.gnome.Calculator$"
+			    open-floating true
+				max-width 300
 			}
 
 
