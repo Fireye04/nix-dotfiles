@@ -36,6 +36,7 @@
 		home-manager,
 		zen-browser,
 		nixvim,
+		lib,
 		...
 	} @ inputs: let
 		system = "x86_64-linux";
@@ -49,6 +50,11 @@
 				inherit system;
 				config.allowUnfree = true;
 				overlays = [niri.overlays.niri];
+				callPackage = lib.callPackageWith pkgs;
+				packages = {
+					nirius = callPackage ./utils/nirius.nix {};
+					slicer = callPackage ./utils/slicer.nix {};
+				};
 			};
 	in {
 		nixosConfigurations = {
