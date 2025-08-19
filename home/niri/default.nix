@@ -277,7 +277,7 @@
 					place-within-column
 				}
 			}
-					
+				
 			prefer-no-csd
 
 			gestures {
@@ -402,6 +402,11 @@
 			}
 			window-rule {
 				match app-id=r#"^kitty$"# title="^spotify_player.*$"
+
+				opacity 0.7
+			}
+			window-rule {
+				match app-id=r#"^kitty$"# title="^btop$"
 
 				opacity 0.7
 			}
