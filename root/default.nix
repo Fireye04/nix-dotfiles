@@ -17,7 +17,6 @@
 		(import ./services/zsh.nix {inherit config pkgs;})
 		(import ./services/tuned.nix {inherit config pkgs;})
 		(import ./services/nvim.nix {inherit config pkgs;})
-		(import ./services/spot_player.nix {inherit config pkgs;})
 	];
 
 	# Use latest kernel.
