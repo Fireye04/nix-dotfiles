@@ -92,47 +92,6 @@
 		libraries =
 			options.programs.nix-ld.libraries.default
 			++ (with pkgs; [
-					xorg.libSM
-					xorg.libICE
-					xorg.libXrender
-					xorg.libXext
-					xorg.libX11
-					xorg.libXcomposite
-					xorg.libXdamage
-					xorg.libXfixes
-					xorg.libXrandr
-					xorg.libxcb
-					xorg.libXcursor
-					xorg.libXi
-					xorg.libXt
-					xorg.libXtst
-					xorg.xcbutil
-					libxkbcommon
-					dbus
-					freetype
-					expat
-					fontconfig
-					libGL
-					libGLU
-					glib
-					libpulseaudio
-					nss
-					alsa-lib
-					krb5
-					spr
-					nspr
-					xcbutilxrm
-					libsForQt5.qt3d
-					libsForQt5.qt5.qtmultimedia
-					libsForQt5.qt5.qtwayland
-					libsForQt5.qt5.qttools
-					libsForQt5.qt5.qtxmlpatterns
-					libsForQt5.qt5.qtsvg
-					libsForQt5.qt5.qtwebengine
-					libsForQt5.qt5.qtwebengine
-					libsForQt5.qt5.qtscript
-					libsForQt5.qt5.qtbase
-					libsForQt5.qt5.qtx11extras
 				]);
 	};
 	programs.steam.enable = true;
