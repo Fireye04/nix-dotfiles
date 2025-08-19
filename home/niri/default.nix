@@ -277,7 +277,7 @@
 					place-within-column
 				}
 			}
-				
+			
 			prefer-no-csd
 
 			gestures {
@@ -402,7 +402,7 @@
 			window-rule {
 				match title="^spotify_player$"
 
-				opacity 0.5
+				opacity 0.7
 			}
 
 			binds {
