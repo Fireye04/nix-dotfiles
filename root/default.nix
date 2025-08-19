@@ -89,7 +89,7 @@
 
 	programs.nix-ld = {
 		enable = true;
-		libraries = options.programs.nix-ld.libraries.default ++ (with pkgs; [xorg.libSM xorg.libICE xorg.libXrender xorg.libXext xorg.libX11 libGL libGLU glib libpulseaudio glibc]);
+		libraries = options.programs.nix-ld.libraries.default ++ (with pkgs; [xorg.libSM xorg.libICE xorg.libXrender xorg.libXext xorg.libX11 libGL libGLU glib libpulseaudio glibc libnss_nis libnss_nis]);
 	};
 	programs.steam.enable = true;
 	# Some programs need SUID wrappers, can be configured further or are
