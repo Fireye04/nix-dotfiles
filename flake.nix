@@ -5,7 +5,6 @@
 		nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
 		niri.url = "github:sodiboo/niri-flake";
 		fix-python.url = "github:GuillaumeDesforges/fix-python";
-		slicer.url = ./utils/slicer;
 
 		home-manager = {
 			url = "github:nix-community/home-manager";

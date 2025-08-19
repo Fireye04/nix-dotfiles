@@ -113,6 +113,7 @@
 		(import ./zen.nix {inherit config pkgs inputs;})
 		(import ./kitty.nix {inherit config pkgs;})
 		(import ./mako.nix {inherit config pkgs;})
+		(import ./slicer.nix {inherit pkgs inputs;})
 	];
 
 	home.pointerCursor = {
@@ -149,7 +150,7 @@
 
 	home.file = {
 		".gitconfig-work" = {
-			text = ''							
+			text = ''					
 				[user]
 					email = kkoehler@lsst.org
 					name = Kai Koehler'';
