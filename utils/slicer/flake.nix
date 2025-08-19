@@ -138,4 +138,4 @@ in
 		  # Put the desktop icon file in the right place.
 		  mkdir -p $out/share/applications
 		  cp ${desktopItem}/share/applications/* $out/share/applications/
-	''
+	
