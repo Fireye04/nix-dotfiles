@@ -27,6 +27,11 @@
 
 		clipboard.providers.wl-copy.enable = true;
 
+		diagnostic.settings = {
+			virtual_lines = true;
+			virtual_text = false;
+		};
+
 		plugins = {
 			lualine.enable = true;
 			gitsigns.enable = true;
@@ -55,6 +60,7 @@
 			telescope.enable = true;
 			mini-pairs.enable = true;
 			lspconfig.enable = true;
+			lsp-lines.enable = true;
 			conform-nvim = {
 				enable = true;
 				settings = {
@@ -100,6 +106,11 @@
 			{
 				action = "<cmd>nohl<CR>";
 				key = "<leader>q";
+			}
+			{
+				action.__raw = ''require("lsp_lines").toggle'';
+				key = "<Leader>l";
+				options.desc = "Toggle lsp_lines";
 			}
 		];
 	};
