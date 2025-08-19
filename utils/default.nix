@@ -1,4 +1,5 @@
 {lib, ...}: let
+	pkgs = import <nixpkgs> {};
 	self = with self; {
 		callPackage = lib.callPackageWith (self // pkgs);
 
