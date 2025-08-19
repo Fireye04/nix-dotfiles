@@ -44,13 +44,12 @@
 			f = import path;
 		in
 			f ((builtins.intersectAttrs (builtins.functionArgs f) allPkgs) // overrides);
-		pkgs = with import nixpkgs {
-			inherit system;
-			config.allowUnfree = true;
-			overlays = [niri.overlays.niri];
-		}; {
-			nirius = callPackage ./utils/nirius.nix {};
-		};
+		pkgs =
+			import nixpkgs {
+				inherit system;
+				config.allowUnfree = true;
+				overlays = [niri.overlays.niri];
+			};
 	in {
 		nixosConfigurations = {
 			nixlaptop =
@@ -60,6 +59,7 @@
 					specialArgs = {inherit inputs;};
 					modules = [
 						./root
+						./utils
 						niri.nixosModules.niri
 						nixvim.nixosModules.nixvim
 						home-manager.nixosModules.home-manager
