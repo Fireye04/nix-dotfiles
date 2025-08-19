@@ -39,12 +39,18 @@
 		...
 	} @ inputs: let
 		system = "x86_64-linux";
-		pkgs =
-			import nixpkgs {
-				inherit system;
-				config.allowUnfree = true;
-				overlays = [niri.overlays.niri];
-			};
+		allPkgs = nixpkgs;
+		callPackage = path: overrides: let
+			f = import path;
+		in
+			f ((builtins.intersectAttrs (builtins.functionArgs f) allPkgs) // overrides);
+		pkgs = with import nixpkgs {
+			inherit system;
+			config.allowUnfree = true;
+			overlays = [niri.overlays.niri];
+		}; {
+			nirius = callPackage ./nirius.nix {};
+		};
 	in {
 		nixosConfigurations = {
 			nixlaptop =
