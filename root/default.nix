@@ -89,10 +89,6 @@
 
 	programs.nix-ld = {
 		enable = true;
-		libraries =
-			options.programs.nix-ld.libraries.default
-			++ (with pkgs; [
-				]);
 	};
 	programs.steam.enable = true;
 	# Some programs need SUID wrappers, can be configured further or are
