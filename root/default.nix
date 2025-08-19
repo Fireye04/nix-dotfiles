@@ -121,7 +121,8 @@
 					spr
 					nspr
 					libsForQt5.qt5.qtmultimedia
-					# qttools5-dev
+					libsForQt5.qt5.qtwayland
+					libsForQt5.qt5.qttools
 					# libqt5xmlpatterns5-dev
 					# libqt5svg5-dev
 					# qtwebengine5-dev
