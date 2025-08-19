@@ -82,7 +82,7 @@
 					};
 				};
 			};
-			plugins.cmp = {
+			cmp = {
 				enable = true;
 				autoEnableSources = true;
 			};
