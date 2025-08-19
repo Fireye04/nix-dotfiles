@@ -119,6 +119,14 @@
 					krb5
 					spr
 					nspr
+					qibsForQt5.qt5.qtmultimedia
+					qttools5-dev
+					libqt5xmlpatterns5-dev
+					libqt5svg5-dev
+					qtwebengine5-dev
+					qtscript5-dev
+					qtbase5-private-dev
+					libqt5x11extras5-dev
 				]);
 	};
 	programs.steam.enable = true;
