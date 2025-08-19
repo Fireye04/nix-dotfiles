@@ -29,6 +29,10 @@
 		"Xft.dpi" = 172;
 	};
 
+	nixpkgs.config.permittedInsecurePackages = [
+		"libsoup-2.74.3"
+	];
+
 	# Packages that should be installed to the user profile.
 	home.packages = with pkgs; [
 		# here is some command line tools I use frequently
@@ -104,10 +108,6 @@
 		powertop
 	];
 
-	nixpkgs.config.permittedInsecurePackages = [
-		"libsoup-2.74.3"
-	];
-
 	imports = [
 		(import ./niri {inherit config pkgs;})
 		(import ./zsh {inherit lib config pkgs;})
@@ -154,7 +154,7 @@
 
 	home.file = {
 		".gitconfig-work" = {
-			text = ''				
+			text = ''						
 				[user]
 					email = kkoehler@lsst.org
 					name = Kai Koehler'';
