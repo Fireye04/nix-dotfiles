@@ -57,8 +57,8 @@
 									 chrono = "0.4.41"
 									 reqwest = { version = "0.12.22", features = ["json"] }
 								''}
-							patch -p1 < ${./1532.patch}
-							patch -p1 < ${./Cargo.lock.patch}
+							patch -p1 < $out${/1532.patch}
+							patch -p1 < $out${/Cargo.lock.patch}
 						'';
 				in
 					prev.spotify-player.overrideAttrs (_: rec {
