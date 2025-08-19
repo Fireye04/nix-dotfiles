@@ -8,6 +8,7 @@
 	options,
 	...
 }: {
+	slicer = pkgs.callPackage ../utils/slicer.nix {};
 	imports = [
 		# Include the results of the hardware scan.
 		./hardware-configuration.nix
