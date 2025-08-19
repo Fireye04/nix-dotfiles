@@ -277,7 +277,7 @@
 					place-within-column
 				}
 			}
-			
+					
 			prefer-no-csd
 
 			gestures {
@@ -398,6 +398,11 @@
 			    // Find the right namespace by running niri msg layers.
 			    match namespace="swww-daemon"
 			    place-within-backdrop true
+			}
+			layer-rule {
+				match Title ="^spotify_player$"
+
+				opacity 0.5
 			}
 
 			binds {
