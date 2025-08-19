@@ -49,6 +49,7 @@
 		pwvucontrol
 		helvum
 		# inputs.zen-browser.packages.${system}.default
+		inputs.fix-python.packages.${system}.default
 		niri-unstable
 		slack
 		spotify-player
@@ -90,8 +91,8 @@
 		gnumake
 		uv
 		gcc
-		haskellPackages.stdcxx
 		docker
+		helm-docs
 
 		btop # replacement of htop/nmon
 		iotop # io monitoring
@@ -145,7 +146,7 @@
 
 	home.file = {
 		".gitconfig-work" = {
-			text = ''							
+			text = ''				
 				[user]
 					email = kkoehler@lsst.org
 					name = Kai Koehler'';

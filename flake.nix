@@ -4,6 +4,7 @@
 	inputs = {
 		nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
 		niri.url = "github:sodiboo/niri-flake";
+		fix-python.url = "github:GuillaumeDesforges/fix-python";
 
 		home-manager = {
 			url = "github:nix-community/home-manager";
@@ -31,6 +32,7 @@
 		self,
 		nixpkgs,
 		niri,
+		fix-python,
 		home-manager,
 		zen-browser,
 		nixvim,
