@@ -104,6 +104,7 @@
 					xorg.libxcb
 					xorg.libXcursor
 					xorg.libXi
+					xorg.libXt
 					xorg.libXtst
 					xorg.xcbutil
 					libxkbcommon
@@ -120,16 +121,18 @@
 					krb5
 					spr
 					nspr
+					xbase
 					libsForQt5.qt3d
 					libsForQt5.qt5.qtmultimedia
 					libsForQt5.qt5.qtwayland
 					libsForQt5.qt5.qttools
-					# libqt5xmlpatterns5-dev
-					# libqt5svg5-dev
-					# qtwebengine5-dev
-					# qtscript5-dev
-					# qtbase5-private-dev
-					# libqt5x11extras5-dev
+					libsForQt5.qt5.xmlpatterns
+					libsForQt5.qt5.qtsvg
+					libsForQt5.qt5.qtwebengine
+					libsForQt5.qt5.qtwebengine
+					libsForQt5.qt5.qtscript
+					libsForQt5.qt5.qtbase
+					libsForQt5.qt5.qtx11extras
 				]);
 	};
 	programs.steam.enable = true;
