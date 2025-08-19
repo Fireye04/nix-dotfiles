@@ -49,7 +49,7 @@
 			config.allowUnfree = true;
 			overlays = [niri.overlays.niri];
 		}; {
-			nirius = callPackage ./nirius.nix {};
+			nirius = callPackage ./utils/nirius.nix {};
 		};
 	in {
 		nixosConfigurations = {
