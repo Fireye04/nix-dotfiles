@@ -121,7 +121,7 @@
 					krb5
 					spr
 					nspr
-					xbase
+					xcbutilxrm
 					libsForQt5.qt3d
 					libsForQt5.qt5.qtmultimedia
 					libsForQt5.qt5.qtwayland
