@@ -277,7 +277,7 @@
 					place-within-column
 				}
 			}
-			
+				
 			prefer-no-csd
 
 			gestures {
@@ -400,7 +400,7 @@
 			    place-within-backdrop true
 			}
 			window-rule {
-				match title="^spotify_player$"
+				match app-id=r#"^kitty$"# title="^spotify_player.*$"
 
 				opacity 0.7
 			}
