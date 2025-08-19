@@ -105,6 +105,7 @@
 					xorg.libXcursor
 					xorg.libXi
 					xorg.libXtst
+					xorg.xcbutil
 					libxkbcommon
 					dbus
 					freetype
