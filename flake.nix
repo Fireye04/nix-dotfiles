@@ -45,8 +45,9 @@
 			import nixpkgs {
 				inherit system;
 				config.allowUnfree = true;
-				overlays = [niri.overlays.niri];
-				slicer = pkgs.callPackage ../utils/slicer.nix {};
+				overlays = [
+					niri.overlays.niri
+				];
 			};
 	in {
 		nixosConfigurations = {
