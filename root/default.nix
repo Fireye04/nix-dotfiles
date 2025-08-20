@@ -93,6 +93,7 @@
 							with pkgs; [
 								pkg-config
 								ncurses
+								gcc15
 								# Feel free to add more packages here if needed.
 							]
 						);
