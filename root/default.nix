@@ -60,6 +60,8 @@
 	};
 
 	hardware.graphics.enable = true;
+	hardware.xone.enable = true;
+	hardware.xpadneo.enable = true;
 
 	# List packages installed in system profile. To search, run:
 	environment.systemPackages = with pkgs; [
