@@ -86,6 +86,27 @@
 				enable = true;
 				autoEnableSources = true;
 			};
+			cmp-nvim-lsp = {
+				enable = true;
+			};
+			cmp-dictionary = {
+				enable = true;
+			};
+			cmp-look = {
+				enable = true;
+			};
+			cmp-buffer = {
+				enable = true;
+			};
+			cmp-path = {
+				enable = true;
+			};
+			friendly-snippets = {
+				enable = true;
+			};
+			cmp-snippets = {
+				enable = true;
+			};
 		};
 
 		lsp = {
