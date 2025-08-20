@@ -112,6 +112,18 @@
 				key = "<leader>q";
 			}
 			{
+				action = "<cmd>Telescope live-grep<CR>";
+				key = "<leader>/";
+			}
+			{
+				action = "<cmd>Telescope<CR>";
+				key = "<leader><leader>";
+			}
+			{
+				action = "<cmd>Telescope fd<CR>";
+				key = "<leader>f";
+			}
+			{
 				action.__raw = ''require("lsp_lines").toggle'';
 				key = "<Leader>l";
 				options.desc = "Toggle lsp_lines";

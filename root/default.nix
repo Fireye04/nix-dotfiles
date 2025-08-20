@@ -71,6 +71,7 @@
 		alejandra
 		fd
 		gtk4
+		gcc15
 		canta-theme
 		cage
 		inputs.nix-alien.packages.${system}.default
