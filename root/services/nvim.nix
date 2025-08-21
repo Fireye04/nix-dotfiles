@@ -35,7 +35,10 @@
 		};
 
 		dependencies = {
-			godot.enable = true;
+			godot = {
+				enable = true;
+				package = pkgs.godot-mono;
+			};
 		};
 
 		plugins = {

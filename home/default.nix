@@ -65,7 +65,7 @@
 		rocketchat-desktop
 
 		godot-mono
-		godotpkgs.latest
+		# godotpkgs.latest
 
 		lutris
 		gamemode
@@ -153,7 +153,7 @@
 
 	home.file = {
 		".gitconfig-work" = {
-			text = ''				
+			text = ''							
 				[user]
 					email = kkoehler@lsst.org
 					name = Kai Koehler'';
