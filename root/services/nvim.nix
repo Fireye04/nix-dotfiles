@@ -65,6 +65,7 @@
 				};
 			};
 
+			# https://github.com/habamax/vim-godot/?tab=readme-ov-file#setup-neovim-as-an-external-editor-for-godot
 			godot = {
 				enable = true;
 				settings = {
@@ -81,7 +82,7 @@
 				enable = true;
 				settings = {
 					formatters_by_ft = {
-						# cs = { "clang_format" };
+						cs = ["clang_format"];
 						python = ["ruff_format"];
 						css = ["prettier"];
 						nix = ["alejandra"];
@@ -90,8 +91,9 @@
 						timeout_ms = 500;
 					};
 					formatters = {
-						# clang_format = {
-						# 	prepend_args = { "-style={BasedOnStyle: LLVM, IndentWidth: 4}", "--fallback-style=LLVM" },}
+						clang_format = {
+							command = "clang-format -style={BasedOnStyle: LLVM, IndentWidth: 4} --fallback-style=LLVM";
+						};
 						# prettier = {
 						# 	prepend_args = { "--use-tabs", "--tab-width", "4" },
 						# },
