@@ -66,6 +66,10 @@
 			};
 
 			godot = {
+				enable = true;
+				settings = {
+					executable = "godot-mono";
+				};
 			};
 
 			web-devicons.enable = true;
