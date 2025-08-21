@@ -20,6 +20,7 @@
 
 		globals = {
 			mapleader = " ";
+			clipboard = "wl-copy";
 		};
 
 		colorschemes.catppuccin.enable = true;
