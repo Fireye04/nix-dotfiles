@@ -75,7 +75,7 @@
 		canta-theme
 		cage
 		inputs.nix-alien.packages.${system}.default
-		(callPackage ../utils/nirius.nix {})
+		(callPackage ./utils/nirius.nix {})
 		(let
 			base = pkgs.appimageTools.defaultFhsEnvArgs;
 		in

@@ -101,12 +101,9 @@
 			cmp-path = {
 				enable = true;
 			};
-			friendly-snippets = {
-				enable = true;
-			};
-			cmp-snippets = {
-				enable = true;
-			};
+			# friendly-snippets = {
+			# 	enable = true;
+			# };
 		};
 
 		lsp = {
