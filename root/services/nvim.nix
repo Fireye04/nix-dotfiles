@@ -15,6 +15,7 @@
 			expandtab = false;
 			number = true;
 			relativenumber = false;
+			clipboard = ["unnamedplus"];
 		};
 
 		globals = {
