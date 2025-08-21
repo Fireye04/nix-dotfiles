@@ -36,6 +36,7 @@
 		glib
 		gsettings-desktop-schemas
 		dotnetCorePackages.sdk_9_0_1xx-bin
+		rocmPackages.llvm.clang-unwrapped
 
 		hyfetch
 		ranger
@@ -154,7 +155,7 @@
 
 	home.file = {
 		".gitconfig-work" = {
-			text = ''					
+			text = ''				
 				[user]
 					email = kkoehler@lsst.org
 					name = Kai Koehler'';
