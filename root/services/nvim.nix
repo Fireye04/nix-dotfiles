@@ -34,6 +34,10 @@
 			virtual_text = false;
 		};
 
+		dependencies = {
+			godot.enable = true;
+		};
+
 		plugins = {
 			lualine.enable = true;
 			gitsigns.enable = true;
@@ -56,6 +60,9 @@
 					change = "cs";
 					change_line = "cS";
 				};
+			};
+
+			godot = {
 			};
 
 			web-devicons.enable = true;
@@ -129,6 +136,8 @@
 			servers = {
 				nixd.enable = true;
 				ruff.enable = true;
+				gdscript.enable = true;
+				gdshader_lsp.enable = true;
 			};
 		};
 
