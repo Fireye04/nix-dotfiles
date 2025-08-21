@@ -147,6 +147,7 @@
 				ruff.enable = true;
 				gdscript.enable = true;
 				gdshader_lsp.enable = true;
+				csharp_ls.enable = true;
 			};
 		};
 
@@ -160,7 +161,7 @@
 				key = "<leader>q";
 			}
 			{
-				action = "<cmd>Telescope live-grep<CR>";
+				action = "<cmd>Telescope live_grep<CR>";
 				key = "<leader>/";
 			}
 			{
