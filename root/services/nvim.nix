@@ -84,16 +84,27 @@
 					};
 				};
 			};
+			friendly-snippets = {
+				enable = true;
+			};
 			cmp = {
 				enable = true;
 				autoEnableSources = true;
 				settings = {
+					preselect = "cmp.PreselectMode.Item";
 					sources = [
 						{name = "nvim_lsp";}
 						{name = "path";}
 						{name = "buffer";}
 						{name = "dictionary";}
+						{name = "luasnip";}
 					];
+					snippet.expand = ''
+						function(args)
+							require("luasnip.loaders.from_vscode").lazy_load()
+							require('luasnip').lsp_expand(args.body)
+						end
+					'';
 					mapping = {
 						"<C-Space>" = "cmp.mapping.complete()";
 						"<C-d>" = "cmp.mapping.scroll_docs(-4)";
@@ -105,24 +116,6 @@
 					};
 				};
 			};
-			# cmp-nvim-lsp = {
-			# 	enable = true;
-			# };
-			# cmp-dictionary = {
-			# 	enable = true;
-			# };
-			# cmp-look = {
-			# 	enable = true;
-			# };
-			# cmp-buffer = {
-			# 	enable = true;
-			# };
-			# cmp-path = {
-			# 	enable = true;
-			# };
-			# friendly-snippets = {
-			# 	enable = true;
-			# };
 		};
 
 		lsp = {
@@ -154,11 +147,11 @@
 			}
 			{
 				action = "<cmd>Telescope<CR>";
-				key = "<leader><leader>";
+				key = "<leader>t";
 			}
 			{
 				action = "<cmd>Telescope fd<CR>";
-				key = "<leader>f";
+				key = "<leader><leader>";
 			}
 			{
 				action.__raw = ''require("lsp_lines").toggle'';
