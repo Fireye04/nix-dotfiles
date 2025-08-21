@@ -85,22 +85,28 @@
 			cmp = {
 				enable = true;
 				autoEnableSources = true;
+				settings.sources = [
+					{name = "nvim_lsp";}
+					{name = "path";}
+					{name = "buffer";}
+					{name = "dictionary";}
+				];
 			};
-			cmp-nvim-lsp = {
-				enable = true;
-			};
-			cmp-dictionary = {
-				enable = true;
-			};
-			cmp-look = {
-				enable = true;
-			};
-			cmp-buffer = {
-				enable = true;
-			};
-			cmp-path = {
-				enable = true;
-			};
+			# cmp-nvim-lsp = {
+			# 	enable = true;
+			# };
+			# cmp-dictionary = {
+			# 	enable = true;
+			# };
+			# cmp-look = {
+			# 	enable = true;
+			# };
+			# cmp-buffer = {
+			# 	enable = true;
+			# };
+			# cmp-path = {
+			# 	enable = true;
+			# };
 			# friendly-snippets = {
 			# 	enable = true;
 			# };
