@@ -149,7 +149,10 @@
 				gdshader_lsp.enable = true;
 				# https://nix-community.github.io/nixvim/plugins/lsp/servers/omnisharp/index.html#omnisharp
 				# https://gist.github.com/squk/055683bb83d4dbbac418582129f0e3b5
-				omnisharp.enable = true;
+				omnisharp = {
+					enable = true;
+					package = pkgs.omnisharp-roslyn;
+				};
 			};
 		};
 
