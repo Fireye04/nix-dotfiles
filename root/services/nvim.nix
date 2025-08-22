@@ -92,7 +92,7 @@
 					};
 					formatters = {
 						clang_format = {
-							command = "clang-format -style={BasedOnStyle: LLVM, IndentWidth: 4} --fallback-style=LLVM";
+							prepend_args = ["-style={BasedOnStyle: LLVM, IndentWidth: 4}" "--fallback-style=LLVM"];
 						};
 						# prettier = {
 						# 	prepend_args = { "--use-tabs", "--tab-width", "4" },
