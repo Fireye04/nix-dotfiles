@@ -147,8 +147,11 @@
 				ruff.enable = true;
 				gdscript.enable = true;
 				# gdshader_lsp.enable = true;
+
 				# https://nix-community.github.io/nixvim/plugins/lsp/servers/omnisharp/index.html#omnisharp
 				# https://gist.github.com/squk/055683bb83d4dbbac418582129f0e3b5
+				# IF ITS ALL RED:
+				# https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/compiler-messages/assembly-references#missing-references
 				omnisharp = {
 					settings = {
 						enableEditorConfigSupport = true;
