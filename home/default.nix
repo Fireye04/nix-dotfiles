@@ -38,7 +38,6 @@
 		dotnetCorePackages.sdk_9_0_1xx-bin
 		rocmPackages.llvm.clang-unwrapped
 		omnisharp-roslyn
-		csharp-ls
 		rustup
 
 		hyfetch
@@ -158,7 +157,7 @@
 
 	home.file = {
 		".gitconfig-work" = {
-			text = ''					
+			text = ''				
 				[user]
 					email = kkoehler@lsst.org
 					name = Kai Koehler'';
