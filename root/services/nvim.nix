@@ -157,7 +157,10 @@
 				# 	enable = true;
 				# 	package = pkgs.omnisharp-roslyn;
 				# };
-				csharp-ls.enable = true;
+				csharp-ls = {
+					enable = true;
+					activate = true;
+				};
 			};
 		};
 
