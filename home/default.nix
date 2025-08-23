@@ -158,15 +158,11 @@
 
 	home.file = {
 		".gitconfig-work" = {
-			text = ''				
+			text = ''							
 				[user]
 					email = kkoehler@lsst.org
 					name = Kai Koehler'';
 		};
-	};
-
-	xdg.portal = {
-		enable = true;
 	};
 
 	# This value determines the home Manager release that your
