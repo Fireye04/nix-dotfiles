@@ -133,7 +133,10 @@
 				};
 			};
 			lsp.servers = {
-				csharp-ls.enable = true;
+				csharp-ls = {
+					enable = true;
+					activate = true;
+				};
 			};
 		};
 
@@ -160,10 +163,10 @@
 				# 	enable = true;
 				# 	package = pkgs.omnisharp-roslyn;
 				# };
-				csharp-ls = {
-					enable = true;
-					activate = true;
-				};
+				# csharp-ls = {
+				# 	enable = true;
+				# 	activate = true;
+				# };
 			};
 		};
 
