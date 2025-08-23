@@ -39,6 +39,10 @@
 		rocmPackages.llvm.clang-unwrapped
 		omnisharp-roslyn
 		rustup
+		xdg-desktop-portal
+		xdg-desktop-portal-gtk
+		xdg-desktop-portal-gnome
+		libgnome-keyring
 
 		hyfetch
 		ranger
@@ -158,7 +162,7 @@
 
 	home.file = {
 		".gitconfig-work" = {
-			text = ''							
+			text = ''				
 				[user]
 					email = kkoehler@lsst.org
 					name = Kai Koehler'';
