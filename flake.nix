@@ -7,7 +7,6 @@
 		fix-python.url = "github:GuillaumeDesforges/fix-python";
 		nix-alien.url = "github:thiagokokada/nix-alien";
 		godot.url = "github:florianvazelle/godot-overlay";
-		nixgl.url = "github:nix-community/nixGL";
 
 		home-manager = {
 			url = "github:nix-community/home-manager";
@@ -38,7 +37,6 @@
 		fix-python,
 		nix-alien,
 		godot,
-		nixgl,
 		home-manager,
 		zen-browser,
 		nixvim,
@@ -52,7 +50,6 @@
 				overlays = [
 					niri.overlays.niri
 					godot.overlays.default
-					nixgl.overlay
 				];
 			};
 	in {

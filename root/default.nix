@@ -75,7 +75,6 @@
 		gcc
 		canta-theme
 		cage
-		nixgl.auto.nixGLDefault
 		inputs.nix-alien.packages.${system}.default
 		(callPackage ./utils/nirius.nix {})
 		(let
