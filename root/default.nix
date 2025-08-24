@@ -66,6 +66,7 @@
 	# List packages installed in system profile. To search, run:
 	environment.systemPackages = with pkgs; [
 		mesa
+		mesa-gl-headers
 		gh
 		os-prober
 		arch-install-scripts
