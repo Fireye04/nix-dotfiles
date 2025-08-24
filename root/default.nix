@@ -66,7 +66,7 @@
 	# List packages installed in system profile. To search, run:
 	environment.systemPackages = with pkgs; [
 		mesa
-		egl-wayland
+		libGL
 		gh
 		os-prober
 		arch-install-scripts
