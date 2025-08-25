@@ -145,6 +145,7 @@
 			servers = {
 				nixd.enable = true;
 				ruff.enable = true;
+				rust_analyzer.enable = true;
 				gdscript.enable = true;
 				# gdshader_lsp.enable = true;
 
