@@ -84,6 +84,7 @@
 					formatters_by_ft = {
 						cs = ["clang_format"];
 						python = ["ruff_format"];
+						rust = ["rustfmt"];
 						css = ["prettier"];
 						nix = ["alejandra"];
 					};
