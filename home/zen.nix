@@ -22,6 +22,8 @@
 		policies = {
 			Preferences = {
 				"browser.aboutConfig.showWarning" = true;
+				# Zen dark theme is broken if this is unset
+				"ui.systemUsesDarkTheme" = 1;
 			};
 		};
 	};

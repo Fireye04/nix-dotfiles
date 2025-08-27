@@ -161,9 +161,16 @@
 		};
 	};
 
+	programs.gh = {
+		enable = true;
+		gitCredentialHelper = {
+			enable = true;
+		};
+	};
+
 	home.file = {
 		".gitconfig-work" = {
-			text = ''							
+			text = ''					
 				[user]
 					email = kkoehler@lsst.org
 					name = Kai Koehler'';
