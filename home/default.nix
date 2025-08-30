@@ -73,6 +73,7 @@
 		zoom-us
 		rocketchat-desktop
 		obsidian
+		gamemode
 
 		godot-mono
 		# godotpkgs.latest
@@ -170,7 +171,7 @@
 
 	home.file = {
 		".gitconfig-work" = {
-			text = ''					
+			text = ''				
 				[user]
 					email = kkoehler@lsst.org
 					name = Kai Koehler'';
