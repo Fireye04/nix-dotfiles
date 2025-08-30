@@ -76,6 +76,7 @@
 		gamemode
 
 		godot-mono
+		godotPackages.export-templates-mono-bin
 		# godotpkgs.latest
 
 		lutris
@@ -171,7 +172,7 @@
 
 	home.file = {
 		".gitconfig-work" = {
-			text = ''				
+			text = ''							
 				[user]
 					email = kkoehler@lsst.org
 					name = Kai Koehler'';
