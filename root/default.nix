@@ -113,6 +113,7 @@
 		fira-code-symbols
 		nerd-fonts.jetbrains-mono
 		nerd-fonts.noto
+		pixel-code
 	];
 	virtualisation.docker.enable = true;
 
