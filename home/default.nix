@@ -75,6 +75,7 @@
 		obsidian
 		gamemode
 		inkscape
+		hyprpicker
 
 		godot-mono
 		godotPackages.export-template-mono
@@ -174,7 +175,7 @@
 
 	home.file = {
 		".gitconfig-work" = {
-			text = ''					
+			text = ''				
 				[user]
 					email = kkoehler@lsst.org
 					name = Kai Koehler'';
