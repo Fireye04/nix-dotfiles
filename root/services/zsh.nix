@@ -15,6 +15,7 @@
 			gc = "git commit";
 			gp = "git push";
 			gst = "git status";
+			arch = "docker run -it archlinux:latest sh";
 		};
 	};
 }
