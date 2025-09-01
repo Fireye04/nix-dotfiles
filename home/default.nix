@@ -77,6 +77,12 @@
 		inkscape
 		hyprpicker
 
+		#audio
+		ardour
+		surge-XT
+		x42-avldrums
+		guitarix
+
 		godot-mono
 		godotPackages.export-template-mono
 
@@ -175,7 +181,7 @@
 
 	home.file = {
 		".gitconfig-work" = {
-			text = ''				
+			text = ''					
 				[user]
 					email = kkoehler@lsst.org
 					name = Kai Koehler'';
