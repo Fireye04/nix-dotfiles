@@ -102,6 +102,7 @@
 					extraOutputsToInstall = ["dev"];
 				}))
 		bibata-cursors
+		xwayland-run
 	];
 
 	fonts.packages = with pkgs; [
