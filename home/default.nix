@@ -59,7 +59,7 @@
 		helvum
 		# inputs.zen-browser.packages.${system}.default
 		inputs.fix-python.packages.${system}.default
-		quickshell.packages.${system}.default
+		inputs.quickshell.packages.${system}.default
 		niri-unstable
 		slack
 		spotify-player
@@ -183,7 +183,7 @@
 
 	home.file = {
 		".gitconfig-work" = {
-			text = ''						
+			text = ''					
 				[user]
 					email = kkoehler@lsst.org
 					name = Kai Koehler'';
