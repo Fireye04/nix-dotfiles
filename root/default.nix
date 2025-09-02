@@ -76,6 +76,7 @@
 		cage
 		inputs.nix-alien.packages.${system}.default
 		(callPackage ./utils/nirius.nix {})
+		(callPackage ./services/mips {})
 		(let
 			base = pkgs.appimageTools.defaultFhsEnvArgs;
 		in
