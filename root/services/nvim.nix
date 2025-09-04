@@ -133,8 +133,6 @@
 					};
 				};
 			};
-
-			java.enable = true;
 		};
 
 		lsp = {
@@ -151,6 +149,8 @@
 				rust_analyzer.enable = true;
 				qmlls.enable = true;
 				gdscript.enable = true;
+				jtdls.enable = true;
+				clangd.enable = true;
 				# gdshader_lsp.enable = true;
 
 				# https://nix-community.github.io/nixvim/plugins/lsp/servers/omnisharp/index.html#omnisharp
