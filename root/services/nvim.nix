@@ -133,6 +133,7 @@
 					};
 				};
 			};
+			jtdls.enable = true;
 			dap = {
 				enable = true;
 			};
@@ -155,7 +156,6 @@
 				rust_analyzer.enable = true;
 				qmlls.enable = true;
 				gdscript.enable = true;
-				jtdls.enable = true;
 				clangd.enable = true;
 				# gdshader_lsp.enable = true;
 
