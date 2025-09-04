@@ -104,6 +104,7 @@
 				}))
 		bibata-cursors
 		xwayland-run
+		vscode-extensions.vscjava.vscode-java-debug
 	];
 
 	fonts.packages = with pkgs; [

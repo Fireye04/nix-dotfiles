@@ -133,7 +133,7 @@
 					};
 				};
 			};
-			jtdls.enable = true;
+			jdtls.enable = true;
 			dap = {
 				enable = true;
 			};
