@@ -100,7 +100,6 @@
 						# },
 					};
 				};
-				java.enable = true;
 			};
 			friendly-snippets = {
 				enable = true;
@@ -134,6 +133,8 @@
 					};
 				};
 			};
+
+			java.enable = true;
 		};
 
 		lsp = {
