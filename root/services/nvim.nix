@@ -136,7 +136,7 @@
 			jdtls = {
 				enable = true;
 				settings = {
-					cmd = [];
+					cmd = ["jdtls"];
 				};
 			};
 			dap = {
