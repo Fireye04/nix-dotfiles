@@ -133,7 +133,12 @@
 					};
 				};
 			};
-			jdtls.enable = true;
+			jdtls = {
+				enable = true;
+				settings = {
+					cmd = [];
+				};
+			};
 			dap = {
 				enable = true;
 			};
