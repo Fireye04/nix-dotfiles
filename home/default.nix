@@ -78,7 +78,7 @@
 		inkscape
 		hyprpicker
 		thunderbird
-		cinny-desktop
+		cinny
 
 		#audio
 		ardour
@@ -184,7 +184,7 @@
 
 	home.file = {
 		".gitconfig-work" = {
-			text = ''					
+			text = ''				
 				[user]
 					email = kkoehler@lsst.org
 					name = Kai Koehler'';
