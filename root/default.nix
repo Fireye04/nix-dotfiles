@@ -72,7 +72,7 @@
 		fd
 		gtk4
 		gcc
-		jdt
+		jdk
 		canta-theme
 		cage
 		inputs.nix-alien.packages.${system}.default
