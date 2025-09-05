@@ -87,6 +87,7 @@
 						rust = ["rustfmt"];
 						css = ["prettier"];
 						nix = ["alejandra"];
+						java = ["google-java-format"];
 					};
 					format_on_save = {
 						timeout_ms = 500;

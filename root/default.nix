@@ -105,6 +105,7 @@
 				}))
 		bibata-cursors
 		xwayland-run
+		google-java-format
 		vscode-extensions.vscjava.vscode-java-debug
 	];
 
