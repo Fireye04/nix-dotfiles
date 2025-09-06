@@ -138,13 +138,7 @@
 				enable = true;
 				settings = {
 					cmd = ["jdtls"];
-					init_options = ''										
-						local_bundles = {
-						  vim.fn.glob(${pkgs.vscode-extensions.vscjava.vscode-java-debug}, 1)
-						}
-						config['init_options'] = {
-						  bundles = bundles
-						}'';
+					init_options = {bundles = ["${pkgs.vscode-extensions.vscjava.vscode-java-debug}"];};
 					root_dir = {__raw = "require('jdtls.setup').find_root({'.git', 'flake.nix'})";};
 				};
 			};
