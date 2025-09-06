@@ -138,6 +138,8 @@
 				enable = true;
 				settings = {
 					cmd = ["jdtls"];
+					init_options = {};
+					root_dir = {__raw = "require('jdtls.setup').find_root({'.git', 'flake.nix'})";};
 				};
 			};
 			dap = {
