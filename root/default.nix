@@ -106,7 +106,9 @@
 		bibata-cursors
 		xwayland-run
 		google-java-format
+		jdt-language-server
 		vscode-extensions.vscjava.vscode-java-debug
+		vscode-extensions.vscjava.vscode-java-test
 	];
 
 	fonts.packages = with pkgs; [
