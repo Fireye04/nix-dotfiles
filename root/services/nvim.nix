@@ -139,9 +139,6 @@
 				settings = {
 					cmd = [
 						"jdtls"
-						{
-							__raw = "'--jvm-arg='..vim.api.nvim_eval('g:NVIM_LOMBOK')";
-						}
 					];
 					init_options = {bundles = ["${pkgs.vscode-extensions.vscjava.vscode-java-debug}"];};
 					root_dir = {__raw = "require('jdtls.setup').find_root({'.git', 'flake.nix'})";};
