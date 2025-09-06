@@ -146,6 +146,13 @@
 			};
 			dap = {
 				enable = true;
+				configurations = {
+					java = {
+						type = "jdtls";
+						request = "launch";
+						name = "Launch jdtls";
+					};
+				};
 			};
 			dap-ui = {
 				enable = true;
