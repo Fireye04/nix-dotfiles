@@ -134,6 +134,31 @@
 					};
 				};
 			};
+			dap = {
+				enable = true;
+				adapters = {
+					executables = {
+						# jdtls = ;
+					};
+				};
+
+				configurations = {
+					java = [
+						# {
+						# 	type = "jdtls";
+						# 	request = "launch";
+						# 	name = "Launch jdtls";
+						# }
+					];
+				};
+			};
+
+			dap-ui = {
+				enable = true;
+			};
+			dap-virtual-text = {
+				enable = true;
+			};
 			jdtls = {
 				enable = true;
 				settings = {
@@ -143,24 +168,6 @@
 					init_options = {bundles = ["${pkgs.vscode-extensions.vscjava.vscode-java-debug}"];};
 					root_dir = {__raw = "require('jdtls.setup').find_root({'.git', 'flake.nix'})";};
 				};
-			};
-			dap = {
-				enable = true;
-				configurations = {
-					java = [
-						{
-							type = "jdtls";
-							request = "launch";
-							name = "Launch jdtls";
-						}
-					];
-				};
-			};
-			dap-ui = {
-				enable = true;
-			};
-			dap-virtual-text = {
-				enable = true;
 			};
 		};
 
