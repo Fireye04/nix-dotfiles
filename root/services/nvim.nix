@@ -153,9 +153,8 @@
 					java = [
 						{
 							type = "java";
-							request = "launch";
-							name = "Launch file";
-							program = "$\{file}";
+							request = "connect";
+							name = "Connect";
 						}
 					];
 				};
