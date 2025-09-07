@@ -151,11 +151,12 @@
 
 				configurations = {
 					java = [
-						# {
-						# 	type = "jdtls";
-						# 	request = "launch";
-						# 	name = "Launch jdtls";
-						# }
+						{
+							type = "java";
+							request = "launch";
+							name = "Launch file";
+							program = "$\{file}";
+						}
 					];
 				};
 			};
