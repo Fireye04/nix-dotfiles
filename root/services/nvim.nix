@@ -138,14 +138,10 @@
 				enable = true;
 				adapters = {
 					servers = {
-						java = ''
-							function(callback, config)
-							  execute_command({command = 'vscode.java.startDebugSession'}, function(err0, port)
-							    assert(not err0, vim.inspect(err0))
-							    callback({ type = 'server'; host = '127.0.0.1'; port = port; })
-							  end)
-							end
-						'';
+						java = ''													
+							require("jdtls.setup").add_commands()
+							require("dap.ext.vscode").load_launchjs()
+							require("jdtls.dap").setup_dap_main_class_configs()'';
 					};
 				};
 
