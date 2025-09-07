@@ -138,7 +138,7 @@
 				enable = true;
 				adapters = {
 					executables = {
-						jdtls = ''jdtls.dap.setup_dap()'';
+						jdtls = ''require("jdtls").dap.setup_dap()'';
 					};
 				};
 
