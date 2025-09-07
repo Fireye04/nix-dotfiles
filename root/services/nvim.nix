@@ -153,7 +153,7 @@
 					java = [
 						{
 							type = "java";
-							request = "connect";
+							request = "attatch";
 							name = "Connect";
 						}
 					];
