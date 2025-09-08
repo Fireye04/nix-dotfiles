@@ -135,24 +135,24 @@
 				};
 			};
 			dap = {
-				enable = true;
+				# enable = true;
 				adapters = {
 					servers = {
-						java = ''													
-							require("jdtls.setup").add_commands()
-							require("dap.ext.vscode").load_launchjs()
-							require("jdtls.dap").setup_dap_main_class_configs()'';
+						# java = ''
+						# 	require("jdtls.setup").add_commands()
+						# 	require("dap.ext.vscode").load_launchjs()
+						# 	require("jdtls.dap").setup_dap_main_class_configs()'';
 					};
 				};
 
 				configurations = {
-					java = [
-						{
-							type = "java";
-							request = "attach";
-							name = "Connect";
-						}
-					];
+					# java = [
+					# 	{
+					# 		type = "java";
+					# 		request = "attach";
+					# 		name = "Connect";
+					# 	}
+					# ];
 				};
 			};
 
