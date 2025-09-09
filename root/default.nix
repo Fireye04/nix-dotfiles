@@ -104,7 +104,7 @@
 				}))
 		bibata-cursors
 		xwayland-run
-		google-java-format
+		astyle
 		jdt-language-server
 		vscode-extensions.vscjava.vscode-java-debug
 		vscode-extensions.vscjava.vscode-java-test
