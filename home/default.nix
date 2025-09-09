@@ -129,6 +129,8 @@
 		iotop # io monitoring
 		iftop # network monitoring
 		powertop
+		brightnessctl
+		playerctl
 	];
 
 	imports = [
@@ -184,7 +186,7 @@
 
 	home.file = {
 		".gitconfig-work" = {
-			text = ''				
+			text = ''						
 				[user]
 					email = kkoehler@lsst.org
 					name = Kai Koehler'';
