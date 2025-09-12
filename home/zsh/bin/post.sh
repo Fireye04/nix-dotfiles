@@ -1,5 +1,3 @@
-#!/bin/zsh
-
 cd ~/Projects/websites/coffee
 
 hugo new "changelog/new-content.md"
