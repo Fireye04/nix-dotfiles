@@ -1,5 +1,3 @@
-cd ~/Projects/websites/coffee
-
 hugo new "changelog/new-content.md"
 if [ -z "$2"];then
 	hugo new "blog/$1"

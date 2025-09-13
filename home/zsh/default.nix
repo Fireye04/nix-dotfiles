@@ -25,7 +25,7 @@
 		history.size = 10000;
 		shellAliases = {
 			ginit = "nvim . --listen ./godothost";
-			post = ". ~/.config/zsh/bin/post.sh";
+			post = "cd ~/Projects/websites/coffee;. ~/.config/zsh/bin/post.sh";
 		};
 		plugins = [
 			{
@@ -50,7 +50,7 @@
 		};
 		initContent = let
 			zshConfigEarlyInit =
-				lib.mkOrder 500 ''						
+				lib.mkOrder 500 ''					
 					awk '{if ($1 > 2*24*3600)
 					print "PC has been running for over 2 days, might wanna restart"}' /proc/uptime
 					if [[ -r "$\{XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-$\{(%):-%n}.zsh" ]]; then
