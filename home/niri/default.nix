@@ -120,7 +120,9 @@
 			      // If the position is unset or results in an overlap, the output is instead placed
 			      // automatically.
 			      position x=0 y=0
-		  	
+					variable-refresh-rate
+
+			
 			  }
 
 
@@ -278,7 +280,7 @@
 			  		place-within-column
 			  	}
 			  }
-				
+								
 			  prefer-no-csd
 
 			  gestures {
