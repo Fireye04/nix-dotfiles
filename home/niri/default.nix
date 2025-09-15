@@ -121,10 +121,14 @@
 			      // automatically.
 			      position x=0 y=0
 					variable-refresh-rate
-
 			
 			  }
-
+			  //Testing
+				output "winit" {
+					hot-corners {
+						bottom-left
+					}
+				}
 
 
 			  // Settings that influence how windows are positioned and sized.
@@ -280,7 +284,7 @@
 			  		place-within-column
 			  	}
 			  }
-								
+					
 			  prefer-no-csd
 
 			  gestures {
@@ -301,11 +305,13 @@
 			  spawn-at-startup "copyq" "--start-server"
 			  spawn-at-startup "gsettings" "set" "org.gnome.desktop.interface" "cursor-theme" "'Bibata-MC'"
 			  spawn-at-startup "xwayland-satellite"
-			  spawn-at-startup "kitty" "spotify_player"
 			  spawn-at-startup "tuned-adm" "profile" "balanced"
 			  //spawn-at-startup "wbg" "/usr/share/backgrounds/waterfall.png"
 			  spawn-at-startup "sleep" "1;" "swww" "img" "/etc/nixos/wallpapers/green_cabin.jpg" "--transition-type" "center"
 			  spawn-at-startup "~/.config/swww/bin/randomize_multi.sh" "/etc/nixos/wallpapers"
+			  spawn-at-startup "kitty" "spotify_player"
+			  spawn-at-startup "thunderbird"
+
 			  environment {
 			      DISPLAY ":0"
 			  }
