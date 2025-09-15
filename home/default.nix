@@ -118,7 +118,7 @@
 
 		# productivity
 		hugo # static site generator
-		python313Full
+		python313
 		ruff
 		gnumake
 		uv
@@ -187,7 +187,7 @@
 
 	home.file = {
 		".gitconfig-work" = {
-			text = ''					
+			text = ''				
 				[user]
 					email = kkoehler@lsst.org
 					name = Kai Koehler'';
