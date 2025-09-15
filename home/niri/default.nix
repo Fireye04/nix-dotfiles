@@ -121,13 +121,13 @@
 			      // automatically.
 			      position x=0 y=0
 					variable-refresh-rate
-					
+				
 			  }
 			  //Testing
 				output "winit" {
-					hot-corners {
-						bottom-left
-					}
+					//hot-corners {
+					//	bottom-left
+					//}
 				}
 
 
@@ -284,12 +284,12 @@
 			  		place-within-column
 			  	}
 			  }
-				
+			
 			  prefer-no-csd
 
 			  gestures {
 			  	hot-corners {
-				  bottom-left
+				  //bottom-left
 			      }
 			  }
 
