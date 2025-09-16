@@ -59,6 +59,9 @@
 				overlays = [
 					niri.overlays.niri
 					godot.overlays.default
+					(self: super: {
+							asm-lsp = pkgs.callPackage ./utils/asm-lsp.nix {};
+						})
 				];
 			};
 	in {
