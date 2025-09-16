@@ -6,7 +6,6 @@
 		niri.url = "github:sodiboo/niri-flake";
 		fix-python.url = "github:GuillaumeDesforges/fix-python";
 		nix-alien.url = "github:thiagokokada/nix-alien";
-		godot.url = "github:florianvazelle/godot-overlay";
 
 		home-manager = {
 			url = "github:nix-community/home-manager";
@@ -44,7 +43,6 @@
 		niri,
 		fix-python,
 		nix-alien,
-		godot,
 		home-manager,
 		zen-browser,
 		nixvim,
@@ -58,7 +56,6 @@
 				config.allowUnfree = true;
 				overlays = [
 					niri.overlays.niri
-					godot.overlays.default
 					(self: super: {
 							asm-lsp = pkgs.callPackage ./root/utils/asm-lsp.nix {};
 						})
