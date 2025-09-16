@@ -311,6 +311,7 @@
 			  spawn-at-startup "~/.config/swww/bin/randomize_multi.sh" "/etc/nixos/wallpapers"
 			  spawn-at-startup "kitty" "spotify_player"
 			  spawn-at-startup "thunderbird"
+			  spawn-at-startup "kitty" "sudo -i"
 
 			  environment {
 			      DISPLAY ":0"
