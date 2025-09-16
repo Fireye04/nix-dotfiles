@@ -6,7 +6,7 @@
 	pkg-config,
 	openssl,
 }: let
-	pname = "asm-lsp-c";
+	pname = "asm-lsp";
 	version = "9df3f5178531c8f89114098ba52f1237bbfa6dd5";
 in
 	rustPlatform.buildRustPackage {
