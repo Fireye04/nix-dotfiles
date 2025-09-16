@@ -88,6 +88,7 @@
 						css = ["prettier"];
 						nix = ["alejandra"];
 						java = ["astyle"];
+						asm = ["asmfmt"];
 					};
 					format_on_save = {
 						timeout_ms = 500;

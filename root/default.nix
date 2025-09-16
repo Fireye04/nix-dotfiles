@@ -108,6 +108,7 @@
 		jdt-language-server
 		vscode-extensions.vscjava.vscode-java-debug
 		vscode-extensions.vscjava.vscode-java-test
+		asmfmt
 	];
 
 	fonts.packages = with pkgs; [
