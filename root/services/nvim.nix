@@ -191,7 +191,7 @@
 				clangd.enable = true;
 				asm_lsp = {
 					enable = true;
-					package = pkgs.asm-lsp-p;
+					package = pkgs.asm-lsp;
 				};
 				# gdshader_lsp.enable = true;
 
