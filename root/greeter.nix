@@ -4,9 +4,9 @@
 	...
 }: {
 	# Enable niri system wide so it shows up on the greeter session menu
-	programs.niri = {
-		enable = true;
-	};
+	# programs.niri = {
+	# 	enable = true;
+	# };
 	services.greetd = {
 		enable = true;
 	};
