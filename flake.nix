@@ -60,7 +60,7 @@
 					niri.overlays.niri
 					godot.overlays.default
 					(self: super: {
-							asm-lsp = pkgs.callPackage ./utils/asm-lsp.nix {};
+							asm-lsp = pkgs.callPackage ./root/utils/asm-lsp.nix {};
 						})
 				];
 			};
