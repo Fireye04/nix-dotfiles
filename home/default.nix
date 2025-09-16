@@ -92,7 +92,7 @@
 						fetchFromGitHub {
 							owner = "godotengine";
 							repo = "godot";
-							url = "876b290332ec6f2e6d173d08162a02aa7e6ca46d";
+							rev = "876b290332ec6f2e6d173d08162a02aa7e6ca46d";
 							hash = "";
 						};
 				}))
@@ -193,7 +193,7 @@
 
 	home.file = {
 		".gitconfig-work" = {
-			text = ''					
+			text = ''				
 				[user]
 					email = kkoehler@lsst.org
 					name = Kai Koehler'';
