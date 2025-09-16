@@ -18,6 +18,7 @@
 		(import ./services/zsh.nix {inherit config pkgs;})
 		(import ./services/tuned.nix {inherit config pkgs;})
 		(import ./services/nvim.nix {inherit config pkgs;})
+		(import ./niri {inherit config pkgs;})
 	];
 
 	# Use latest kernel.
