@@ -239,7 +239,7 @@
 			}
 		];
 	};
-	imports = [
-		(import ./mips/asm-format.nix {inherit config pkgs;})
-	];
+	# imports = [
+	# 	(import ./mips/asm-format.nix {inherit config pkgs;})
+	# ];
 }
