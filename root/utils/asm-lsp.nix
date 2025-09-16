@@ -17,7 +17,7 @@ in
 				owner = "bergercookie";
 				repo = "asm-lsp";
 				rev = "${version}";
-				hash = "";
+				hash = "sha256-PWlxqU+3bu/BGq5JFqgm3cYhasafOnMjxQ8fhWyGn8M=";
 			};
 
 		nativeBuildInputs = [pkg-config];
