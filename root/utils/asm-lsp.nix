@@ -24,7 +24,7 @@ in
 
 		buildInputs = lib.optionals (!stdenv.hostPlatform.isDarwin) [openssl];
 
-		cargoHash = "";
+		cargoHash = "sha256-4GbKT8+TMf2o563blj8lnZTD7Lc+z9yW11TfxYzDSg4=";
 
 		# tests expect ~/.cache/asm-lsp to be writable
 		preCheck = ''
