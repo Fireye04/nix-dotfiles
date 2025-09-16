@@ -93,7 +93,7 @@
 							owner = "godotengine";
 							repo = "godot";
 							rev = "876b290332ec6f2e6d173d08162a02aa7e6ca46d";
-							hash = "";
+							hash = "sha256-JCIKhwBG43rahTPNEgMkxt6RUnXJXlzGJtNylvyrPmk=";
 						};
 				}))
 		godotPackages.export-template-mono
@@ -193,7 +193,7 @@
 
 	home.file = {
 		".gitconfig-work" = {
-			text = ''				
+			text = ''							
 				[user]
 					email = kkoehler@lsst.org
 					name = Kai Koehler'';
