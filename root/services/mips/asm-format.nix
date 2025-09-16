@@ -3,7 +3,7 @@
 	pkgs,
 }: {
 	programs.nixvim = {
-		extraCOnfigVim = ''
+		extraConfigVim = ''
 			if exists("b:did_indent")
 			  finish
 			endif
