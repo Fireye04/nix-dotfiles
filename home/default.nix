@@ -87,8 +87,15 @@
 		x42-avldrums
 		guitarix
 
-		(godot-mono.override
-			{src = "876b290332ec6f2e6d173d08162a02aa7e6ca46d";})
+		(godot-mono.overrideAttrs (finalAttrs: previousAttrs: {
+					src =
+						fetchFromGithub {
+							owner = "godotengine";
+							repo = "godot";
+							url = "876b290332ec6f2e6d173d08162a02aa7e6ca46d";
+							hash = "";
+						};
+				}))
 		godotPackages.export-template-mono
 
 		lutris
@@ -186,7 +193,7 @@
 
 	home.file = {
 		".gitconfig-work" = {
-			text = ''				
+			text = ''						
 				[user]
 					email = kkoehler@lsst.org
 					name = Kai Koehler'';
