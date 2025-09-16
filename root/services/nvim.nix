@@ -189,7 +189,10 @@
 				qmlls.enable = true;
 				gdscript.enable = true;
 				clangd.enable = true;
-				asm_lsp.enable = true;
+				asm_lsp = {
+					enable = true;
+					package = pkgs.asm-lsp-p;
+				};
 				# gdshader_lsp.enable = true;
 
 				# https://nix-community.github.io/nixvim/plugins/lsp/servers/omnisharp/index.html#omnisharp
