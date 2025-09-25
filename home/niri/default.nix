@@ -286,7 +286,7 @@
 			  		place-within-column
 			  	}
 			  }
-					
+			
 			  prefer-no-csd
 
 			  gestures {
@@ -302,7 +302,7 @@
 			  // See the binds section below for more spawn examples.
 
 			  spawn-at-startup "waybar"
-			  //spawn-at-startup "niriusd"
+			  spawn-at-startup "niriusd"
 			  spawn-at-startup "export" "ELECTRON_OZONE_PLATFORM_HINT=auto"
 			  spawn-at-startup "systemctl" "--user" "start" "plasma-polkit-agent"
 			  spawn-at-startup "copyq" "--start-server"
@@ -314,7 +314,6 @@
 			  spawn-at-startup "~/.config/swww/bin/randomize_multi.sh" "/etc/nixos/wallpapers"
 			  spawn-at-startup "kitty" "spotify_player"
 			  spawn-at-startup "thunderbird"
-			  spawn-at-startup "kitty" "sudo -i"
 
 			  environment {
 			      DISPLAY ":0"
@@ -471,8 +470,8 @@
 			      Mod+O repeat=false { toggle-overview; }
 
 			      Mod+C { close-window; }
-			      //Mod+Z { spawn "nirius" "focus-or-spawn" "-t" ".*Zen Browser" "zen-browser"; }
-			  	Mod+Z {spawn "zen";}
+			      Mod+Z { spawn "nirius" "focus-or-spawn" "-t" ".*Zen Browser" "zen-beta"; }
+			  	//Mod+Z {spawn "zen";}
 
 			  	Mod+P { spawn "nirius" "toggle-follow-mode"; }
 
