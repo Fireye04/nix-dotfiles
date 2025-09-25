@@ -26,7 +26,7 @@
 		shellAliases = {
 			ginit = "nvim . --listen ./godothost";
 			post = "cd ~/Projects/websites/coffee;. ~/.config/zsh/bin/post.sh";
-			arch = "docker run -v ~/Files/arch-docker:/root -it archlinux:latest sh";
+			arch = "docker run -v ~/Files/arch-docker:/root -it archlinux:latest sh 'pacman -Sy neovim git'";
 		};
 		plugins = [
 			{
@@ -51,7 +51,7 @@
 		};
 		initContent = let
 			zshConfigEarlyInit =
-				lib.mkOrder 500 ''									
+				lib.mkOrder 500 ''								
 					awk '{if ($1 > 2*24*3600)
 					print "PC has been running for over 2 days, might wanna restart"}' /proc/uptime
 					if [[ -r "$\{XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-$\{(%):-%n}.zsh" ]]; then
