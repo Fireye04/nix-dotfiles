@@ -86,6 +86,7 @@
 		surge-XT
 		x42-avldrums
 		guitarix
+		cava
 
 		(godot-mono.overrideAttrs (finalAttrs: previousAttrs: {
 					src =
@@ -194,7 +195,7 @@
 
 	home.file = {
 		".gitconfig-work" = {
-			text = ''						
+			text = ''					
 				[user]
 					email = kkoehler@lsst.org
 					name = Kai Koehler'';
