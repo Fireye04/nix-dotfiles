@@ -83,6 +83,7 @@
 
 		#audio
 		ardour
+		surge
 		surge-XT
 		x42-avldrums
 		guitarix
@@ -195,7 +196,7 @@
 
 	home.file = {
 		".gitconfig-work" = {
-			text = ''					
+			text = ''				
 				[user]
 					email = kkoehler@lsst.org
 					name = Kai Koehler'';
