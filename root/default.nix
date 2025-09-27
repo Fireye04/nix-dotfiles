@@ -109,6 +109,10 @@
 		vscode-extensions.vscjava.vscode-java-debug
 		vscode-extensions.vscjava.vscode-java-test
 		wine
+
+		surge-XT
+		x42-avldrums
+		guitarix
 	];
 
 	fonts.packages = with pkgs; [
