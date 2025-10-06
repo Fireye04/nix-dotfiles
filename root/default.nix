@@ -22,9 +22,12 @@
 
 	# Use latest kernel.
 	boot.kernelPackages = pkgs.linuxPackages_latest;
-	services.logind.lidSwitch = "hybrid-sleep";
-	services.logind.lidSwitchExternalPower = "suspend";
-	services.logind.lidSwitchDocked = "ignore";
+
+	services.logind.settings.Login = {
+		HandleLidSwitchDocked = "ignore";
+		HandleLidSwitchExternalPoer = "suspend";
+		HandleLidSwitch = "sleep";
+	};
 
 	nix.settings.experimental-features = ["nix-command" "flakes"];
 
