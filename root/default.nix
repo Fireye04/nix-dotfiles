@@ -131,6 +131,7 @@
 		nerd-fonts.jetbrains-mono
 		nerd-fonts.noto
 		pixel-code
+		comic-mono
 	];
 	virtualisation.docker.enable = true;
 
