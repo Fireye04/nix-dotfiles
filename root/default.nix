@@ -116,7 +116,7 @@
 		vscode-extensions.vscjava.vscode-java-test
 		wine
 
-		surge
+		surge-XT
 		x42-avldrums
 		guitarix
 	];
