@@ -71,7 +71,7 @@
 		tuned
 		ffmpeg-full
 		gnome-calculator
-		zoom-us
+		zoom
 		rocketchat-desktop
 		obsidian
 		gamemode
@@ -194,7 +194,7 @@
 
 	home.file = {
 		".gitconfig-work" = {
-			text = ''							
+			text = ''						
 				[user]
 					email = kkoehler@lsst.org
 					name = Kai Koehler'';
