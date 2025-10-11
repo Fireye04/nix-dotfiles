@@ -60,6 +60,11 @@
 							asm-lsp = pkgs.callPackage ./root/utils/asm-lsp.nix {};
 						})
 				];
+				# Allow temporarily to allow cinny to build until
+				# nixpkgs updates
+				config.permittedInsecurePackages = [
+					"libsoup-2.74.3"
+				];
 			};
 	in {
 		nixosConfigurations = {
