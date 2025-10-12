@@ -78,6 +78,7 @@
 		inkscape
 		hyprpicker
 		thunderbird
+		fluffychat
 		cinny-desktop
 		element-desktop
 		libreoffice
@@ -195,7 +196,7 @@
 
 	home.file = {
 		".gitconfig-work" = {
-			text = ''							
+			text = ''						
 				[user]
 					email = kkoehler@lsst.org
 					name = Kai Koehler'';
