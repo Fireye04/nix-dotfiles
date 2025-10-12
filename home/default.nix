@@ -71,19 +71,25 @@
 		tuned
 		ffmpeg-full
 		gnome-calculator
-		zoom-us
-		rocketchat-desktop
 		obsidian
 		gamemode
-		inkscape
 		hyprpicker
+
+		# Communication
 		thunderbird
+
 		fluffychat
 		cinny-desktop
 		element-desktop
+
+		zoom-us
+		rocketchat-desktop
+
+		# tools
 		libreoffice
 		gimp3
 		obs-studio
+		inkscape
 
 		#audio
 		ardour
@@ -196,7 +202,7 @@
 
 	home.file = {
 		".gitconfig-work" = {
-			text = ''						
+			text = ''					
 				[user]
 					email = kkoehler@lsst.org
 					name = Kai Koehler'';
