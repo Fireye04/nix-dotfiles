@@ -119,6 +119,8 @@
 		# surge-XT
 		x42-avldrums
 		guitarix
+
+		xorg.xauth
 	];
 
 	fonts.packages = with pkgs; [
@@ -139,6 +141,10 @@
 		enable = true;
 	};
 	programs.steam.enable = true;
+
+	programs.ssh = {
+		setXAuthLocation = true;
+	};
 	# Some programs need SUID wrappers, can be configured further or are
 	# started in user sessions.
 	# programs.mtr.enable = true;

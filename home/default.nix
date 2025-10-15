@@ -95,8 +95,6 @@
 		ardour
 		cava
 
-		xorg.xauth
-
 		(godot-mono.overrideAttrs (finalAttrs: previousAttrs: {
 					src =
 						fetchFromGitHub {
@@ -204,7 +202,7 @@
 
 	home.file = {
 		".gitconfig-work" = {
-			text = ''				
+			text = ''							
 				[user]
 					email = kkoehler@lsst.org
 					name = Kai Koehler'';
