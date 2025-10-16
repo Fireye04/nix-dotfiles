@@ -45,6 +45,7 @@
 		libgnome-keyring
 		nautilus
 		udisks
+		udiskie
 
 		hyfetch
 		ranger
@@ -203,7 +204,7 @@
 
 	home.file = {
 		".gitconfig-work" = {
-			text = ''				
+			text = ''						
 				[user]
 					email = kkoehler@lsst.org
 					name = Kai Koehler'';
@@ -215,18 +216,6 @@
 		settings = {
 			color_theme = "HotPurpleTrafficLight";
 			theme_background = false;
-		};
-	};
-
-	services.udiskie = {
-		enable = true;
-		settings = {
-			# workaround for
-			# https://github.com/nix-community/home-manager/issues/632
-			program_options = {
-				# replace with your favorite file manager
-				# file_manager = "${pkgs.dolphin}/bin/dolphin";
-			};
 		};
 	};
 
