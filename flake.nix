@@ -64,6 +64,7 @@
 				# nixpkgs updates
 				config.permittedInsecurePackages = [
 					"libsoup-2.74.3"
+					"ventoy-1.1.07"
 				];
 			};
 	in {
