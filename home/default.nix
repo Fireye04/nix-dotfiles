@@ -44,7 +44,6 @@
 		xdg-desktop-portal-gnome
 		libgnome-keyring
 		nautilus
-		udisks
 		udiskie
 
 		hyfetch
@@ -204,7 +203,7 @@
 
 	home.file = {
 		".gitconfig-work" = {
-			text = ''						
+			text = ''					
 				[user]
 					email = kkoehler@lsst.org
 					name = Kai Koehler'';
