@@ -203,7 +203,7 @@
 
 	home.file = {
 		".gitconfig-work" = {
-			text = ''					
+			text = ''				
 				[user]
 					email = kkoehler@lsst.org
 					name = Kai Koehler'';
@@ -225,7 +225,7 @@
 			# https://github.com/nix-community/home-manager/issues/632
 			program_options = {
 				# replace with your favorite file manager
-				file_manager = "${pkgs.dolphin}/bin/dolphin";
+				# file_manager = "${pkgs.dolphin}/bin/dolphin";
 			};
 		};
 	};
