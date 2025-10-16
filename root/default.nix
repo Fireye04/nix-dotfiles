@@ -70,7 +70,7 @@
 
 	# List packages installed in system profile. To search, run:
 	environment.systemPackages = with pkgs; [
-		ventoy-full-qt
+		ventoy-full-gtk
 		gh
 		os-prober
 		arch-install-scripts
