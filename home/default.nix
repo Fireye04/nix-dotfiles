@@ -75,6 +75,7 @@
 		obsidian
 		gamemode
 		hyprpicker
+		wl-clipboard
 
 		# Communication
 		thunderbird
@@ -204,7 +205,7 @@
 
 	home.file = {
 		".gitconfig-work" = {
-			text = ''					
+			text = ''				
 				[user]
 					email = kkoehler@lsst.org
 					name = Kai Koehler'';
