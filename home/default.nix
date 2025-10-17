@@ -204,13 +204,15 @@
 
 	home.file = {
 		".gitconfig-work" = {
-			text = ''							
+			text = ''						
 				[user]
 					email = kkoehler@lsst.org
 					name = Kai Koehler'';
 		};
 		".config/iamb/config.toml" = {
 			text = ''
+				[profiles.user]
+				user_id = "@user2:example.com"
 			'';
 		};
 	};
