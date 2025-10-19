@@ -97,7 +97,10 @@
 							home-manager.users.fireye = import ./home;
 
 							# Optionally, use home-manager.extraSpecialArgs to pass arguments to home.nix
-							home-manager.extraSpecialArgs = {inherit inputs;};
+							home-manager.extraSpecialArgs = {
+								pkgs-stable = pkgs-stable;
+								inherit inputs;
+							};
 						}
 					];
 				};
