@@ -25,8 +25,8 @@
 
 	services.logind.settings.Login = {
 		HandleLidSwitchDocked = "ignore";
-		HandleLidSwitchExternalPoer = "suspend";
-		HandleLidSwitch = "sleep";
+		HandleLidSwitchExternalPower = "suspend";
+		HandleLidSwitch = "suspend";
 	};
 
 	nix.settings.experimental-features = ["nix-command" "flakes"];
@@ -119,7 +119,6 @@
 		vscode-extensions.vscjava.vscode-java-test
 		wine
 
-		# surge-XT
 		x42-avldrums
 		x42-plugins
 		guitarix
@@ -138,6 +137,7 @@
 		nerd-fonts.noto
 		pixel-code
 		comic-mono
+		liberation_ttf
 	];
 	virtualisation.docker.enable = true;
 
