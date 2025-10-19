@@ -4,7 +4,7 @@
 {
 	config,
 	pkgs,
-	stable-pkgs,
+	pkgs-stable,
 	inputs,
 	options,
 	...
@@ -24,13 +24,13 @@
 	# Use latest kernel.
 	boot.kernelPackages = pkgs.linuxPackages_latest;
 
-	services.logind.settings.Login = {
+	services.logind.cofig.Login = {
 		HandleLidSwitchDocked = "ignore";
 		HandleLidSwitchExternalPower = "suspend";
 		HandleLidSwitch = "suspend";
 	};
 
-	nix.settings.experimental-features = ["nix-command" "flakes"];
+	nix.config.experimental-features = ["nix-command" "flakes"];
 
 	# Set your time zone.
 	time.timeZone = "America/Phoenix";
