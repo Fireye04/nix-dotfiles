@@ -2,6 +2,7 @@
 	description = "My personal hell";
 
 	inputs = {
+		nixpkgs-stable.url = "github:nixos/nixpkgs?ref=nixos-25.05";
 		nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
 		niri.url = "github:sodiboo/niri-flake";
 		fix-python.url = "github:GuillaumeDesforges/fix-python";
@@ -39,6 +40,7 @@
 
 	outputs = {
 		self,
+		nixpkgs-stable,
 		nixpkgs,
 		niri,
 		fix-python,
@@ -60,12 +62,19 @@
 							asm-lsp = pkgs.callPackage ./root/utils/asm-lsp.nix {};
 						})
 				];
-				# Allow temporarily to allow cinny to build until
+				# Allow temporarily to allow cinny & ventoy to build until
 				# nixpkgs updates
 				config.permittedInsecurePackages = [
 					"libsoup-2.74.3"
 					"ventoy-gtk3-1.1.07"
 				];
+			};
+		pkgs-stable =
+			import nixpkgs-stable {
+				inherit system;
+				config.allowUnfree = true;
+				overlays = [];
+				config.permittedInsecurePackages = [];
 			};
 	in {
 		nixosConfigurations = {

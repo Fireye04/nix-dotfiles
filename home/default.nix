@@ -1,6 +1,7 @@
 {
 	config,
 	pkgs,
+	pkgs-stable,
 	lib,
 	inputs,
 	...
@@ -95,6 +96,7 @@
 		inkscape
 
 		#audio
+		pkgs-stable.surge-XT
 		ardour
 		cava
 
@@ -205,7 +207,7 @@
 
 	home.file = {
 		".gitconfig-work" = {
-			text = ''				
+			text = ''						
 				[user]
 					email = kkoehler@lsst.org
 					name = Kai Koehler'';
