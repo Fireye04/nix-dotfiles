@@ -24,7 +24,7 @@
 	# Use latest kernel.
 	boot.kernelPackages = pkgs.linuxPackages_latest;
 
-	services.logind.config.Login = {
+	services.logind.settings.Login = {
 		HandleLidSwitchDocked = "ignore";
 		HandleLidSwitchExternalPower = "suspend";
 		HandleLidSwitch = "suspend";
