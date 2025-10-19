@@ -82,7 +82,10 @@
 				nixpkgs.lib.nixosSystem {
 					inherit pkgs;
 					system = "x86_64-linux";
-					specialArgs = {inherit inputs;};
+					specialArgs = {
+						pkgs-stable = pkgs-stable;
+						inherit inputs;
+					};
 					modules = [
 						./root
 						niri.nixosModules.niri

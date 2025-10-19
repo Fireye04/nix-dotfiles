@@ -4,6 +4,7 @@
 {
 	config,
 	pkgs,
+	stable-pkgs,
 	inputs,
 	options,
 	...
@@ -119,6 +120,7 @@
 		vscode-extensions.vscjava.vscode-java-test
 		wine
 
+		pkgs-stable.surge-XT
 		x42-avldrums
 		x42-plugins
 		guitarix
