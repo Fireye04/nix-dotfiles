@@ -187,13 +187,14 @@
 	# basic configuration of git, please change to your own
 	programs.git = {
 		enable = true;
-		userName = "Fireye";
-		userEmail = "codekai16@gmail.com";
 		settings = {
+			name = "Fireye";
+			email = "codekai16@gmail.com";
+			alias = {
+				lg = "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit";
+			};
+
 			includeIf."gitdir:~/Work/".path = "~/.gitconfig-work";
-		};
-		aliases = {
-			lg = "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit";
 		};
 	};
 
@@ -206,7 +207,7 @@
 
 	home.file = {
 		".gitconfig-work" = {
-			text = ''							
+			text = ''				
 				[user]
 					email = kkoehler@lsst.org
 					name = Kai Koehler'';
