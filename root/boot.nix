@@ -8,9 +8,9 @@
 			enable = true;
 			efiSupport = true;
 			devices = ["nodev"];
-			useOSProber = true;
+			useOSProber = false;
 			memtest86.enable = true;
-			extraEntries = ''				
+			extraEntries = ''							
 				menuentry "UEFI Settings" {fwsetup}'';
 
 			#  extraEntries = ''menuentry "ARCH" {
