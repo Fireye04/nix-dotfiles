@@ -22,7 +22,12 @@
 	];
 
 	# Use latest kernel.
-	boot.kernelPackages = pkgs.linuxPackages_latest;
+	boot = {
+		kernelPackages = pkgs.linuxPackages_latest;
+		kernelParams = "mem_sleep_default=deep";
+	};
+
+	systemd.sleep.extraConfig = "SuspendState=mem";
 
 	services.logind.settings.Login = {
 		HandleLidSwitchDocked = "ignore";
