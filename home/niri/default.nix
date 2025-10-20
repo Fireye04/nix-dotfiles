@@ -4,7 +4,7 @@
 	inputs,
 	...
 }: let
-	conf = pkgs.runCommand ''echo ${./config.kdl}'';
+	conf = pkgs.runCommand ''cat ${./config.kdl} >> $out'';
 in {
 	home.file = {
 		".config/niri/bin/runtofi.sh" = {
