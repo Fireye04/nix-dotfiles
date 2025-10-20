@@ -184,7 +184,7 @@
 			#
 			# Width and height of the window. Can be pixels or a percentage.
 			width = "50%";
-			height = "50%";
+			height = "100%";
 
 			# Window background color
 			background-color = "#1B1D1E";
