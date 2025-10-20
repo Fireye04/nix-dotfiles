@@ -77,6 +77,7 @@
 		gamemode
 		hyprpicker
 		wl-clipboard
+		nirius
 
 		# Communication
 		thunderbird
@@ -210,7 +211,7 @@
 
 	home.file = {
 		".gitconfig-work" = {
-			text = ''							
+			text = ''						
 				[user]
 					email = kkoehler@lsst.org
 					name = Kai Koehler'';
