@@ -5,7 +5,9 @@
 	programs.foot = {
 		enable = true;
 		settings = {
-			font = "Comic Mono";
+			main = {
+				font = "Comic Mono:size=16";
+			};
 		};
 	};
 }
