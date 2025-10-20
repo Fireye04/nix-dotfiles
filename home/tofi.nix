@@ -183,8 +183,8 @@
 			### Window theming
 			#
 			# Width and height of the window. Can be pixels or a percentage.
-			width = "200px";
-			height = "500px";
+			width = "200";
+			height = "500";
 
 			# Window background color
 			background-color = "#1B1D1E";
