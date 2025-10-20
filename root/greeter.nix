@@ -27,7 +27,7 @@
 			name = "Canta-dark";
 			package = pkgs.canta-theme;
 		};
-		config = {
+		settings = {
 			background = {
 				# Path to the background image
 				path = "/etc/nixos/wallpapers/green_cabin.jpg";

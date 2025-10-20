@@ -28,7 +28,7 @@
 	hardware.bluetooth = {
 		enable = true;
 		powerOnBoot = true;
-		settings = {
+		config = {
 			General = {
 				Experimental = true; # Show battery charge of Bluetooth devices
 			};
