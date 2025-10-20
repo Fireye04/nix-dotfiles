@@ -16,7 +16,7 @@
 				power-saver = "powersave";
 			};
 		};
-		settings = {
+		config = {
 			daemon = true;
 		};
 	};
