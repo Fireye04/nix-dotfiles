@@ -3,7 +3,9 @@
 	pkgs,
 	inputs,
 	...
-}: {
+}: let
+	conf = pkgs.runCommand ''cat ${./config.kdl}'';
+in {
 	home.file = {
 		".config/niri/bin/runtofi.sh" = {
 			source = ./bin/runtofi.sh;
@@ -15,8 +17,6 @@
 		# enable = true;
 		package = pkgs.niri-unstable;
 
-		config = with inputs.niri.lib.kdl; [
-			(serialize.path "${cat ./config.kdl}")
-		];
+		config = conf;
 	};
 }
