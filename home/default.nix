@@ -189,7 +189,7 @@
 		enable = true;
 		userName = "Fireye";
 		userEmail = "codekai16@gmail.com";
-		extraConfig = {
+		settings = {
 			includeIf."gitdir:~/Work/".path = "~/.gitconfig-work";
 		};
 		aliases = {
@@ -206,7 +206,7 @@
 
 	home.file = {
 		".gitconfig-work" = {
-			text = ''				
+			text = ''							
 				[user]
 					email = kkoehler@lsst.org
 					name = Kai Koehler'';
