@@ -200,7 +200,7 @@
 				# IF ITS ALL RED:
 				# https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/compiler-messages/assembly-references#missing-references
 				omnisharp = {
-					settings = {
+					config = {
 						enableEditorConfigSupport = true;
 						enableImportCompletion = true;
 					};
