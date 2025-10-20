@@ -1,6 +1,7 @@
 {
 	config,
 	pkgs,
+	inputs,
 	...
 }: {
 	home.file = {
@@ -14,6 +15,6 @@
 		# enable = true;
 		package = pkgs.niri-unstable;
 
-		config = ./config.kdl;
+		config = with inputs.niri.lib.kdl; kdl.kdl-document ./config.kdl;
 	};
 }
