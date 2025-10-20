@@ -11,7 +11,7 @@
 in {
 	home.file = {
 		".config/swww/bin/randomize_multi.sh" = {
-			source = file;
+			source = file; # ./bin/randomize_multi.sh
 			executable = true;
 		};
 	};
