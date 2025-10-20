@@ -59,7 +59,7 @@
 				overlays = [
 					niri.overlays.niri
 					(self: super: {
-							asm-lsp = pkgs.callPackage ./root/utils/asm-lsp.nix {};
+							asm-lsp = pkgs.callPackage ./root/utils/mips/asm-lsp.nix {};
 						})
 				];
 				# Allow temporarily to allow cinny & ventoy to build until
