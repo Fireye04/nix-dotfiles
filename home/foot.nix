@@ -6,7 +6,7 @@
 		enable = true;
 		settings = {
 			main = {
-				font = "Comic Mono:size=13";
+				font = "Pixel Code:size=13";
 			};
 		};
 	};
