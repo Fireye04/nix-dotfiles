@@ -38,7 +38,6 @@
 							  // Enable numlock on startup, omitting this setting disables it.
 							  numlock
 						  }
-
 						  // Next sections include libinput settings.
 						  // Omitting settings disables them, or leaves them at their default values.
 						  touchpad {
