@@ -239,6 +239,6 @@
 		];
 	};
 	imports = [
-		(import ./mips/asm-format.nix {inherit config pkgs;})
+		(import ../utils/mips/asm-format.nix {inherit config pkgs;})
 	];
 }
