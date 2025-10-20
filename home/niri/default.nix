@@ -15,6 +15,6 @@
 		# enable = true;
 		package = pkgs.niri-unstable;
 
-		config = with inputs.niri.lib.kdl; kdl.kdl-document ./config.kdl;
+		config = with inputs.niri.lib.kdl; [(serialize ./config.kdl)];
 	};
 }
