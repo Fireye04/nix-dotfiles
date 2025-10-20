@@ -183,7 +183,7 @@
 			### Window theming
 			#
 			# Width and height of the window. Can be pixels or a percentage.
-			width = "50%";
+			width = "30%";
 			height = "100%";
 
 			# Window background color
