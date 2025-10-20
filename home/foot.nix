@@ -6,7 +6,7 @@
 		enable = true;
 		settings = {
 			main = {
-				font = "Comic Mono:size=16";
+				font = "Comic Mono:size=14";
 			};
 		};
 	};
