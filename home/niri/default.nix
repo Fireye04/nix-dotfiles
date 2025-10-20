@@ -16,7 +16,7 @@
 		package = pkgs.niri-unstable;
 
 		config = with inputs.niri.lib.kdl; [
-			(serialize.path ./config.kdl)
+			(serialize.path "${./config.kdl}")
 		];
 	};
 }
