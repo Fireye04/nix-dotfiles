@@ -51,6 +51,7 @@
 		ranger
 		waybar
 		kitty
+		foot
 		gh
 		autojump
 		zsh-autosuggestions
@@ -209,7 +210,7 @@
 
 	home.file = {
 		".gitconfig-work" = {
-			text = ''							
+			text = ''						
 				[user]
 					email = kkoehler@lsst.org
 					name = Kai Koehler'';
