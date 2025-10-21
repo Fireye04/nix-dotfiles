@@ -153,7 +153,7 @@
 	];
 
 	imports = [
-		(import ./bash {inherit config pkgs;})
+		(import ./bash.nix {inherit config pkgs;})
 		(import ./zsh {inherit lib config pkgs;})
 		(import ./swww {inherit config pkgs;})
 		(import ./waybar {inherit config pkgs;})
@@ -210,7 +210,7 @@
 
 	home.file = {
 		".gitconfig-work" = {
-			text = ''				
+			text = ''							
 				[user]
 					email = kkoehler@lsst.org
 					name = Kai Koehler'';
