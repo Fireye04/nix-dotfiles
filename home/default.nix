@@ -3,6 +3,7 @@
 	pkgs,
 	pkgs-stable,
 	lib,
+	fetchFromGitHub,
 	inputs,
 	...
 }: {
@@ -156,7 +157,7 @@
 
 	imports = [
 		(import ./zsh {inherit lib config pkgs;})
-		(import ./swww {inherit config pkgs;})
+		(import ./swww {inherit config pkgs fetchFromGitHub;})
 		(import ./waybar {inherit config pkgs;})
 
 		(import ./tofi.nix {inherit lib config pkgs;})
@@ -211,7 +212,7 @@
 
 	home.file = {
 		".gitconfig-work" = {
-			text = ''						
+			text = ''				
 				[user]
 					email = kkoehler@lsst.org
 					name = Kai Koehler'';
