@@ -74,7 +74,6 @@
 		ffmpeg-full
 		gnome-calculator
 		obsidian
-		gamemode
 		hyprpicker
 		wl-clipboard
 		nirius
@@ -112,7 +111,6 @@
 		godotPackages.export-template-mono
 
 		lutris
-		gamemode
 
 		# archives
 		zip
@@ -211,7 +209,7 @@
 
 	home.file = {
 		".gitconfig-work" = {
-			text = ''				
+			text = ''							
 				[user]
 					email = kkoehler@lsst.org
 					name = Kai Koehler'';

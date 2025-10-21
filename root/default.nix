@@ -90,6 +90,7 @@
 		canta-theme
 		cage
 		gamescope
+		gamemode
 		inputs.nix-alien.packages.${system}.default
 		# (callPackage ./utils/nirius {})
 		(callPackage ./utils/mips {})
