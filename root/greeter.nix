@@ -49,7 +49,7 @@
 
 	services.xserver.displayManager.session = [
 		{
-			manage = "desktop";
+			manage = "window";
 			name = "Game Mode";
 			start = ''bash'';
 		}

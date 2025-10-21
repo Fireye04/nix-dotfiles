@@ -8,7 +8,7 @@
 		# 	amixer sset Speaker unmute\n
 		# 	amixer sset Headphone unmute";
 		shellAliases = {
-			"GS" = "gamescope -e --adaptive-sync -- steam -gamepadui";
+			GS = "gamescope -e --adaptive-sync -- steam -gamepadui";
 		};
 	};
 }
