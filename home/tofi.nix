@@ -205,9 +205,9 @@
 			corner-radius = 5;
 
 			# Padding between borders and text. Can be pixels or a percentage.
-			padding-top = "35%";
+			padding-top = 0;
 			padding-bottom = 0;
-			padding-left = "35%";
+			padding-left = "25%";
 			padding-right = 0;
 
 			# Whether to clip text drawing to be within the specified padding. This
