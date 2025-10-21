@@ -168,7 +168,7 @@
 
 			# Maximum number of results to display.
 			# If 0, tofi will draw as many results as it can fit in the window.
-			num-results = 20;
+			num-results = 0;
 
 			# Spacing between results in pixels. Can be negative.
 			result-spacing = 5;
@@ -183,7 +183,7 @@
 			### Window theming
 			#
 			# Width and height of the window. Can be pixels or a percentage.
-			width = "30%";
+			width = "100%";
 			height = "100%";
 
 			# Window background color
