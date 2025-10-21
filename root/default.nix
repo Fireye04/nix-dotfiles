@@ -1,4 +1,4 @@
-# Edit this configuration file to define what should be installed onbuild
+#gamescope -e --adaptive-sync -- steam -gamepadui Edit this configuration file to define what should be installed onbuild
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 {
@@ -95,6 +95,7 @@
 		inputs.nix-alien.packages.${system}.default
 		# (callPackage ./utils/nirius {})
 		(callPackage ./utils/mips {})
+		(callPackage ./greeter/games/gamemode.nix {})
 		(let
 			base = pkgs.appimageTools.defaultFhsEnvArgs;
 		in

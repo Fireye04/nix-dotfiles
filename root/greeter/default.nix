@@ -47,11 +47,9 @@
 		};
 	};
 
-	services.xserver.displayManager.session = [
-		{
-			manage = "window";
-			name = "Gamemode";
-			start = "bash";
-		}
-	];
+	#Add more envs on new lines
+	environment.etc."greetd/environments".text = ''
+		bash
+		bash-gamemode
+	'';
 }
