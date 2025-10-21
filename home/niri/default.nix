@@ -304,7 +304,7 @@
 			spawn-at-startup "xwayland-satellite"
 			spawn-at-startup "tuned-adm" "profile" "balanced"
 			//spawn-at-startup "wbg" "/usr/share/backgrounds/waterfall.png"
-			spawn-at-startup "sleep" "1;" "swww" "img" "/etc/nixos/wallpapers/green_cabin.jpg" "--transition-type" "center"
+			// spawn-at-startup "sleep" "1;" "swww" "img" "/etc/nixos/wallpapers/green_cabin.jpg" "--transition-type" "center"
 			spawn-at-startup "~/.config/swww/bin/randomize_multi.sh" "/etc/nixos/wallpapers"
 			spawn-at-startup "kitty" "spotify_player"
 			spawn-at-startup "thunderbird"

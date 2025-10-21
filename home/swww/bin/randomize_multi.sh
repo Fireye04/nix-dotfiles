@@ -2,7 +2,7 @@
 # For each display, changes the wallpaper to a randomly chosen image in
 # a given directory at a set interval.
 
-DEFAULT_INTERVAL=300 # In seconds
+DEFAULT_INTERVAL=120 # In seconds
 
 if [ $# -lt 1 ] || [ ! -d "$1" ]; then
 	printf "Usage:\n\t\e[1m%s\e[0m \e[4mDIRECTORY\e[0m [\e[4mINTERVAL\e[0m]\n" "$0"
