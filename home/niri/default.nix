@@ -4,13 +4,6 @@
 	inputs,
 	...
 }: {
-	home.file = {
-		".config/niri/bin/runtofi.sh" = {
-			source = ./bin/runtofi.sh;
-			executable = true;
-		};
-	};
-
 	programs.niri = {
 		# enable = true;
 		package = pkgs.niri-unstable;
