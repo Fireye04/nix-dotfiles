@@ -205,8 +205,8 @@
 			corner-radius = 5;
 
 			# Padding between borders and text. Can be pixels or a percentage.
-			padding-top = 0;
-			padding-bottom = 0;
+			padding-top = "10%";
+			padding-bottom = "10%";
 			padding-left = "25%";
 			padding-right = 0;
 
