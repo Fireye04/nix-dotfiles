@@ -56,7 +56,7 @@
 		{
 			manage = "window";
 			name = "Gamemode";
-			start = "gamescope -e -f -r 60 --backend drm --mangoapp -- steam -gamepadui";
+			start = "gamescope -e -f -r 60 --backend drm -e --mangoapp -- steam -gamepadui";
 		}
 	];
 
