@@ -187,7 +187,7 @@
 			height = "100%";
 
 			# Window background color
-			background-color = "#1B1D1E";
+			background-color = "#000A";
 
 			# Width of the border outlines in pixels.
 			outline-width = 4;
@@ -205,9 +205,9 @@
 			corner-radius = 5;
 
 			# Padding between borders and text. Can be pixels or a percentage.
-			padding-top = 0;
+			padding-top = "35%";
 			padding-bottom = 0;
-			padding-left = 0;
+			padding-left = "35%";
 			padding-right = 0;
 
 			# Whether to clip text drawing to be within the specified padding. This
