@@ -56,7 +56,7 @@
 		{
 			manage = "desktop";
 			name = "Gamemode";
-			start = "gamescope -e -f -r 60 --backend drm --mangoapp -- steam -bigpicture";
+			start = "gamescope -e -f -r 60 --sdr-gamut-wideness 1 --backend drm --mangoapp -- steam -nointro -bigpicture";
 		}
 	];
 
