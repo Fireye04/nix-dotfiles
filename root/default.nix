@@ -145,6 +145,7 @@
 		pixel-code
 		comic-mono
 		liberation_ttf
+		font-awesome
 	];
 	virtualisation.docker.enable = true;
 

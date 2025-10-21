@@ -2,7 +2,7 @@
 
 * {
 	/* `otf-font-awesome` is required to be installed for icons */
-	font-family: "";
+	font-family: "fira-code";
 	font-size: 14px;
 	min-width: 8px;
 	min-height: 0px;
