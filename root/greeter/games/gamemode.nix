@@ -2,4 +2,4 @@
 	stdenv,
 	pkgs,
 }:
-pkgs.writeShellScriptBin "bash-gamemode" ''gamescope -e -r 59 --adaptive-sync --hdr-enabled -- steam -gamepadui''
+pkgs.writeShellScriptBin "bash-gamemode" ''gamescope -e -f -r 60 -mangohud -- steam -gamepadui''

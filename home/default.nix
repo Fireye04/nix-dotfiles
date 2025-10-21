@@ -111,6 +111,7 @@
 		godotPackages.export-template-mono
 
 		lutris
+		mangohud
 
 		# archives
 		zip
@@ -210,7 +211,7 @@
 
 	home.file = {
 		".gitconfig-work" = {
-			text = ''							
+			text = ''					
 				[user]
 					email = kkoehler@lsst.org
 					name = Kai Koehler'';
