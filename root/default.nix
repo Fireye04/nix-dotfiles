@@ -96,6 +96,8 @@
 		# (callPackage ./utils/nirius {})
 		(callPackage ./utils/mips {})
 		(callPackage ./greeter/games/gamemode.nix {})
+		(callPackage ./greeter/games/no-mans-sky.nix {})
+
 		(let
 			base = pkgs.appimageTools.defaultFhsEnvArgs;
 		in
