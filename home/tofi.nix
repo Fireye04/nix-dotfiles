@@ -168,7 +168,7 @@
 
 			# Maximum number of results to display.
 			# If 0, tofi will draw as many results as it can fit in the window.
-			num-results = 0;
+			num-results = 20;
 
 			# Spacing between results in pixels. Can be negative.
 			result-spacing = 5;
