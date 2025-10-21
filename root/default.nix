@@ -91,6 +91,7 @@
 		cage
 		gamescope
 		gamemode
+		alsa-utils
 		inputs.nix-alien.packages.${system}.default
 		# (callPackage ./utils/nirius {})
 		(callPackage ./utils/mips {})
