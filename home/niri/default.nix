@@ -441,7 +441,7 @@
 						  // Suggested binds for running programs: terminal, app launcher, screen locker.
 						  Mod+Q hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
 						  Mod+D hotkey-overlay-title="Run an Application: tofi" { spawn-sh "
-			tofi-drun --drun-launch=true --font ${pkgs.pixel-code} || pkill tofi-drun
+			tofi-drun --drun-launch=true --font ${pkgs.pixel-code}/share/fonts/opentype/PixelCode.otf || pkill tofi-drun
 			"; }
 						  Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
 
