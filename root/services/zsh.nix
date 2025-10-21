@@ -15,6 +15,9 @@
 			gc = "git commit";
 			gp = "git push";
 			gst = "git status";
+
+			# Games
+			no-mans-sky = "gamemoderun gamescope -- steam steam://rungameid/275850 | tee Runtime-logs.txt";
 		};
 	};
 }
