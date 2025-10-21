@@ -44,12 +44,26 @@
 			appearance = {
 				greeting_msg = "Climb a tree! :3";
 			};
+
+			commands = {
+				#BREAKS x11 SESSIONS (probably)
+				x11_prefix = [""];
+			};
 		};
 	};
 
+	services.xserver.displayManager.session = [
+		{
+			manage = "window";
+			name = "Gamemode";
+			start = "gamescope -e -f -r 60 --backend drm --mangoapp -- steam -gamepadui";
+		}
+	];
+
+	# DOES NOT WORK FOR REGREET
 	#Add more envs on new lines
-	environment.etc."greetd/environments".text = ''
-		bash
-		bash-gamemode
-	'';
+	# environment.etc."greetd/environments".text = ''
+	# 	bash
+	# 	bash-gamemode
+	# '';
 }
