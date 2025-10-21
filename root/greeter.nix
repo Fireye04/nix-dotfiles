@@ -46,4 +46,12 @@
 			};
 		};
 	};
+
+	services.xserver.displayManager.session = [
+		{
+			manage = "desktop";
+			name = "Game Mode";
+			start = ''bash'';
+		}
+	];
 }
