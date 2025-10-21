@@ -4,7 +4,7 @@
 	...
 }: let
 	file =
-		builtins.fetchurl {
+		builtins.fetchFromGithub {
 			url = "https://github.com/LGFae/swww/blob/main/example_scripts/swww_randomize_multi.sh";
 			sha256 = "sha256:1mxqrxvyzg54xz2h453pk7pska3ggxq1za4flwladgqfphj8lnxc";
 		};
