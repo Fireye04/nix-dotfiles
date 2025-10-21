@@ -33,7 +33,7 @@
 			font = "/usr/share/fonts/noto/NotoSansMono-Regular.ttf";
 
 			# Point size of text.
-			font-size = 30;
+			font-size = 50;
 
 			# Comma separated list of OpenType font feature settings to apply,
 			# if supported by the chosen font. The format is similar to the CSS
