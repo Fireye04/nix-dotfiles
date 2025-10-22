@@ -88,6 +88,7 @@
 						css = ["prettier"];
 						nix = ["alejandra"];
 						java = ["astyle"];
+						c = ["clang_format"];
 					};
 					format_on_save = {
 						timeout_ms = 500;
@@ -189,6 +190,7 @@
 				qmlls.enable = true;
 				gdscript.enable = true;
 				clangd.enable = true;
+				ccls.enable = true;
 				asm_lsp = {
 					enable = true;
 					package = pkgs.asm-lsp;
