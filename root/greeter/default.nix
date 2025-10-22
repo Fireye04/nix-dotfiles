@@ -53,10 +53,15 @@
 	};
 
 	services.xserver.displayManager.session = [
+		# {
+		# 	manage = "desktop";
+		# 	name = "Gamemode";
+		# 	start = "gamescope -e -f -r 60 --backend wayland --mangoapp -- steam -nointro -bigpicture";
+		# }
 		{
 			manage = "desktop";
-			name = "Gamemode";
-			start = "gamescope -e -f -r 60 --backend wayland --mangoapp -- steam -nointro -bigpicture > Runtime-logs.txt";
+			name = "NoMansSky";
+			start = "gamescope -e -f -r 60 --backend wayland --mangoapp -- steam steam://rungameid/275850";
 		}
 	];
 
