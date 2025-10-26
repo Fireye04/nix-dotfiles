@@ -201,7 +201,8 @@
 				  // You can use any CSS linear-gradient tool on the web to set these up.
 				  // Changing the color space is also supported, check the wiki for more info.
 				  //
-				  active-gradient from="#e8228f" to="#b022e8" angle=45
+				  // active-gradient from="#e8228f" to="#b022e8" angle=45
+				  active-gradient from="#6722e8" to="#b022e8" angle=45
 
 				  // You can also color the gradient relative to the entire view
 				  // of the workspace, rather than relative to just the window itself.
@@ -405,14 +406,25 @@
 			  match namespace="swww-daemon"
 			  place-within-backdrop true
 			}
+
+			// Transparency
 			window-rule {
 			match app-id=r#"^kitty$"# title="^spotify_player.*$"
-
 			opacity 0.8
 			}
+
 			window-rule {
 			match app-id=r#"^kitty$"# title="^btop$"
+			opacity 0.8
+			}
 
+			window-rule {
+			match app-id=r#"^signal$"# title="^Signal$"
+			opacity 0.8
+			}
+
+			window-rule {
+			match app-id=r#"^thunderbird$"
 			opacity 0.8
 			}
 
