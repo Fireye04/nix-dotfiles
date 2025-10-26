@@ -424,7 +424,7 @@
 			}
 
 			window-rule {
-			match app-id=r#"^thunderbird$"
+			match app-id=r#"^thunderbird$"#
 			opacity 0.8
 			}
 
