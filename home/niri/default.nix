@@ -420,12 +420,7 @@
 
 			window-rule {
 			match app-id=r#"^signal$"# title="^Signal$"
-			opacity 0.8
-			}
-
-			window-rule {
-			match app-id=r#"^thunderbird$"#
-			opacity 0.8
+			opacity 0.9
 			}
 
 			binds {
