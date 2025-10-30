@@ -8,6 +8,9 @@
 			main = {
 				font = "Pixel Code:size=13";
 			};
+			cursor = {
+				style = "underline";
+			};
 		};
 	};
 }
