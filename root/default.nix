@@ -137,7 +137,7 @@
 		vscode-extensions.vscjava.vscode-java-test
 		wine
 
-		surge-XT
+		pkgs-stable.surge-XT
 		x42-avldrums
 		x42-plugins
 		guitarix
