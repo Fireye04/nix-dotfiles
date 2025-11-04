@@ -99,6 +99,7 @@
 
 		#audio
 		ardour
+		audacity
 		cava
 
 		(godot-mono.overrideAttrs (finalAttrs: previousAttrs: {
@@ -214,7 +215,7 @@
 
 	home.file = {
 		".gitconfig-work" = {
-			text = ''						
+			text = ''					
 				[user]
 					email = kkoehler@lsst.org
 					name = Kai Koehler'';
