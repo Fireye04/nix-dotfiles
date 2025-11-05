@@ -9,10 +9,11 @@
 
 		opts = {
 			shiftwidth = 4;
-			tabstop = 4;
+			smarttab = true;
+			tabstop = 8;
 			wrap = true;
-			softtabstop = 4;
-			expandtab = false;
+			softtabstop = 8;
+			expandtab = true;
 			number = true;
 			relativenumber = false;
 			clipboard = ["unnamedplus"];
