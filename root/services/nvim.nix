@@ -10,7 +10,7 @@
 		opts = {
 			shiftwidth = 4;
 			smarttab = true;
-			tabstop = 8;
+			tabstop = 4;
 			wrap = true;
 			softtabstop = 0;
 			expandtab = true;
