@@ -12,7 +12,7 @@
 			smarttab = true;
 			tabstop = 8;
 			wrap = true;
-			softtabstop = 8;
+			softtabstop = 0;
 			expandtab = true;
 			number = true;
 			relativenumber = false;
