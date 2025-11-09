@@ -28,7 +28,10 @@
 	};
 
 	systemd.sleep.extraConfig = "SuspendState=mem";
-
+	hardware.graphics.extraPackages = with pkgs; [
+		intel-vaapi-driver
+		intel-media-driver
+	];
 	services.logind.settings.Login = {
 		HandleLidSwitchDocked = "ignore";
 		HandleLidSwitchExternalPower = "suspend";
@@ -85,6 +88,7 @@
 	# List packages installed in system profile. To search, run:
 	environment.systemPackages = with pkgs; [
 		ventoy-full-gtk
+		mesa
 		gh
 		os-prober
 		arch-install-scripts

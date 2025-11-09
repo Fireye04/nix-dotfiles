@@ -187,6 +187,7 @@
 			servers = {
 				nixd.enable = true;
 				ruff.enable = true;
+				pyright.enable = true;
 				rust_analyzer.enable = true;
 				qmlls.enable = true;
 				gdscript.enable = true;
@@ -221,10 +222,12 @@
 			{
 				action = "<cmd>nohl<CR>";
 				key = "<leader>q";
+				options.desc = "No Highlights";
 			}
 			{
 				action = "<cmd>Telescope live_grep<CR>";
 				key = "<leader>/";
+				options.desc = "Grep directory";
 			}
 			{
 				action = "<cmd>Telescope<CR>";
@@ -233,11 +236,16 @@
 			{
 				action = "<cmd>Telescope fd<CR>";
 				key = "<leader><leader>";
+				options.desc = "Grep files";
 			}
 			{
 				action.__raw = ''require("lsp_lines").toggle'';
 				key = "<Leader>l";
 				options.desc = "Toggle lsp_lines";
+			}
+			{
+				action = "\"_d";
+				key = "<leader>d";
 			}
 		];
 	};
