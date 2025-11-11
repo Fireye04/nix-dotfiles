@@ -84,6 +84,12 @@
 	hardware.xpadneo.enable = true;
 
 	services.udisks2.enable = true;
+	services = {
+		desktopManager.plasma6.enable = true;
+		displayManager.sddm.enable = true;
+
+		displayManager.sddm.wayland.enable = true;
+	};
 
 	# List packages installed in system profile. To search, run:
 	environment.systemPackages = with pkgs; [
@@ -147,6 +153,8 @@
 		guitarix
 
 		xorg.xauth
+
+		kdePackages.ssdm-kcm
 	];
 
 	fonts.packages = with pkgs; [
