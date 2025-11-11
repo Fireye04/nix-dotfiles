@@ -154,7 +154,7 @@
 
 		xorg.xauth
 
-		kdePackages.ssdm-kcm
+		ssdm-kcm
 	];
 
 	fonts.packages = with pkgs; [
