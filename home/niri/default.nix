@@ -7,7 +7,7 @@
 	programs.niri = {
 		# enable = true;
 		package =
-			pkgs.niri-unstable.overrideAttrs (finalAttrs: previousAttrs: {
+			pkgs.niri.overrideAttrs (finalAttrs: previousAttrs: {
 					src =
 						pkgs.fetchFromGitHub {
 							owner = "YaLTeR";
