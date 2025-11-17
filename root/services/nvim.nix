@@ -248,6 +248,19 @@
 				key = "<leader>d";
 			}
 		];
+
+		extraPlugins = [
+			(pkgs.vimUtils.buildVimPlugin {
+					name = "vim-twee-sugarcube";
+					src =
+						pkgs.fetchFromGitHub {
+							owner = "mcombeau";
+							repo = "vim-twee-sugarcube";
+							rev = "";
+							hash = "";
+						};
+				})
+		];
 	};
 	imports = [
 		(import ../utils/mips/asm-format.nix {inherit config pkgs;})
