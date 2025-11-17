@@ -13,6 +13,7 @@
 							repo = "niri";
 							rev = "3e4f2ee4de69cf063b154c09be0a99e6fba4e1ac";
 							hash = "sha256-meUdmPsuApeutD/LM+6ORYZ9hd1si0ejx8rZgW0jc+I=";
+							cargoHash = "";
 						};
 				});
 		enable = true;
