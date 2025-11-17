@@ -5,8 +5,17 @@
 }: {
 	# Enable niri system wide so it shows up on the greeter session menu
 	programs.niri = {
+		package =
+			pkgs.niri.overrideAttrs (finalAttrs: previousAttrs: {
+					src =
+						pkgs.fetchFromGitHub {
+							owner = "YaLTeR";
+							repo = "niri";
+							rev = "3e4f2ee4de69cf063b154c09be0a99e6fba4e1ac";
+							hash = "";
+						};
+				});
 		enable = true;
-		package = pkgs.niri-unstable;
 	};
 	services.greetd = {
 		enable = true;

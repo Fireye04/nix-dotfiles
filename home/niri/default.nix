@@ -5,18 +5,6 @@
 	...
 }: {
 	programs.niri = {
-		# enable = true;
-		package =
-			pkgs.niri.overrideAttrs (finalAttrs: previousAttrs: {
-					src =
-						pkgs.fetchFromGitHub {
-							owner = "YaLTeR";
-							repo = "niri";
-							rev = "3e4f2ee4de69cf063b154c09be0a99e6fba4e1ac";
-							hash = "";
-						};
-				});
-
 		config = ''
 			// This config is in the KDL format: https://kdl.dev
 			// "/-" comments out the following node.
