@@ -98,6 +98,7 @@
 	environment.systemPackages = with pkgs; [
 		ventoy-full-gtk
 		mesa
+		mesa-gl-headers
 		gh
 		os-prober
 		arch-install-scripts
