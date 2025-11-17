@@ -257,7 +257,7 @@
 							owner = "mcombeau";
 							repo = "vim-twee-sugarcube";
 							rev = "c514622b4a57f39ebb9c3adb9f2d0ba77fa1115a";
-							hash = "";
+							hash = "sha256-D4RokTtPmc3b91nXc8sm4wBVvrVsrHFx8RkRQnjrXlE=";
 						};
 				})
 		];
