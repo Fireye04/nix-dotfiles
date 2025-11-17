@@ -32,6 +32,9 @@
 		intel-vaapi-driver
 		intel-media-driver
 	];
+
+	hardware.opengl.enable = true;
+
 	services.logind.settings.Login = {
 		HandleLidSwitchDocked = "ignore";
 		HandleLidSwitchExternalPower = "suspend";
