@@ -484,7 +484,7 @@
 			Mod+B {spawn "kitty" "btop";}
 			Mod+A {spawn "hyprpicker" "-a" "-n";}
 
-			  Mod+Tab { focus-window-down-or-top; }
+			  Mod+E { focus-window-down-or-top; }
 
 			  Mod+Shift+Left  { move-column-left; }
 			  // Mod+Shift+Down  { move-window-down; }
