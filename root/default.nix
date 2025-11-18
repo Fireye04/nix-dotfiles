@@ -34,7 +34,7 @@
 	];
 
 	hardware.opengl.enable = true;
-
+	virtualisation.virtualbox.host.enable = true;
 	services.logind.settings.Login = {
 		HandleLidSwitchDocked = "ignore";
 		HandleLidSwitchExternalPower = "suspend";
