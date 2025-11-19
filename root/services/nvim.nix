@@ -193,6 +193,7 @@
 				gdscript.enable = true;
 				clangd.enable = true;
 				ccls.enable = true;
+				quick_lint_js.enable = true;
 				asm_lsp = {
 					enable = true;
 					package = pkgs.asm-lsp;
