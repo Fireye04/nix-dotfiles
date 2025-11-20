@@ -8,6 +8,7 @@
 		package = pkgs.niri-unstable;
 		enable = true;
 	};
+	programs.sway.enable = true;
 	services.greetd = {
 		enable = true;
 	};
