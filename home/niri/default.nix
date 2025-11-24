@@ -414,6 +414,11 @@
 			match app-id=r#"^kitty$"# title="^btop$"
 			opacity 0.8
 			}
+		         
+			window-rule {
+			match app-id=r#"^kitty$"# title="^peaclock$"
+			opacity 0.8
+			}
 
 			window-rule {
 			match app-id=r#"^signal$"# title="^Signal$"
