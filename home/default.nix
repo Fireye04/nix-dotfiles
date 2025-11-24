@@ -35,7 +35,7 @@
 		# here is some command line tools I use frequently
 		# feel free to add your own or remove some of them
 		glib
-		pkgs-stable.gnome-clocks
+		gnome-clocks
 		pkg-config-unwrapped
 		gsettings-desktop-schemas
 		dotnetCorePackages.sdk_9_0_1xx-bin
@@ -218,7 +218,7 @@
 
 	home.file = {
 		".gitconfig-work" = {
-			text = ''					
+			text = ''				
 				[user]
 					email = kkoehler@lsst.org
 					name = Kai Koehler'';
