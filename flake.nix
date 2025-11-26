@@ -7,6 +7,7 @@
 		niri.url = "github:sodiboo/niri-flake";
 		fix-python.url = "github:GuillaumeDesforges/fix-python";
 		nix-alien.url = "github:thiagokokada/nix-alien";
+		nix-citizen.url = "github:LovingMelody/nix-citizen";
 
 		home-manager = {
 			url = "github:nix-community/home-manager";
@@ -45,6 +46,7 @@
 		niri,
 		fix-python,
 		nix-alien,
+		nix-citizen,
 		home-manager,
 		zen-browser,
 		nixvim,

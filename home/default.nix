@@ -65,6 +65,7 @@
 		# inputs.zen-browser.packages.${system}.default
 		inputs.fix-python.packages.${system}.default
 		inputs.quickshell.packages.${system}.default
+		inputs.nix-citizen.packages.${system}.rsi-launcher
 		niri-unstable
 		slack
 		spotify-player
@@ -219,7 +220,7 @@
 
 	home.file = {
 		".gitconfig-work" = {
-			text = ''							
+			text = ''					
 				[user]
 					email = kkoehler@lsst.org
 					name = Kai Koehler'';
