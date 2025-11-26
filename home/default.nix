@@ -48,6 +48,7 @@
 		libgnome-keyring
 		nautilus
 		udiskie
+		cabextract
 
 		hyfetch
 		ranger
@@ -218,7 +219,7 @@
 
 	home.file = {
 		".gitconfig-work" = {
-			text = ''				
+			text = ''							
 				[user]
 					email = kkoehler@lsst.org
 					name = Kai Koehler'';
