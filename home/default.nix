@@ -35,6 +35,7 @@
 		# here is some command line tools I use frequently
 		# feel free to add your own or remove some of them
 		glib
+		qmk
 		gnome-clocks
 		pkg-config-unwrapped
 		gsettings-desktop-schemas
@@ -220,7 +221,7 @@
 
 	home.file = {
 		".gitconfig-work" = {
-			text = ''				
+			text = ''							
 				[user]
 					email = kkoehler@lsst.org
 					name = Kai Koehler'';
