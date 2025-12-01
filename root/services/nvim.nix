@@ -159,10 +159,10 @@
 			};
 
 			dap-ui = {
-				enable = true;
+				# enable = true;
 			};
 			dap-virtual-text = {
-				enable = true;
+				# enable = true;
 			};
 			jdtls = {
 				enable = true;
