@@ -33,7 +33,6 @@
 		intel-media-driver
 	];
 
-	hardware.graphics.enable = true;
 	virtualisation.virtualbox.host.enable = true;
 	services.logind.settings.Login = {
 		HandleLidSwitchDocked = "ignore";
