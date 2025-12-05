@@ -26,7 +26,7 @@
 		nixvim = {
 			url = "github:nix-community/nixvim";
 			# If you are not running an unstable channel of nixpkgs, select the corresponding branch of nixvim.
-			inputs.nixpkgs.follows = "nixpkgs";
+			# inputs.nixpkgs.follows = "nixpkgs";
 		};
 		quickshell = {
 			# add ?ref=<tag> to track a tag
