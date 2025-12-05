@@ -63,10 +63,7 @@
 							asm-lsp = pkgs.callPackage ./root/utils/mips/asm-lsp.nix {};
 						})
 				];
-				# Allow temporarily to allow cinny & ventoy to build until
-				# nixpkgs updates
 				config.permittedInsecurePackages = [
-					"libsoup-2.74.3"
 					"ventoy-gtk3-1.1.07"
 				];
 			};
