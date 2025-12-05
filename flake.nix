@@ -2,7 +2,7 @@
 	description = "My personal hell";
 
 	inputs = {
-		nixpkgs-stable.url = "github:nixos/nixpkgs?ref=nixos-25.05";
+		nixpkgs-stable.url = "github:nixos/nixpkgs?ref=nixos-25.11";
 		nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
 		niri.url = "github:sodiboo/niri-flake";
 		fix-python.url = "github:GuillaumeDesforges/fix-python";
@@ -26,7 +26,6 @@
 		nixvim = {
 			url = "github:nix-community/nixvim";
 			# If you are not running an unstable channel of nixpkgs, select the corresponding branch of nixvim.
-			# url = "github:nix-community/nixvim/nixos-25.05";
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
 		quickshell = {
