@@ -7,6 +7,7 @@
 	pkgs-stable,
 	inputs,
 	options,
+	stdenv,
 	...
 }: {
 	imports = [
@@ -207,5 +208,5 @@
 	# this value at the release version of the first install of this system.
 	# Before changing this value read the documentation for this option
 	# (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-	hostPlatform.system.stateVersion = "25.11"; # Did you read the comment?
+	stdenv.hostPlatform.system.stateVersion = "25.11"; # Did you read the comment?
 }
