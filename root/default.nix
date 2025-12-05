@@ -82,7 +82,7 @@
 	};
 
 	hardware.graphics.enable = true;
-	hardware.xone.enable = true;
+	# hardware.xone.enable = true;
 	# hardware.xpadneo.enable = true;
 
 	services.udisks2.enable = true;
