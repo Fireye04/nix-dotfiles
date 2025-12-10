@@ -233,6 +233,7 @@
 			{
 				action = "<cmd>Telescope<CR>";
 				key = "<leader>t";
+				options.desc = "Open Telescope";
 			}
 			{
 				action = "<cmd>Telescope fd<CR>";
@@ -240,8 +241,28 @@
 				options.desc = "Grep files";
 			}
 			{
+				action = "<cmd>Telescope buffers<CR>";
+				key = "<leader>b";
+				options.desc = "Telescope buffers";
+			}
+			{
+				action = "<cmd>BufferLineCycleNext<CR>";
+				key = "<leader>l";
+				options.desc = "Focus Next buffer";
+			}
+			{
+				action = "<cmd>BufferLineCyclePrev<CR>";
+				key = "<leader>h";
+				options.desc = "Focus Previous buffer";
+			}
+			{
+				action = "<cmd>BufferLineCloseOthers<CR>";
+				key = "<leader>c";
+				options.desc = "Clean buffers, leave current";
+			}
+			{
 				action.__raw = ''require("lsp_lines").toggle'';
-				key = "<Leader>l";
+				key = "<Leader>p";
 				options.desc = "Toggle lsp_lines";
 			}
 			{
