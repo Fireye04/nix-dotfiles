@@ -414,7 +414,18 @@
 			match app-id=r#"^kitty$"# title="^btop$"
 			opacity 0.8
 			}
-		         
+
+			window-rule {
+			match app-id=r#"^kitty$"# title="^cmatrix$"
+			opacity 0.6
+			}
+
+			         window-rule {
+			match app-id=r#"^kitty$"#
+			opacity 0.8
+			         match is-floating=true
+			}
+		  
 			window-rule {
 			match app-id=r#"^kitty$"# title="^peaclock$"
 			opacity 0.8
@@ -444,6 +455,7 @@
 			  Mod+Q hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
 			  Mod+D hotkey-overlay-title="Run an Application: tofi" { spawn-sh "tofi-drun --drun-launch=true --font ${pkgs.fira-code}/share/fonts/opentype/PixelCode.otf || pkill tofi-drun"; }
 			  Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
+			            Mod+T {toggle-window-rule-opacity;}
 
 
 			  // You can also use a shell. Do this if you need pipes, multiple commands, etc.
