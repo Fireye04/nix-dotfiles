@@ -421,11 +421,11 @@
 			}
 
 			         window-rule {
+			         match is-floating=true
 			match app-id=r#"^kitty$"#
 			opacity 0.8
-			         match is-floating=true
 			}
-		 
+				 
 			window-rule {
 			match app-id=r#"^kitty$"# title="^peaclock$"
 			opacity 0.8
