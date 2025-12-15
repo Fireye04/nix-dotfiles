@@ -425,7 +425,7 @@
 			opacity 0.8
 			         match is-floating=true
 			}
-		  
+		 
 			window-rule {
 			match app-id=r#"^kitty$"# title="^peaclock$"
 			opacity 0.8
@@ -655,7 +655,7 @@
 			  Mod+Ctrl+R { reset-window-height; }
 			  Mod+F { maximize-column; }
 			  Mod+Shift+F { fullscreen-window; }
-			  Mod+T { center-column; }
+			  // Mod+T { center-column; }
 
 			  // Center all fully visible columns on screen.
 			  Mod+Shift+C { center-visible-columns; }
