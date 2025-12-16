@@ -420,11 +420,16 @@
 			opacity 0.6
 			}
 
+			window-rule {
+			match app-id=r#"^kitty$"# title="^pipes-rs$"
+			opacity 0.6
+			}
+
 			         window-rule {
 			match app-id=r#"^kitty$"# is-floating=true
 			opacity 0.8
 			}
-			 
+		 
 			window-rule {
 			match app-id=r#"^kitty$"# title="^peaclock$"
 			opacity 0.8
