@@ -18,6 +18,7 @@
 			gst = "git status";
 			gco = "git checkout";
 			gcb = "git checkout -b";
+			v = "nvim .";
 
 			# Games
 			no-mans-sky = "gamemoderun gamescope -- steam steam://rungameid/275850 | tee Runtime-logs.txt";
