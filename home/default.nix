@@ -100,42 +100,10 @@
 		obs-studio
 		inkscape
 		blender
-		vlc
-
-		#audio
-		ardour
-
-		audacity
-		cava
-
-		(godot-mono.overrideAttrs (finalAttrs: previousAttrs: {
-					src =
-						fetchFromGitHub {
-							owner = "godotengine";
-							repo = "godot";
-							rev = "876b290332ec6f2e6d173d08162a02aa7e6ca46d";
-							hash = "sha256-JCIKhwBG43rahTPNEgMkxt6RUnXJXlzGJtNylvyrPmk=";
-						};
-				}))
-		godotPackages.export-template-mono
-
-		pkgs-stable.lutris
-		mangohud
-
-		# archives
-		zip
-		unzip
-		gparted
-
-		# networking tools
-		nmap # A utility for network discovery and security auditing
-
-		# misc
-		cowsay
-		which
-		gnupg
-		tldr
 		killall
+		cmatrix
+		lolcat
+		pipes-rs
 
 		# nix related
 		#
@@ -221,7 +189,7 @@
 
 	home.file = {
 		".gitconfig-work" = {
-			text = ''					
+			text = ''							
 				[user]
 					email = kkoehler@lsst.org
 					name = Kai Koehler'';
