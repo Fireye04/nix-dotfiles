@@ -4,6 +4,45 @@
 	makeWrapper,
 	makeDesktopItem,
 	autoPatchelfHook,
+	lib,
+	wrapGAppsHook3,
+	alsa-lib,
+	at-spi2-atk,
+	at-spi2-core,
+	atk,
+	cairo,
+	cups,
+	dbus-glib,
+	libnotify,
+	libdrm,
+	libxkbcommon,
+	mesa,
+	nspr,
+	nss,
+	pango,
+	systemd,
+	libpulseaudio,
+	gdk-pixbuf,
+	gtk3,
+	unzip,
+	libX11,
+	libXScrnSaver,
+	libXcomposite,
+	libXcursor,
+	libXdamage,
+	libXext,
+	libXfixes,
+	libXi,
+	libXrandr,
+	libXrender,
+	libXtst,
+	libxcb,
+	writeText,
+	patchelf,
+	libGL,
+	ffmpeg,
+	glib,
+	pciutils,
 }:
 stdenv.mkDerivation rec {
 	pname = "waterfox";
@@ -17,10 +56,44 @@ stdenv.mkDerivation rec {
 	dontUnpack = true;
 	nativeBuildInputs = [
 		makeWrapper
+		autoPatchelfHook
 	];
 	buildInputs = [
-		makeWrapper
-		autoPatchelfHook
+		alsa-lib
+		at-spi2-atk
+		at-spi2-core
+		atk
+		cairo
+		cups
+		dbus-glib
+		libnotify
+		libdrm
+		libxkbcommon
+		mesa
+		nspr
+		nss
+		pango
+		systemd
+		libpulseaudio
+		gdk-pixbuf
+		gtk3
+		libX11
+		libXScrnSaver
+		libXcomposite
+		libXcursor
+		libXdamage
+		libXext
+		libXfixes
+		libXi
+		libXrandr
+		libXrender
+		libXtst
+		libxcb
+		stdenv.cc.cc.lib
+		libGL
+		ffmpeg
+		glib
+		pciutils
 	];
 	installPhase = ''
 		mkdir -p $out/bin
