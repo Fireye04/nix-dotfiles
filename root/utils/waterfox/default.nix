@@ -59,21 +59,10 @@ stdenv.mkDerivation rec {
 		autoPatchelfHook
 	];
 	buildInputs = [
-		atk
-		cairo
-		cups
 		dbus-glib
 		libnotify
 		libdrm
 		libxkbcommon
-		mesa
-		nspr
-		nss
-		pango
-		systemd
-		libpulseaudio
-		gdk-pixbuf
-		gtk3
 		libX11
 		libXScrnSaver
 		libXcomposite
@@ -86,7 +75,6 @@ stdenv.mkDerivation rec {
 		libXrender
 		libXtst
 		libxcb
-		stdenv.cc.cc.lib
 		libGL
 		ffmpeg
 		glib
