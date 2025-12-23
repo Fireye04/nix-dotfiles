@@ -59,9 +59,6 @@ stdenv.mkDerivation rec {
 		autoPatchelfHook
 	];
 	buildInputs = [
-		alsa-lib
-		at-spi2-atk
-		at-spi2-core
 		atk
 		cairo
 		cups
