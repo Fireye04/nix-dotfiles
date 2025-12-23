@@ -18,7 +18,7 @@ stdenv.mkDerivation rec {
 	];
 	sourceRoot = ".";
 	installPhase = ''
-		install -m755 -D waterfox/ $out/waterfox
+		install -m755 $out/waterfox
 	'';
 	# desktopItems = [
 	# 	(makeDesktopItem {
