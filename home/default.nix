@@ -6,6 +6,20 @@
 	inputs,
 	...
 }: {
+	imports = [
+		(import ./bash.nix {inherit config pkgs;})
+		(import ./zsh {inherit lib config pkgs;})
+		(import ./swww {inherit config pkgs;})
+		(import ./waybar {inherit config pkgs;})
+
+		(import ./tofi.nix {inherit lib config pkgs;})
+		(import ./zen.nix {inherit config pkgs inputs;})
+		(import ./kitty.nix {inherit config pkgs;})
+		(import ./foot.nix {inherit config pkgs;})
+		(import ./mako.nix {inherit config pkgs;})
+		(import ./niri {inherit config pkgs inputs;})
+	];
+
 	home.username = "fireye";
 	home.homeDirectory = "/home/fireye";
 
@@ -133,18 +147,19 @@
 		playerctl
 	];
 
-	imports = [
-		(import ./bash.nix {inherit config pkgs;})
-		(import ./zsh {inherit lib config pkgs;})
-		(import ./swww {inherit config pkgs;})
-		(import ./waybar {inherit config pkgs;})
+	services.flatpak.remotes =
+		lib.mkOptionDefault [
+			{
+				name = "flathub-beta";
+				location = "https://flathub.org/beta-repo/flathub-beta.flatpakrepo";
+			}
+		];
 
-		(import ./tofi.nix {inherit lib config pkgs;})
-		(import ./zen.nix {inherit config pkgs inputs;})
-		(import ./kitty.nix {inherit config pkgs;})
-		(import ./foot.nix {inherit config pkgs;})
-		(import ./mako.nix {inherit config pkgs;})
-		(import ./niri {inherit config pkgs inputs;})
+	services.flatpak.update.auto.enable = false;
+	services.flatpak.uninstallUnmanaged = false;
+	# Add flatpaks here
+	services.flatpak.packages = [
+		"net.waterfox.waterfox"
 	];
 
 	home.pointerCursor = {
@@ -191,7 +206,7 @@
 
 	home.file = {
 		".gitconfig-work" = {
-			text = ''					
+			text = ''						
 				[user]
 					email = kkoehler@lsst.org
 					name = Kai Koehler'';

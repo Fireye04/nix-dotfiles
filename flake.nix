@@ -8,6 +8,7 @@
 		fix-python.url = "github:GuillaumeDesforges/fix-python";
 		nix-alien.url = "github:thiagokokada/nix-alien";
 		nix-citizen.url = "github:LovingMelody/nix-citizen";
+		nix-flatpak.url = "github:gmodena/nix-flatpak";
 
 		home-manager = {
 			url = "github:nix-community/home-manager";
@@ -46,6 +47,7 @@
 		fix-python,
 		nix-alien,
 		nix-citizen,
+		nix-flatpak,
 		home-manager,
 		zen-browser,
 		nixvim,
@@ -88,6 +90,7 @@
 						./root
 						niri.nixosModules.niri
 						nixvim.nixosModules.nixvim
+						nix-flatpak.nixosModules.nix-flatpak
 
 						home-manager.nixosModules.home-manager
 						{
