@@ -93,7 +93,6 @@ stdenv.mkDerivation rec {
 		libGL
 		ffmpeg
 		glib
-		pciutils
 	];
 	installPhase = ''
 		mkdir -p $out/bin
