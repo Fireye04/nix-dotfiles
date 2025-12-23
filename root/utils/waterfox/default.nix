@@ -20,7 +20,7 @@ stdenv.mkDerivation rec {
 	buildInputs = [makeWrapper];
 	installPhase = ''
 		mkdir -p $out/bin
-		      makeWrapper ./waterfox $out/bin/waterfox
+		      makeWrapper ${src}/waterfox $out/bin/waterfox
 	'';
 	# desktopItems = [
 	# 	(makeDesktopItem {
