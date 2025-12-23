@@ -2,18 +2,23 @@
 	stdenv,
 	fetchurl,
 	makeDesktopItem,
-	makeWrapper,
+	autoPatchelfHook,
 }:
-stdenv.mkDerivation {
+stdenv.mkDerivation rec {
+	pname = "waterfox";
 	version = "6.6.7";
-	name = "waterfox";
 	src =
 		fetchurl {
-			url = "https://cdn.waterfox.com/waterfox/releases/6.6.7/Linux_x86_64/waterfox-6.6.7.tar.bz2";
+			url = "https://cdn.waterfox.com/waterfox/releases/${version}/Linux_x86_64/waterfox-${version}.tar.bz2";
 			hash = "sha256-/R2rQkYPJ8boC/hHK39UuIkKyAHjaW+t7s5aaWZYTTI=";
 		};
+
+	nativeBuildInputs = [
+		autoPatchelfHook
+	];
+	sourceRoot = ".";
 	installPhase = ''
-		wrapProgram $out/bin/hello
+		install -m755 -D waterfox-${version} $out/waterfox
 	'';
 	# desktopItems = [
 	# 	(makeDesktopItem {
