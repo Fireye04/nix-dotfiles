@@ -1,6 +1,7 @@
 {
 	stdenv,
 	fetchurl,
+	makeWrapper,
 	makeDesktopItem,
 	autoPatchelfHook,
 }:
@@ -14,11 +15,13 @@ stdenv.mkDerivation rec {
 		};
 
 	nativeBuildInputs = [
-		autoPatchelfHook
+		makeWrapper
 	];
 	sourceRoot = ".";
+	buildInputs = [makeWrapper];
 	installPhase = ''
-		install -m755 $out/waterfox -D waterfox-${version}
+		mkdir -p $out/bin
+		      makeWrapper $out/bin/waterfox waterfox
 	'';
 	# desktopItems = [
 	# 	(makeDesktopItem {
