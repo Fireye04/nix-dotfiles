@@ -21,6 +21,7 @@ stdenv.mkDerivation rec {
 	buildInputs = [makeWrapper];
 	installPhase = ''
 		mkdir -p $out/bin
+		mkdir -p $out/src
 		      tar xf ${src} -C $out/src
 		      makeWrapper $out/src/waterfox $out/bin/waterfox
 	'';
