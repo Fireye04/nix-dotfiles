@@ -18,7 +18,10 @@ stdenv.mkDerivation rec {
 	nativeBuildInputs = [
 		makeWrapper
 	];
-	buildInputs = [makeWrapper];
+	buildInputs = [
+		makeWrapper
+		autoPatchelfHook
+	];
 	installPhase = ''
 		mkdir -p $out/bin
 		mkdir -p $out/src
