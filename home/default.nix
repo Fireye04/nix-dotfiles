@@ -147,21 +147,6 @@
 		playerctl
 	];
 
-	services.flatpak.remotes =
-		lib.mkOptionDefault [
-			{
-				name = "flathub-beta";
-				location = "https://flathub.org/beta-repo/flathub-beta.flatpakrepo";
-			}
-		];
-
-	services.flatpak.update.auto.enable = false;
-	services.flatpak.uninstallUnmanaged = false;
-	# Add flatpaks here
-	services.flatpak.packages = [
-		"net.waterfox.waterfox"
-	];
-
 	home.pointerCursor = {
 		enable = true;
 		package = pkgs.bibata-cursors;
@@ -206,7 +191,7 @@
 
 	home.file = {
 		".gitconfig-work" = {
-			text = ''						
+			text = ''					
 				[user]
 					email = kkoehler@lsst.org
 					name = Kai Koehler'';
