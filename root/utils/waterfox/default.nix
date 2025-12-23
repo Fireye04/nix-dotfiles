@@ -17,11 +17,10 @@ stdenv.mkDerivation rec {
 	nativeBuildInputs = [
 		makeWrapper
 	];
-	sourceRoot = ".";
 	buildInputs = [makeWrapper];
 	installPhase = ''
 		mkdir -p $out/bin
-		      makeWrapper waterfox $out/bin/waterfox
+		      makeWrapper ./waterfox $out/bin/waterfox
 	'';
 	# desktopItems = [
 	# 	(makeDesktopItem {
