@@ -14,13 +14,15 @@ stdenv.mkDerivation rec {
 			hash = "sha256-/R2rQkYPJ8boC/hHK39UuIkKyAHjaW+t7s5aaWZYTTI=";
 		};
 
+	dontUnpack = true;
 	nativeBuildInputs = [
 		makeWrapper
 	];
 	buildInputs = [makeWrapper];
 	installPhase = ''
 		mkdir -p $out/bin
-		      makeWrapper ${src}/waterfox $out/bin/waterfox
+		      tar xf ${src} -C $out/src
+		      makeWrapper $out/src/waterfox $out/bin/waterfox
 	'';
 	# desktopItems = [
 	# 	(makeDesktopItem {
