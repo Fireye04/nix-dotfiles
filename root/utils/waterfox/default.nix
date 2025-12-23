@@ -1,6 +1,7 @@
 {
 	stdenv,
 	fetchurl,
+	makeDesktopItem,
 }:
 stdenv.mkDerivation rec {
 	name = "waterfox-${version}";
@@ -11,4 +12,11 @@ stdenv.mkDerivation rec {
 			hash = "sha256-/R2rQkYPJ8boC/hHK39UuIkKyAHjaW+t7s5aaWZYTTI=";
 		};
 	installPhase = ''mkdir -p $out/bin'';
+	desktopItems = [
+		(makeDesktopItem {
+				name = "Waterfox";
+				desktopName = "Waterfox";
+				exec = "waterfox";
+			})
+	];
 }
