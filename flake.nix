@@ -59,9 +59,9 @@
 				config.allowUnfree = true;
 				overlays = [
 					niri.overlays.niri
-					(self: super: {
-							asm-lsp = pkgs.callPackage ./root/utils/mips/asm-lsp.nix {};
-						})
+					# (self: super: {
+					# 		asm-lsp = pkgs.callPackage ./root/utils/mips/asm-lsp.nix {};
+					# 	})
 				];
 				config.permittedInsecurePackages = [
 					"ventoy-gtk3-1.1.07"

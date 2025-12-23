@@ -114,8 +114,8 @@
 		alsa-utils
 		inputs.nix-alien.packages.${system}.default
 		# (callPackage ./utils/nirius {})
-		(callPackage ./utils/mips {})
-		(callPackage ./utils/waterfox {})
+		# (callPackage ./utils/mips {})
+		# (callPackage ./utils/waterfox {})
 		(callPackage ./greeter/games/gamemode.nix {})
 		(callPackage ./greeter/games/no-mans-sky.nix {})
 

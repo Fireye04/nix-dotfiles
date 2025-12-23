@@ -194,10 +194,10 @@
 				clangd.enable = true;
 				ccls.enable = true;
 				ts_ls.enable = true;
-				asm_lsp = {
-					enable = true;
-					package = pkgs.asm-lsp;
-				};
+				# asm_lsp = {
+				# 	enable = true;
+				# 	package = pkgs.asm-lsp;
+				# };
 				# gdshader_lsp.enable = true;
 
 				# https://nix-community.github.io/nixvim/plugins/lsp/servers/omnisharp/index.html#omnisharp
@@ -284,7 +284,7 @@
 				})
 		];
 	};
-	imports = [
-		(import ../utils/mips/asm-format.nix {inherit config pkgs;})
-	];
+	# imports = [
+	# 	(import ../utils/mips/asm-format.nix {inherit config pkgs;})
+	# ];
 }
