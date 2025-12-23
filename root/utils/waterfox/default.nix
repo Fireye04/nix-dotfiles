@@ -23,7 +23,7 @@ stdenv.mkDerivation rec {
 		mkdir -p $out/bin
 		mkdir -p $out/src
 		      tar xf ${src} -C $out/src
-		      makeWrapper $out/src/waterfox $out/bin/waterfox
+		      makeWrapper $out/src/waterfox/waterfox $out/bin/waterfox
 	'';
 	# desktopItems = [
 	# 	(makeDesktopItem {
