@@ -2,6 +2,7 @@
 	stdenv,
 	fetchurl,
 	makeDesktopItem,
+	makeWrapper,
 }:
 stdenv.mkDerivation {
 	version = "6.6.7";
