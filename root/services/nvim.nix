@@ -49,6 +49,7 @@
 			which-key.enable = true;
 			bufferline.enable = true;
 			neo-tree.enable = true;
+			markdown-preview.enable = true;
 			nvim-surround = {
 				enable = true;
 				settings.keymaps = {
