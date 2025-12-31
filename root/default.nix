@@ -114,7 +114,6 @@
 		gamemode
 		alsa-utils
 		openvpn
-		networkmanager-openvpn
 		inputs.nix-alien.packages.${system}.default
 		# (callPackage ./utils/nirius {})
 		# (callPackage ./utils/mips {})
