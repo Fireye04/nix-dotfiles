@@ -66,6 +66,7 @@
 		udiskie
 		cabextract
 		tor-browser
+		yt-dlp
 
 		hyfetch
 		anki
@@ -194,7 +195,7 @@
 
 	home.file = {
 		".gitconfig-work" = {
-			text = ''							
+			text = ''						
 				[user]
 					email = kkoehler@lsst.org
 					name = Kai Koehler'';
