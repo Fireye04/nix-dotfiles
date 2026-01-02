@@ -30,6 +30,7 @@
 			pacman -Sy neovim git lazygit fzf curl ripgrep --noconfirm
 			sh
 			'";
+			dcol = "git add --all; git commit -m 'rev'; git push; colmena apply";
 		};
 		plugins = [
 			{
@@ -54,7 +55,7 @@
 		};
 		initContent = let
 			zshConfigEarlyInit =
-				lib.mkOrder 500 ''								
+				lib.mkOrder 500 ''							
 					awk '{if ($1 > 2*24*3600)
 					print "PC has been running for over 2 days, might wanna restart"}' /proc/uptime
 					if [[ -r "$\{XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-$\{(%):-%n}.zsh" ]]; then
