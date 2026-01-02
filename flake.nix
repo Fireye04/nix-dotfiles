@@ -9,6 +9,7 @@
 		nix-alien.url = "github:thiagokokada/nix-alien";
 		nix-citizen.url = "github:LovingMelody/nix-citizen";
 		nix-flatpak.url = "github:gmodena/nix-flatpak";
+		colmena.url = "github:zhaofengli/colmena";
 
 		home-manager = {
 			url = "github:nix-community/home-manager";
@@ -48,6 +49,7 @@
 		nix-alien,
 		nix-citizen,
 		nix-flatpak,
+		colmena,
 		home-manager,
 		zen-browser,
 		nixvim,
