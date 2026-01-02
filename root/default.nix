@@ -207,7 +207,7 @@
 			# Alpha server
 			alpha = {
 				extraHostNames = ["192.168.86.29"];
-				publicKey = "ssh-ed25519 AAAC3NzaC1lZDI1NTE5AAAAIAqYu29gfiO23YDDjJyNvgnMIEBH24qzR7QymsqOgSd3";
+				publicKey = "ssh-ed25519 AAAC3NzaC1lZDI1NTE5AAAAIAqYu29gfiO23YDDjJyNvgnMIEBH24qzR7QymsqOgSd3 fireye";
 			};
 		};
 	};
