@@ -103,6 +103,7 @@
 		wl-clipboard
 		nirius
 		nmap
+		ardour
 
 		# Communication
 		thunderbird
@@ -195,7 +196,7 @@
 
 	home.file = {
 		".gitconfig-work" = {
-			text = ''						
+			text = ''					
 				[user]
 					email = kkoehler@lsst.org
 					name = Kai Koehler'';
