@@ -88,6 +88,7 @@
 		inputs.quickshell.packages.${system}.default
 		inputs.nix-citizen.packages.${system}.rsi-launcher
 		inputs.colmena.packages.${system}.colmena
+		compose2nix
 		niri-unstable
 		slack
 		spotify-player
@@ -197,7 +198,7 @@
 
 	home.file = {
 		".gitconfig-work" = {
-			text = ''						
+			text = ''							
 				[user]
 					email = kkoehler@lsst.org
 					name = Kai Koehler'';
