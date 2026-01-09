@@ -64,6 +64,7 @@
 		libgnome-keyring
 		nautilus
 		unzip
+		img2pdf
 		udiskie
 		cabextract
 		tor-browser
@@ -201,7 +202,7 @@
 
 	home.file = {
 		".gitconfig-work" = {
-			text = ''							
+			text = ''						
 				[user]
 					email = kkoehler@lsst.org
 					name = Kai Koehler'';
