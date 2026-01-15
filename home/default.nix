@@ -67,6 +67,9 @@
 		img2pdf
 		udiskie
 		cabextract
+		unityhub
+		plasticscm-client-core
+		plasticscm-client-complete
 		tor-browser
 		yt-dlp
 		pkgs-stable.etherpad-lite
@@ -203,7 +206,7 @@
 
 	home.file = {
 		".gitconfig-work" = {
-			text = ''					
+			text = ''							
 				[user]
 					email = kkoehler@lsst.org
 					name = Kai Koehler'';
