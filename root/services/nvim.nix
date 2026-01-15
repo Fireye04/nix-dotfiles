@@ -80,7 +80,7 @@
 			mini-pairs.enable = true;
 			lspconfig.enable = true;
 			lsp-lines.enable = true;
-			nvim-ufo.enable = true;
+			# nvim-ufo.enable = true;
 			conform-nvim = {
 				enable = true;
 				settings = {
