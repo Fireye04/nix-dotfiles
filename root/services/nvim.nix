@@ -80,6 +80,7 @@
 			mini-pairs.enable = true;
 			lspconfig.enable = true;
 			lsp-lines.enable = true;
+			nvim-ufo.enable = true;
 			conform-nvim = {
 				enable = true;
 				settings = {
@@ -283,7 +284,9 @@
 							hash = "sha256-D4RokTtPmc3b91nXc8sm4wBVvrVsrHFx8RkRQnjrXlE=";
 						};
 				})
+			pkgs.vimPlugins."nvim-unity"
 		];
+		# extraConfigLua = "require('nvim-unity').setup({foo = 'bar'})";
 	};
 	# imports = [
 	# 	(import ../utils/mips/asm-format.nix {inherit config pkgs;})
