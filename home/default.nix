@@ -118,6 +118,8 @@
 		# Communication
 		thunderbird
 		iamb
+		jellyfin-tui
+		jellyfin-desktop
 
 		# fluffychat
 		element-desktop
