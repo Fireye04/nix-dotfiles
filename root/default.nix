@@ -114,6 +114,7 @@
 		gamemode
 		alsa-utils
 		openvpn
+		mangowc
 		inputs.nix-alien.packages.${system}.default
 		# (callPackage ./utils/nirius {})
 		# (callPackage ./utils/mips {})
