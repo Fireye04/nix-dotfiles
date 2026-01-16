@@ -10,6 +10,10 @@
 		nix-citizen.url = "github:LovingMelody/nix-citizen";
 		nix-flatpak.url = "github:gmodena/nix-flatpak";
 		colmena.url = "github:zhaofengli/colmena";
+		mango = {
+			url = "github:DreamMaoMao/mango";
+			inputs.nixpkgs.follows = "nixpkgs";
+		};
 
 		home-manager = {
 			url = "github:nix-community/home-manager";
@@ -50,6 +54,7 @@
 		nix-citizen,
 		nix-flatpak,
 		colmena,
+		mango,
 		home-manager,
 		zen-browser,
 		nixvim,
@@ -91,6 +96,10 @@
 					modules = [
 						./root
 						niri.nixosModules.niri
+						mango.nixosModules.mango
+						{
+							programs.mango.enable = true;
+						}
 						nixvim.nixosModules.nixvim
 						nix-flatpak.nixosModules.nix-flatpak
 
