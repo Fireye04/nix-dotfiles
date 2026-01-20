@@ -79,6 +79,7 @@
 		description = "fireye";
 		extraGroups = ["networkmanager" "wheel" "docker"];
 		packages = with pkgs; [
+			(callPackage ../root/utils/nvimunity {})
 		];
 	};
 
