@@ -79,7 +79,6 @@
 		description = "fireye";
 		extraGroups = ["networkmanager" "wheel" "docker"];
 		packages = with pkgs; [
-			(callPackage ./utils/nvimunity {})
 		];
 	};
 
@@ -121,6 +120,7 @@
 		bash
 		jq
 		# (callPackage ./utils/waterfox {})
+		(callPackage ./utils/nvimunity {})
 		(callPackage ./greeter/games/gamemode.nix {})
 		(callPackage ./greeter/games/no-mans-sky.nix {})
 
