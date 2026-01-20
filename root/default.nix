@@ -117,6 +117,7 @@
 		inputs.nix-alien.packages.${system}.default
 		# (callPackage ./utils/nirius {})
 		# (callPackage ./utils/mips {})
+		bash
 		(callPackage ./utils/nvimunity {})
 		# (callPackage ./utils/waterfox {})
 		(callPackage ./greeter/games/gamemode.nix {})
