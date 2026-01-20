@@ -1,3 +1,5 @@
+#!/bin/bash
+
 CONFIG_DIR="$HOME/.config/nvim-unity"
 CONFIG_FILE="$CONFIG_DIR/config.json"
 NVIM_PATH="nvim"
