@@ -4,12 +4,14 @@
 	runCommand,
 	# runtime deps (depend on script)
 	bash,
+	jq,
 }: let
 	# Your external shell script.
 	src = ./nvimunity.sh;
 	binName = "nvimunity";
 	deps = [
 		bash
+		jq
 	];
 in
 	runCommand "${binName}"

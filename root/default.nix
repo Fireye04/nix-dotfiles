@@ -118,6 +118,7 @@
 		# (callPackage ./utils/nirius {})
 		# (callPackage ./utils/mips {})
 		bash
+		jq
 		(callPackage ./utils/nvimunity {})
 		# (callPackage ./utils/waterfox {})
 		(callPackage ./greeter/games/gamemode.nix {})
