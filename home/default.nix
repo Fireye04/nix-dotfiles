@@ -56,6 +56,7 @@
 		glib
 		dos2unix
 		qmk
+		zip
 		gnome-clocks
 		pkg-config-unwrapped
 		gsettings-desktop-schemas
@@ -213,7 +214,7 @@
 
 	home.file = {
 		".gitconfig-work" = {
-			text = ''						
+			text = ''					
 				[user]
 					email = kkoehler@lsst.org
 					name = Kai Koehler'';
