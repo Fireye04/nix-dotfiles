@@ -81,7 +81,6 @@
 		packages = with pkgs; [
 		];
 	};
-	stylix.enable = true;
 
 	hardware.graphics.enable = true;
 	# hardware.xone.enable = true;
