@@ -15,6 +15,10 @@
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
 
+		stylix = {
+			url = "github:nix-community/stylix";
+			inputs.nixpkgs.follows = "nixpkgs";
+		};
 		home-manager = {
 			url = "github:nix-community/home-manager";
 			# The `follows` keyword in inputs is used for inheritance.
@@ -55,6 +59,7 @@
 		nix-flatpak,
 		colmena,
 		mango,
+		stylix,
 		home-manager,
 		zen-browser,
 		nixvim,
@@ -95,6 +100,7 @@
 					};
 					modules = [
 						./root
+						stylix.nixosModules.stylix
 						niri.nixosModules.niri
 						mango.nixosModules.mango
 						{
