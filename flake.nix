@@ -4,6 +4,7 @@
 	inputs = {
 		nixpkgs-stable.url = "github:nixos/nixpkgs?ref=nixos-25.11";
 		nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
+		nixpkgs-small.url = "github:nixos/nixpkgs?ref=nixos-unstable-small";
 		niri.url = "github:sodiboo/niri-flake";
 		fix-python.url = "github:GuillaumeDesforges/fix-python";
 		nix-alien.url = "github:thiagokokada/nix-alien";
@@ -52,6 +53,7 @@
 		self,
 		nixpkgs-stable,
 		nixpkgs,
+		nixpkgs-small,
 		niri,
 		fix-python,
 		nix-alien,
