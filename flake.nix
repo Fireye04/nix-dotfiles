@@ -90,6 +90,13 @@
 				overlays = [];
 				config.permittedInsecurePackages = [];
 			};
+		pkgs-small =
+			import nixpkgs-small {
+				inherit system;
+				config.allowUnfree = true;
+				overlays = [];
+				config.permittedInsecurePackages = [];
+			};
 	in {
 		nixosConfigurations = {
 			nixlaptop =
@@ -98,6 +105,7 @@
 					system = "x86_64-linux";
 					specialArgs = {
 						pkgs-stable = pkgs-stable;
+						pkgs-small = pkgs-small;
 						inherit inputs;
 					};
 					modules = [

@@ -5,6 +5,7 @@
 	config,
 	pkgs,
 	pkgs-stable,
+	pkgs-small,
 	inputs,
 	options,
 	lib,

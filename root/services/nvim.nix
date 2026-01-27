@@ -1,6 +1,7 @@
 {
 	config,
 	pkgs,
+	pkgs-small,
 	...
 }: {
 	programs.nixvim = {
