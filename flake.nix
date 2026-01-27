@@ -130,6 +130,7 @@
 							# Optionally, use home-manager.extraSpecialArgs to pass arguments to home.nix
 							home-manager.extraSpecialArgs = {
 								pkgs-stable = pkgs-stable;
+								pkgs-small = pkgs-small;
 								inherit inputs;
 							};
 						}
