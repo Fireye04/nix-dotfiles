@@ -78,9 +78,8 @@
 		plasticscm-client-complete
 		tor-browser
 		yt-dlp
-		pkgs-stable.etherpad-lite
 		vlc
-		kdePackages.kdenlive
+		# kdePackages.kdenlive
 
 		hyfetch
 		anki
@@ -98,8 +97,8 @@
 		helvum
 		# inputs.zen-browser.packages.${system}.default
 		inputs.fix-python.packages.${system}.default
-		inputs.quickshell.packages.${system}.default
-		inputs.nix-citizen.packages.${system}.rsi-launcher
+		# inputs.quickshell.packages.${system}.default
+		# inputs.nix-citizen.packages.${system}.rsi-launcher
 		inputs.colmena.packages.${system}.colmena
 		compose2nix
 		niri-unstable
@@ -214,7 +213,7 @@
 
 	home.file = {
 		".gitconfig-work" = {
-			text = ''					
+			text = ''				
 				[user]
 					email = kkoehler@lsst.org
 					name = Kai Koehler'';
