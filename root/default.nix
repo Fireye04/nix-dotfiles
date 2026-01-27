@@ -20,7 +20,7 @@
 		(import ./services/git.nix {inherit config pkgs;})
 		(import ./services/zsh.nix {inherit config pkgs;})
 		(import ./services/tuned.nix {inherit config pkgs;})
-		(import ./services/nvim.nix {inherit config pkgs;})
+		(import ./services/nvim.nix {inherit config pkgs pkgs-small;})
 	];
 
 	# Use latest kernel.
