@@ -82,6 +82,7 @@
 		yt-dlp
 		vlc
 		pkgs-stable.kdePackages.kdenlive
+		onboard
 
 		hyfetch
 		anki
@@ -217,7 +218,7 @@
 
 	home.file = {
 		".gitconfig-work" = {
-			text = ''						
+			text = ''					
 				[user]
 					email = kkoehler@lsst.org
 					name = Kai Koehler'';
