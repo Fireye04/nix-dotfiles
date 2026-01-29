@@ -23,6 +23,10 @@
 		(import ./services/nvim.nix {inherit config pkgs pkgs-small;})
 	];
 
+	services.keyd = {
+		enable = true;
+	};
+
 	# Use latest kernel.
 	boot = {
 		kernelPackages = pkgs.linuxPackages_latest;

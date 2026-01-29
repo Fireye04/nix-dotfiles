@@ -7,9 +7,6 @@
 	inputs,
 	...
 }: {
-	services.keyd = {
-		enable = true;
-	};
 	imports =
 		[
 			(import ./bash.nix {inherit config pkgs;})
@@ -221,7 +218,7 @@
 
 	home.file = {
 		".gitconfig-work" = {
-			text = ''				
+			text = ''							
 				[user]
 					email = kkoehler@lsst.org
 					name = Kai Koehler'';
