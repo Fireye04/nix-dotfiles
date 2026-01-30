@@ -11,10 +11,10 @@
 		nix-citizen.url = "github:LovingMelody/nix-citizen";
 		nix-flatpak.url = "github:gmodena/nix-flatpak";
 		colmena.url = "github:zhaofengli/colmena";
-		mango = {
-			url = "github:DreamMaoMao/mango";
-			inputs.nixpkgs.follows = "nixpkgs";
-		};
+		# mango = {
+		# 	url = "github:DreamMaoMao/mango";
+		# 	inputs.nixpkgs.follows = "nixpkgs";
+		# };
 
 		stylix = {
 			url = "github:nix-community/stylix";
@@ -60,7 +60,7 @@
 		nix-citizen,
 		nix-flatpak,
 		colmena,
-		mango,
+		# mango,
 		stylix,
 		home-manager,
 		zen-browser,
@@ -112,10 +112,10 @@
 						./root
 						stylix.nixosModules.stylix
 						niri.nixosModules.niri
-						mango.nixosModules.mango
-						{
-							programs.mango.enable = true;
-						}
+						# mango.nixosModules.mango
+						# {
+						# 	programs.mango.enable = true;
+						# }
 						nixvim.nixosModules.nixvim
 						nix-flatpak.nixosModules.nix-flatpak
 

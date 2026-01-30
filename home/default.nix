@@ -7,24 +7,23 @@
 	inputs,
 	...
 }: {
-	imports =
-		[
-			(import ./bash.nix {inherit config pkgs;})
-			(import ./zsh {inherit lib config pkgs;})
-			(import ./swww {inherit config pkgs;})
-			(import ./waybar {inherit config pkgs;})
+	imports = [
+		(import ./bash.nix {inherit config pkgs;})
+		(import ./zsh {inherit lib config pkgs;})
+		(import ./swww {inherit config pkgs;})
+		(import ./waybar {inherit config pkgs;})
 
-			(import ./tofi.nix {inherit lib config pkgs;})
-			(import ./zen.nix {inherit config pkgs inputs;})
-			(import ./kitty.nix {inherit config pkgs;})
-			(import ./foot.nix {inherit config pkgs;})
-			(import ./mako.nix {inherit config pkgs;})
-			(import ./niri {inherit config pkgs inputs;})
-			(import ./mango.nix {inherit config pkgs inputs;})
-		]
-		++ [
-			inputs.mango.hmModules.mango
-		];
+		(import ./tofi.nix {inherit lib config pkgs;})
+		(import ./zen.nix {inherit config pkgs inputs;})
+		(import ./kitty.nix {inherit config pkgs;})
+		(import ./foot.nix {inherit config pkgs;})
+		(import ./mako.nix {inherit config pkgs;})
+		(import ./niri {inherit config pkgs inputs;})
+		# (import ./mango.nix {inherit config pkgs inputs;})
+	];
+	# ++ [
+	# 	inputs.mango.hmModules.mango
+	# ];
 
 	home.username = "fireye";
 	home.homeDirectory = "/home/fireye";
@@ -218,7 +217,7 @@
 
 	home.file = {
 		".gitconfig-work" = {
-			text = ''							
+			text = ''					
 				[user]
 					email = kkoehler@lsst.org
 					name = Kai Koehler'';
