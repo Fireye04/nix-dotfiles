@@ -31,7 +31,7 @@
 	# Framework firmware
 	services.fwupd.enable = true;
 
-	systemd.sleep.extraConfig = "SuspendState=disk";
+	systemd.sleep.extraConfig = "SuspendState=freeze";
 	hardware.graphics.extraPackages = with pkgs; [
 		intel-vaapi-driver
 		intel-media-driver
