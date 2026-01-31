@@ -95,7 +95,7 @@
 			  // mode "1920x1080@59.977"
 
 			  // You can use integer or fractional scale, for example use 1.5 for 150% scale.
-			  scale 1.25
+			  scale 1.4
 
 			  // Transform allows to rotate the output counter-clockwise, valid values are:
 			  // normal, 90, 180, 270, flipped, flipped-90, flipped-180 and flipped-270.
@@ -429,7 +429,7 @@
 			match app-id=r#"^kitty$"# is-floating=true
 			opacity 0.8
 			}
-			 
+		 
 			window-rule {
 			match app-id=r#"^kitty$"# title="^peaclock$"
 			opacity 0.8
