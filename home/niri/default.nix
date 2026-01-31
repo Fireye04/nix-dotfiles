@@ -293,7 +293,7 @@
 			// which may be more convenient to use.
 			// See the binds section below for more spawn examples.
 
-			# spawn-at-startup "waybar"
+			// spawn-at-startup "waybar"
 			spawn-at-startup "niriusd"
 			spawn-at-startup "export" "ELECTRON_OZONE_PLATFORM_HINT=auto"
 			spawn-at-startup "systemctl" "--user" "start" "plasma-polkit-agent"
@@ -428,7 +428,7 @@
 			match app-id=r#"^kitty$"# is-floating=true
 			opacity 0.8
 			}
-		 
+				 
 			window-rule {
 			match app-id=r#"^kitty$"# title="^peaclock$"
 			opacity 0.8
