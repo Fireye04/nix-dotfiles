@@ -37,7 +37,7 @@
 
 	virtualisation.virtualbox.host.enable = true;
 	services.logind.settings.Login = {
-		HandleLidSwitchDocked = "ignore";
+		HandleLidSwitchDocked = "suspend";
 		HandleLidSwitchExternalPower = "suspend";
 		HandleLidSwitch = "suspend";
 	};
