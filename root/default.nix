@@ -39,9 +39,9 @@
 
 	virtualisation.virtualbox.host.enable = true;
 	services.logind.settings.Login = {
-		HandleLidSwitchDocked = "suspend";
-		HandleLidSwitchExternalPower = "suspend";
-		HandleLidSwitch = "suspend";
+		HandleLidSwitchDocked = "hibernate";
+		HandleLidSwitchExternalPower = "hibernate";
+		HandleLidSwitch = "hibernate";
 	};
 
 	nix.settings.experimental-features = ["nix-command" "flakes"];
