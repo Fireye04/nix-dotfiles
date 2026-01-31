@@ -39,6 +39,7 @@
 		HandleLidSwitchDocked = "suspend";
 		HandleLidSwitchExternalPower = "suspend";
 		HandleLidSwitch = "suspend-then-hibernate";
+		HibernateDelaySec = "10";
 	};
 	services.udev.extraRules =
 		lib.mkAfter ''
