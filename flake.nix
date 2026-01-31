@@ -5,6 +5,7 @@
 		nixpkgs-stable.url = "github:nixos/nixpkgs?ref=nixos-25.11";
 		nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
 		nixpkgs-small.url = "github:nixos/nixpkgs?ref=nixos-unstable-small";
+		nixos-hardware.url = "github:NixOS/nixos-hardware/master";
 		niri.url = "github:sodiboo/niri-flake";
 		fix-python.url = "github:GuillaumeDesforges/fix-python";
 		nix-alien.url = "github:thiagokokada/nix-alien";
@@ -54,6 +55,7 @@
 		nixpkgs-stable,
 		nixpkgs,
 		nixpkgs-small,
+		nixos-hardware,
 		niri,
 		fix-python,
 		nix-alien,
@@ -111,6 +113,7 @@
 					modules = [
 						./root
 						stylix.nixosModules.stylix
+						nixos-hardware.nixosModules.framework-16-amd-ai-300-series
 						niri.nixosModules.niri
 						# mango.nixosModules.mango
 						# {

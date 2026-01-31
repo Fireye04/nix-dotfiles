@@ -28,6 +28,8 @@
 		kernelPackages = pkgs.linuxPackages_latest;
 		kernelParams = ["mem_sleep_default=deep"];
 	};
+	# Framework firmware
+	services.fwupd.enable = true;
 
 	systemd.sleep.extraConfig = "SuspendState=mem";
 	hardware.graphics.extraPackages = with pkgs; [
