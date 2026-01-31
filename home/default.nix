@@ -113,7 +113,7 @@
 		networkmanagerapplet
 		copyq
 		signal-desktop
-		tuned
+		# tuned
 		ffmpeg-full
 		gnome-calculator
 		obsidian
@@ -217,7 +217,7 @@
 
 	home.file = {
 		".gitconfig-work" = {
-			text = ''					
+			text = ''				
 				[user]
 					email = kkoehler@lsst.org
 					name = Kai Koehler'';
