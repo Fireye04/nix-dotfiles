@@ -36,10 +36,15 @@
 
 	virtualisation.virtualbox.host.enable = true;
 	services.logind.settings.Login = {
-		HandleLidSwitchDocked = "hibernate";
-		HandleLidSwitchExternalPower = "hibernate";
-		HandleLidSwitch = "hibernate";
+		HandleLidSwitchDocked = "suspend";
+		HandleLidSwitchExternalPower = "suspend";
+		HandleLidSwitch = "suspend-then-hibernate";
 	};
+	services.udev.extraRules =
+		lib.mkAfter ''
+			SUBSYSTEM=="usb", DRIVERS=="usb", ATTRS{idVendor}=="32ac", ATTRS{idProduct}=="0012", ATTR{power/wakeup}="disabled", ATTR{driver/1-1.1.1.4/power/wakeup}="disabled"
+			SUBSYSTEM=="usb", DRIVERS=="usb", ATTRS{idVendor}=="32ac", ATTRS{idProduct}=="0014", ATTR{power/wakeup}="disabled", ATTR{driver/1-1.1.1.4/power/wakeup}="disabled"
+		'';
 
 	nix.settings.experimental-features = ["nix-command" "flakes"];
 	nix.optimise.automatic = true;
