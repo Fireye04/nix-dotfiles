@@ -10,7 +10,7 @@
 			devices = ["nodev"];
 			useOSProber = false;
 			memtest86.enable = true;
-			extraEntries = ''						
+			extraEntries = ''					
 				menuentry "UEFI Settings" {fwsetup}'';
 
 			#  extraEntries = ''menuentry "ARCH" {
@@ -24,7 +24,7 @@
 
 		efi = {
 			canTouchEfiVariables = true;
-			efiSysMountPoint = "/boot/efi";
+			efiSysMountPoint = "/boot";
 		};
 	};
 }
