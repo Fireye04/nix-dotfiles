@@ -34,12 +34,11 @@
           "warningThreshold": 30
         },
         {
-          "displayMode": "onhover",
-          "id": "Network"
-        },
-        {
-          "displayMode": "onhover",
-          "id": "Bluetooth"
+          "hideWhenZero": false,
+          "hideWhenZeroUnread": false,
+          "id": "NotificationHistory",
+          "showUnreadBadge": true,
+          "unreadBadgeColor": "primary"
         },
         {
           "customFont": "",
@@ -49,9 +48,51 @@
           "tooltipFormat": "HH:mm ddd, MMM dd",
           "useCustomFont": false,
           "usePrimaryColor": false
+        },
+        {
+          "compactMode": true,
+          "diskPath": "/",
+          "id": "SystemMonitor",
+          "showCpuFreq": false,
+          "showCpuTemp": true,
+          "showCpuUsage": true,
+          "showDiskAsFree": false,
+          "showDiskUsage": false,
+          "showGpuTemp": false,
+          "showLoadAverage": false,
+          "showMemoryAsPercent": false,
+          "showMemoryUsage": true,
+          "showNetworkStats": false,
+          "showSwapUsage": false,
+          "useMonospaceFont": true,
+          "usePrimaryColor": false
+        },
+        {
+          "compactMode": false,
+          "compactShowAlbumArt": true,
+          "compactShowVisualizer": false,
+          "hideMode": "hidden",
+          "hideWhenIdle": false,
+          "id": "MediaMini",
+          "maxWidth": 145,
+          "panelShowAlbumArt": true,
+          "panelShowVisualizer": true,
+          "scrollingMode": "hover",
+          "showAlbumArt": true,
+          "showArtistFirst": true,
+          "showProgressRing": true,
+          "showVisualizer": false,
+          "useFixedWidth": false,
+          "visualizerType": "linear"
         }
       ],
       "center": [
+        {
+          "colorName": "tertiary",
+          "hideWhenIdle": false,
+          "id": "AudioVisualizer",
+          "width": 150
+        },
         {
           "characterCount": 2,
           "colorizeIcons": false,
@@ -63,16 +104,54 @@
           "hideUnoccupied": false,
           "iconScale": 0.8,
           "id": "Workspace",
-          "labelMode": "none",
+          "labelMode": "name",
           "occupiedColor": "secondary",
-          "reverseScroll": false,
+          "reverseScroll": true,
           "showApplications": false,
           "showBadge": true,
           "showLabelsOnlyWhenOccupied": true,
           "unfocusedIconsOpacity": 1
+        },
+        {
+          "colorName": "tertiary",
+          "hideWhenIdle": false,
+          "id": "AudioVisualizer",
+          "width": 150
         }
       ],
       "right": [
+        {
+          "blacklist": [],
+          "colorizeIcons": false,
+          "drawerEnabled": true,
+          "hidePassive": false,
+          "id": "Tray",
+          "pinned": []
+        },
+        {
+          "id": "PowerProfile"
+        },
+        {
+          "displayMode": "onhover",
+          "id": "Brightness"
+        },
+        {
+          "displayMode": "onhover",
+          "id": "Volume",
+          "middleClickCommand": "pwvucontrol || pavucontrol"
+        },
+        {
+          "displayMode": "onhover",
+          "id": "VPN"
+        },
+        {
+          "displayMode": "onhover",
+          "id": "Network"
+        },
+        {
+          "displayMode": "onhover",
+          "id": "Bluetooth"
+        },
         {
           "colorizeDistroLogo": false,
           "colorizeSystemIcon": "none",
@@ -257,10 +336,6 @@
       },
       {
         "enabled": false,
-        "id": "audio-card"
-      },
-      {
-        "enabled": false,
         "id": "brightness-card"
       },
       {
@@ -270,6 +345,10 @@
       {
         "enabled": true,
         "id": "media-sysmon-card"
+      },
+      {
+        "enabled": true,
+        "id": "audio-card"
       }
     ]
   },
@@ -414,7 +493,7 @@
     "volumeStep": 5,
     "volumeOverdrive": false,
     "cavaFrameRate": 30,
-    "visualizerType": "linear",
+    "visualizerType": "mirrored",
     "mprisBlacklist": [],
     "preferredPlayer": "",
     "volumeFeedback": false
@@ -459,7 +538,7 @@
     "session": ""
   },
   "desktopWidgets": {
-    "enabled": true,
+    "enabled": false,
     "gridSnap": true,
     "monitorWidgets": [
       {
