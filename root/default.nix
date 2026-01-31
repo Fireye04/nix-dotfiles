@@ -31,7 +31,7 @@
 	# Framework firmware
 	services.fwupd.enable = true;
 
-	systemd.sleep.extraConfig = "SuspendState=freeze";
+	systemd.sleep.extraConfig = "SuspendState=mem";
 	hardware.graphics.extraPackages = with pkgs; [
 		intel-vaapi-driver
 		intel-media-driver
@@ -39,9 +39,9 @@
 
 	virtualisation.virtualbox.host.enable = true;
 	services.logind.settings.Login = {
-		HandleLidSwitchDocked = "hibernate";
-		HandleLidSwitchExternalPower = "hibernate";
-		HandleLidSwitch = "hibernate";
+		HandleLidSwitchDocked = "suspend-then-hibernate";
+		HandleLidSwitchExternalPower = "suspend-then-hibernate";
+		HandleLidSwitch = "suspend-then-hibernate";
 	};
 
 	nix.settings.experimental-features = ["nix-command" "flakes"];
