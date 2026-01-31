@@ -19,6 +19,7 @@
 		(import ./foot.nix {inherit config pkgs;})
 		(import ./mako.nix {inherit config pkgs;})
 		(import ./niri {inherit config pkgs inputs;})
+		(import ./noctalia.nix {inherit config pkgs inputs;})
 		# (import ./mango.nix {inherit config pkgs inputs;})
 	];
 	# ++ [
@@ -217,7 +218,7 @@
 
 	home.file = {
 		".gitconfig-work" = {
-			text = ''				
+			text = ''							
 				[user]
 					email = kkoehler@lsst.org
 					name = Kai Koehler'';
