@@ -30,18 +30,15 @@
 	};
 	# Framework firmware
 	services.fwupd.enable = true;
+	services.upower.enable = true;
 
-	systemd.sleep.extraConfig = "SuspendState=mem";
-	hardware.graphics.extraPackages = with pkgs; [
-		intel-vaapi-driver
-		intel-media-driver
-	];
+	systemd.sleep.extraConfig = "SuspendState=freeze";
 
 	virtualisation.virtualbox.host.enable = true;
 	services.logind.settings.Login = {
-		HandleLidSwitchDocked = "suspend-then-hibernate";
-		HandleLidSwitchExternalPower = "suspend-then-hibernate";
-		HandleLidSwitch = "suspend-then-hibernate";
+		HandleLidSwitchDocked = "hibernate";
+		HandleLidSwitchExternalPower = "hibernate";
+		HandleLidSwitch = "hibernate";
 	};
 
 	nix.settings.experimental-features = ["nix-command" "flakes"];
@@ -118,6 +115,7 @@
 		alsa-utils
 		openvpn
 		inputs.nix-alien.packages.${system}.default
+		inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
 		# (callPackage ./utils/nirius {})
 		# (callPackage ./utils/mips {})
 		bash

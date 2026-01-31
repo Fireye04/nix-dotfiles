@@ -12,6 +12,10 @@
 		nix-citizen.url = "github:LovingMelody/nix-citizen";
 		nix-flatpak.url = "github:gmodena/nix-flatpak";
 		colmena.url = "github:zhaofengli/colmena";
+		noctalia = {
+			url = "github:noctalia-dev/noctalia-shell";
+			inputs.nixpkgs.follows = "nixpkgs";
+		};
 		# mango = {
 		# 	url = "github:DreamMaoMao/mango";
 		# 	inputs.nixpkgs.follows = "nixpkgs";
