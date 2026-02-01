@@ -103,7 +103,8 @@
 		# inputs.quickshell.packages.${system}.default
 		# inputs.nix-citizen.packages.${system}.rsi-launcher
 		inputs.colmena.packages.${system}.colmena
-		pkgs-small.godot_4_6-mono
+		godot-mono
+		godotPackages.export-templates-mono-bin
 
 		compose2nix
 		niri-unstable
@@ -218,7 +219,7 @@
 
 	home.file = {
 		".gitconfig-work" = {
-			text = ''						
+			text = ''					
 				[user]
 					email = kkoehler@lsst.org
 					name = Kai Koehler'';
