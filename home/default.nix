@@ -83,7 +83,7 @@
 		vlc
 		pkgs-stable.kdePackages.kdenlive
 		onboard
-		supersonic-wayland
+		tauon
 
 		hyfetch
 		anki
@@ -222,7 +222,7 @@
 
 	home.file = {
 		".gitconfig-work" = {
-			text = ''							
+			text = ''						
 				[user]
 					email = kkoehler@lsst.org
 					name = Kai Koehler'';
