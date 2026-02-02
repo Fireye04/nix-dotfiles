@@ -104,7 +104,6 @@
 		# inputs.nix-citizen.packages.${system}.rsi-launcher
 		inputs.colmena.packages.${system}.colmena
 		godot-mono
-		godotPackages.export-template-mono
 
 		compose2nix
 		niri-unstable
@@ -174,7 +173,8 @@
 		brightnessctl
 		playerctl
 	];
-
+	home.file.".local/share/godot/export_templates/${builtins.replaceStrings ["-"] ["."] pkgs.godot-mono_4-export-templates.version}".source =
+		pkgs.godotPackages.export-template-mono;
 	home.pointerCursor = {
 		enable = true;
 		package = pkgs.bibata-cursors;
@@ -219,7 +219,7 @@
 
 	home.file = {
 		".gitconfig-work" = {
-			text = ''							
+			text = ''						
 				[user]
 					email = kkoehler@lsst.org
 					name = Kai Koehler'';
