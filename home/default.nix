@@ -104,7 +104,7 @@
 		# inputs.nix-citizen.packages.${system}.rsi-launcher
 		inputs.colmena.packages.${system}.colmena
 		godot-mono
-		godotPackages.export-templates-mono-bin
+		godot-export-templates-mono-bin
 
 		compose2nix
 		niri-unstable
@@ -219,7 +219,7 @@
 
 	home.file = {
 		".gitconfig-work" = {
-			text = ''					
+			text = ''				
 				[user]
 					email = kkoehler@lsst.org
 					name = Kai Koehler'';
