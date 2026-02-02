@@ -16,7 +16,6 @@
     "frameThickness": 8,
     "frameRadius": 12,
     "outerCorners": true,
-    "exclusive": true,
     "hideOnOverview": false,
     "displayMode": "always_visible",
     "autoHideDelay": 500,
@@ -42,10 +41,10 @@
         },
         {
           "customFont": "",
-          "formatHorizontal": "HH:mm ddd, MMM dd",
-          "formatVertical": "HH mm - dd MM",
+          "formatHorizontal": "h:mm AP",
+          "formatVertical": "h:mm AP - dd MM",
           "id": "Clock",
-          "tooltipFormat": "HH:mm ddd, MMM dd",
+          "tooltipFormat": "h:mm AP ddd MMM d",
           "useCustomFont": false,
           "usePrimaryColor": false
         },
@@ -129,16 +128,14 @@
           "pinned": []
         },
         {
+          "id": "plugin:timer"
+        },
+        {
           "id": "PowerProfile"
         },
         {
           "displayMode": "onhover",
           "id": "Brightness"
-        },
-        {
-          "displayMode": "onhover",
-          "id": "Volume",
-          "middleClickCommand": "pwvucontrol || pavucontrol"
         },
         {
           "displayMode": "onhover",
@@ -151,6 +148,11 @@
         {
           "displayMode": "onhover",
           "id": "Bluetooth"
+        },
+        {
+          "displayMode": "onhover",
+          "id": "Volume",
+          "middleClickCommand": "pwvucontrol || pavucontrol"
         },
         {
           "colorizeDistroLogo": false,
@@ -270,7 +272,8 @@
     "wallhavenApiKey": "",
     "wallhavenResolutionMode": "atleast",
     "wallhavenResolutionWidth": "",
-    "wallhavenResolutionHeight": ""
+    "wallhavenResolutionHeight": "",
+    "sortOrder": "name"
   },
   "appLauncher": {
     "enableClipboardHistory": true,
