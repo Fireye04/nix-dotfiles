@@ -42,7 +42,7 @@
         {
           "customFont": "",
           "formatHorizontal": "h:mm AP",
-          "formatVertical": "h:mm AP - dd MM",
+          "formatVertical": "h:mm AP - MMM dd",
           "id": "Clock",
           "tooltipFormat": "h:mm AP ddd MMM d",
           "useCustomFont": false,
@@ -65,6 +65,9 @@
           "showSwapUsage": false,
           "useMonospaceFont": true,
           "usePrimaryColor": false
+        },
+        {
+          "id": "plugin:todo"
         },
         {
           "compactMode": false,
@@ -496,7 +499,7 @@
     "volumeStep": 5,
     "volumeOverdrive": false,
     "cavaFrameRate": 30,
-    "visualizerType": "mirrored",
+    "visualizerType": "linear",
     "mprisBlacklist": [],
     "preferredPlayer": "",
     "volumeFeedback": false
