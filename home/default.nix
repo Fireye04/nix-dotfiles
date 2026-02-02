@@ -175,7 +175,7 @@
 		playerctl
 	];
 
-	home.file.".local/share/godot/export_templates/${builtins.replaceStrings ["-"] ["."] pkgs.godotPackages.export-template-mono.version}.mono".source = pkgs.godotPackages.export-template-mono.outPath/bin;
+	home.file.".local/share/godot/export_templates/${builtins.replaceStrings ["-"] ["."] pkgs.godotPackages.export-template-mono.version}.mono".source = pkgs.godotPackages.export-template-mono.outPath.bin;
 
 	home.pointerCursor = {
 		enable = true;
@@ -221,7 +221,7 @@
 
 	home.file = {
 		".gitconfig-work" = {
-			text = ''						
+			text = ''				
 				[user]
 					email = kkoehler@lsst.org
 					name = Kai Koehler'';
