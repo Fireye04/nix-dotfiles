@@ -174,7 +174,7 @@
 		playerctl
 	];
 	home.file.".local/share/godot/export_templates/${builtins.replaceStrings ["-"] ["."] pkgs.godotPackages.export-template-mono.version}.mono".source =
-		pkgs.godotPackages.export-template-mono;
+		pkgs.godotPackages.export-template-mono.bin;
 	home.pointerCursor = {
 		enable = true;
 		package = pkgs.bibata-cursors;
@@ -219,7 +219,7 @@
 
 	home.file = {
 		".gitconfig-work" = {
-			text = ''							
+			text = ''					
 				[user]
 					email = kkoehler@lsst.org
 					name = Kai Koehler'';
