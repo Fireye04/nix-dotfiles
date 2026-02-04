@@ -18,6 +18,9 @@
 			gst = "git status";
 			gco = "git checkout";
 			gcb = "git checkout -b";
+			g = "git";
+			grb = "git rebase";
+			gl = "git pull";
 			v = "nvim .";
 
 			# Games
