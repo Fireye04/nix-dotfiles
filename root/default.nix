@@ -135,6 +135,7 @@
 		(callPackage ./utils/nvimunity {})
 		(callPackage ./greeter/games/gamemode.nix {})
 		(callPackage ./greeter/games/no-mans-sky.nix {})
+		dxvk
 
 		(let
 			base = pkgs.appimageTools.defaultFhsEnvArgs;
