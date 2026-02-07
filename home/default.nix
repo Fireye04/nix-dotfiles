@@ -84,6 +84,7 @@
 		pkgs-stable.kdePackages.kdenlive
 		onboard
 		tauon
+		musescore
 
 		hyfetch
 		anki
@@ -222,7 +223,7 @@
 
 	home.file = {
 		".gitconfig-work" = {
-			text = ''							
+			text = ''						
 				[user]
 					email = kkoehler@lsst.org
 					name = Kai Koehler'';
