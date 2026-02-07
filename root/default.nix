@@ -9,6 +9,7 @@
 	inputs,
 	options,
 	lib,
+	nixos-hardware,
 	...
 }: {
 	imports = [
@@ -21,6 +22,7 @@
 		(import ./services/zsh.nix {inherit config pkgs;})
 		# (import ./services/tuned.nix {inherit config pkgs;})
 		(import ./services/nvim.nix {inherit config pkgs pkgs-small;})
+		nixos-hardware.nixosModules.framework-16-amd-ai-300-series
 	];
 
 	nix.settings = {

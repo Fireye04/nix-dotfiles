@@ -117,7 +117,6 @@
 					modules = [
 						./root
 						stylix.nixosModules.stylix
-						nixos-hardware.nixosModules.framework-16-amd-ai-300-series
 						niri.nixosModules.niri
 						# mango.nixosModules.mango
 						# {
