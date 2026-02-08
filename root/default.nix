@@ -116,6 +116,7 @@
 		mangowc
 		mesa
 		mesa-gl-headers
+		vulkan-tools
 		gh
 		os-prober
 		arch-install-scripts
