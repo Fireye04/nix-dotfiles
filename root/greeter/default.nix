@@ -60,10 +60,15 @@
 		# 	name = "Gamemode";
 		# 	start = "gamescope -e -f -r 60 --backend wayland --mangoapp -- steam -nointro -bigpicture";
 		# }
+		# {
+		# 	manage = "desktop";
+		# 	name = "NoMansSky";
+		# 	start = "gamescope -e -f -r 60 --backend wayland --mangoapp -- steam steam://rungameid/275850";
+		# }
 		{
 			manage = "desktop";
-			name = "NoMansSky";
-			start = "gamescope -e -f -r 60 --backend wayland --mangoapp -- steam steam://rungameid/275850";
+			name = "Star Citizen";
+			start = ''gamescope -e -r 165 --adaptive-sync --hdr-enabled -W 2560 -H 1600 --force-grab-cursor -- rsi-launcher'';
 		}
 	];
 
