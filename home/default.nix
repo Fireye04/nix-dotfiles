@@ -79,7 +79,7 @@
 		# 	(finalAttrs: previousAttrs: {
 		# 			pname = previousAttrs.installPhase + "export GDK_SCALE=2; export GDK_DPI_SCALE=0.5;";
 		# 		}))
-		(unityhub.overrideAttrs {shellHook = "export GDK_SCALE=2; export GDK_DPI_SCALE=0.5;";})
+		(unityhub.override {buildFHSEnv.runScript = "export GDK_SCALE=2; export GDK_DPI_SCALE=0.5;";})
 		plasticscm-client-core
 		plasticscm-client-complete
 		tor-browser
@@ -227,7 +227,7 @@
 
 	home.file = {
 		".gitconfig-work" = {
-			text = ''				
+			text = ''						
 				[user]
 					email = kkoehler@lsst.org
 					name = Kai Koehler'';
