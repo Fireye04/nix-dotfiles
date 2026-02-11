@@ -79,7 +79,32 @@
 		# 	(finalAttrs: previousAttrs: {
 		# 			pname = previousAttrs.installPhase + "export GDK_SCALE=2; export GDK_DPI_SCALE=0.5;";
 		# 		}))
-		(unityhub.override {fhsEnv.runScript = "export GDK_SCALE=2; export GDK_DPI_SCALE=0.5;";})
+		(unityhub.override {
+				installPhase = ''
+					runHook preInstall
+
+					mkdir -p $out
+					mv opt/ usr/share/ $out
+
+					# `/opt/unityhub/unityhub` is a shell wrapper that runs `/opt/unityhub/unityhub-bin`
+					# Which we don't need and overwrite with our own custom wrapper
+					makeWrapper ${fhsEnv}/bin/${pname}-fhs-env $out/opt/unityhub/unityhub \
+					  --add-flags $out/opt/unityhub/unityhub-bin \
+					  --argv0 unityhub
+					  --set GDK_SCALE 2
+					  --set GDK_DPI_SCALE 0.5
+
+					# Link binary
+					mkdir -p $out/bin
+					ln -s $out/opt/unityhub/unityhub $out/bin/unityhub
+
+					# Replace absolute path in desktop file to correctly point to nix store
+					substituteInPlace $out/share/applications/unityhub.desktop \
+					  --replace /opt/unityhub/unityhub $out/opt/unityhub/unityhub
+
+					runHook postInstall
+				'';
+			})
 		plasticscm-client-core
 		plasticscm-client-complete
 		tor-browser
@@ -227,7 +252,7 @@
 
 	home.file = {
 		".gitconfig-work" = {
-			text = ''					
+			text = ''				
 				[user]
 					email = kkoehler@lsst.org
 					name = Kai Koehler'';
