@@ -77,7 +77,7 @@
 		cabextract
 		(unityhub.overrideAttrs
 			(finalAttrs: previousAttrs: {
-					pname = previousAttrs.postInstall + "export GDK_SCALE=2; export GDK_DPI_SCALE=0.5;";
+					pname = previousAttrs.installPhase + "export GDK_SCALE=2; export GDK_DPI_SCALE=0.5;";
 				}))
 		plasticscm-client-core
 		plasticscm-client-complete
@@ -226,7 +226,7 @@
 
 	home.file = {
 		".gitconfig-work" = {
-			text = ''						
+			text = ''					
 				[user]
 					email = kkoehler@lsst.org
 					name = Kai Koehler'';
