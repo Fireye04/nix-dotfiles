@@ -160,12 +160,12 @@
 							with pkgs; [
 								pkg-config
 								ncurses
-								gcc15
+								gcc14
 								# Feel free to add more packages here if needed.
 							]
 						);
 					profile = "export FHS=1";
-					runScript = "bash";
+					runScript = "zsh";
 					extraOutputsToInstall = ["dev"];
 				}))
 		bibata-cursors
