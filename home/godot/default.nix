@@ -5,7 +5,7 @@
 }: {
 	home.file = {
 		".config/godot/custom" = {
-			source = ./bin/randomize_multi.sh;
+			source = ./run.sh;
 			executable = true;
 		};
 
