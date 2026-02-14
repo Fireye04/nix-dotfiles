@@ -7,7 +7,7 @@ term_exec="kitty"
 # - replace with your Neovim executable
 nvim_exec="nvim"
 # - replace with other path for the Neovim server pipe
-server_path="$HOME/.cache/nvim/godot-server.pipe"
+server_path="./godothost"
 # - if you don't get the gdscript in nvim on startup increase this number NOTE: delay is in seconds
 server_startup_delay=0.1
 
