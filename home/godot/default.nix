@@ -4,7 +4,7 @@
 	...
 }: {
 	home.file = {
-		".config/godot/custom" = {
+		".config/godot/custom/run.sh" = {
 			source = ./run.sh;
 			executable = true;
 		};
