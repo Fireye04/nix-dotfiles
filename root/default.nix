@@ -40,7 +40,7 @@
 
 	systemd.sleep.extraConfig = "SuspendState=freeze";
 
-	virtualisation.virtualbox.host.enable = true;
+	# virtualisation.virtualbox.host.enable = true;
 	services.logind.settings.Login = {
 		HandleLidSwitchDocked = "suspend";
 		HandleLidSwitchExternalPower = "suspend";
