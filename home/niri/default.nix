@@ -300,7 +300,6 @@
 			spawn-at-startup "systemctl" "--user" "start" "plasma-polkit-agent"
 			spawn-at-startup "copyq" "--start-server"
 			spawn-at-startup "gsettings" "set" "org.gnome.desktop.interface" "cursor-theme" "'Bibata-MC'"
-			// spawn-at-startup "xwayland-satellite"
 			//spawn-at-startup "wbg" "/usr/share/backgrounds/waterfall.png"
 			// spawn-at-startup "sleep" "1;" "swww" "img" "/etc/nixos/wallpapers/green_cabin.jpg" "--transition-type" "center"
 			spawn-at-startup "~/.config/swww/bin/randomize_multi.sh" "/etc/nixos/wallpapers"
@@ -311,9 +310,9 @@
 			  DISPLAY ":0"
 			}
 
-			xwayland-satellite {
-			             path "~/Foss/xwayland-satellite/target/release/xwayland-satellite"
-			         }
+			//xwayland-satellite {
+			//             path "~/Foss/xwayland-satellite/target/release/xwayland-satellite"
+			//         }
 
 
 			workspace "M";
@@ -434,7 +433,7 @@
 			match app-id=r#"^kitty$"# is-floating=true
 			opacity 0.8
 			}
-			 
+		 
 			window-rule {
 			match app-id=r#"^kitty$"# title="^peaclock$"
 			opacity 0.8
