@@ -226,6 +226,7 @@
     "allowPasswordWithFprintd": false,
     "clockStyle": "custom",
     "clockFormat": "hh\\nmm",
+    "passwordChars": false,
     "lockScreenMonitors": [],
     "lockScreenBlur": 0,
     "lockScreenTint": 0,
@@ -252,7 +253,7 @@
         "Del"
       ]
     },
-    "reverseScroll": false
+    "reverseScroll": true
   },
   "ui": {
     "fontDefault": "Sans Serif",
@@ -455,6 +456,8 @@
     "monitors": [],
     "pinnedApps": [],
     "colorizeIcons": false,
+    "showLauncherIcon": false,
+    "launcherPosition": "end",
     "pinnedStatic": false,
     "inactiveIndicators": false,
     "deadOpacity": 0.6,
@@ -522,6 +525,13 @@
         "countdownEnabled": true,
         "enabled": true,
         "keybind": "6"
+      },
+      {
+        "action": "rebootToUefi",
+        "command": "",
+        "countdownEnabled": true,
+        "enabled": true,
+        "keybind": ""
       }
     ]
   },
@@ -552,7 +562,7 @@
       "lowSoundFile": "",
       "excludedApps": "discord,firefox,chrome,chromium,edge"
     },
-    "enableMediaToast": true,
+    "enableMediaToast": false,
     "enableKeyboardLayoutToast": true,
     "enableBatteryToast": true
   },
