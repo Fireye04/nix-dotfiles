@@ -6,7 +6,7 @@
 		package =
 			pkgs.foot.overrideAttrs (oldAttrs: {
 					src =
-						pkgs.fetchGit {
+						pkgs.fetchgit {
 							url = "https://codeberg.org/dnkl/foot";
 							rev = "e63150305ebe394960fbe386bed961f6aa5202dc";
 						};
