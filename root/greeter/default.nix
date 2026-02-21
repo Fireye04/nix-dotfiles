@@ -8,7 +8,7 @@
 		package =
 			pkgs.niri-unstable.override {
 				src =
-					pkgs.fetchFromGithub {
+					pkgs.fetchFromGitHub {
 						owner = "niri-wm";
 						repo = "niri";
 						rev = "f1e4091ab1de3bfe96bc8c927a7fdcf913d88fd0";
