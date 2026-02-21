@@ -6,14 +6,15 @@
 	# Enable niri system wide so it shows up on the greeter session menu
 	programs.niri = {
 		package =
-			pkgs.niri-unstable.overrideAttrs (final: old: {
-					src =
-						final.fetchFromGithub {
-							owner = "niri-wm";
-							repo = "niri";
-							rev = "f1e4091ab1de3bfe96bc8c927a7fdcf913d88fd0";
-						};
-				});
+			pkgs.niri-unstable.override {
+				src =
+					pkgs.fetchFromGithub {
+						owner = "niri-wm";
+						repo = "niri";
+						rev = "f1e4091ab1de3bfe96bc8c927a7fdcf913d88fd0";
+					};
+			};
+
 		enable = true;
 	};
 	programs.sway.enable = true;
