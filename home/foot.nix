@@ -5,12 +5,12 @@
 }: {
 	programs.foot = {
 		package =
-			pkgs-stable.foot.overrideAttrs (oldAttrs: {
+			pkgs.foot.overrideAttrs (oldAttrs: {
 					src =
 						pkgs.fetchFromCodeberg {
-							owner = "Fireye";
+							owner = "dnkl";
 							repo = "foot";
-							rev = "c291194a4e593bbbb91420e81fa0111508084448";
+							version = "1.25.0";
 							hash = "sha256-mhjRqZcGkE/QGS3a7H5Veo/Ou95/5kZt54WUEFffK6w=";
 						};
 				});
