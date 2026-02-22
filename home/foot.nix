@@ -1,10 +1,11 @@
 {
 	config,
 	pkgs,
+	pkgs-stable,
 }: {
 	programs.foot = {
 		package =
-			pkgs.foot.overrideAttrs (oldAttrs: {
+			pkgs-stable.foot.overrideAttrs (oldAttrs: {
 					src =
 						pkgs.fetchFromCodeberg {
 							owner = "Fireye";
