@@ -19,8 +19,8 @@
 			main = {
 				font = "Pixel Code:size=13";
 			};
-			colors-dark = {
-				blur = "true";
+			colors = {
+				blur = "yes";
 			};
 			cursor = {
 				style = "underline";
