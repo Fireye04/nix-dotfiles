@@ -20,7 +20,7 @@
 				font = "Pixel Code:size=13";
 			};
 			colors = {
-				blur = "yes";
+				blur = "true";
 			};
 			cursor = {
 				style = "underline";
