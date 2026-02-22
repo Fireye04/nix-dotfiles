@@ -18,6 +18,8 @@
 		settings = {
 			main = {
 				font = "Pixel Code:size=13";
+			};
+			color = {
 				blur = "yes";
 			};
 			cursor = {
