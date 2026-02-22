@@ -10,7 +10,7 @@
 						pkgs.fetchFromCodeberg {
 							owner = "dnkl";
 							repo = "foot";
-							version = "1.25.0";
+							tag = "1.25.0";
 						};
 				});
 		enable = true;
