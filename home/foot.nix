@@ -19,7 +19,7 @@
 			main = {
 				font = "Pixel Code:size=13";
 			};
-			color = {
+			colors = {
 				blur = "yes";
 			};
 			cursor = {
