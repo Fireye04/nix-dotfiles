@@ -9,7 +9,7 @@
 						pkgs.fetchFromCodeberg {
 							owner = "Fireye";
 							repo = "foot";
-							rev = "efe40d460b495f6d5c2448eadcd3480002d4f12c";
+							rev = "c291194a4e593bbbb91420e81fa0111508084448";
 							hash = "sha256-mhjRqZcGkE/QGS3a7H5Veo/Ou95/5kZt54WUEFffK6w=";
 						};
 				});
