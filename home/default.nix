@@ -53,6 +53,16 @@
 
 	# Packages that should be installed to the user profile.
 	home.packages = with pkgs; [
+		(pkgs.foot.overrideAttrs
+			(oldAttrs: {
+					src =
+						pkgs.fetchFromCodeberg {
+							owner = "Fireye";
+							repo = "foot";
+							tag = "1.25.0b";
+							hash = "sha256-s7SwIdkWhBKcq9u4V0FLKW6CA36MBvDyB9ELB0V52O0=";
+						};
+				}))
 		# here is some command line tools I use frequently
 		# feel free to add your own or remove some of them
 		glib
@@ -223,7 +233,7 @@
 
 	home.file = {
 		".gitconfig-work" = {
-			text = ''						
+			text = ''				
 				[user]
 					email = kkoehler@lsst.org
 					name = Kai Koehler'';
