@@ -5,8 +5,7 @@
 }: {
 	programs.foot = {
 		package =
-			pkgs.foot.overrideAttrs (oldAttrs: {
-					version = "1.25.0b";
+			pkgs.foot.override {version = "1.25.0b";}.overrideAttrs (oldAttrs: {
 					src =
 						pkgs.fetchFromCodeberg {
 							owner = "Fireye";
