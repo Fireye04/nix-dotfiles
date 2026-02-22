@@ -6,6 +6,7 @@
 	programs.foot = {
 		package =
 			pkgs.foot.overrideAttrs (oldAttrs: {
+					varsion = "1.25.0b";
 					src =
 						pkgs.fetchFromCodeberg {
 							owner = "Fireye";
