@@ -6,7 +6,7 @@
 	programs.foot = {
 		package =
 			pkgs.foot.overrideAttrs (oldAttrs: {
-					varsion = "1.25.0b";
+					version = "1.25.0b";
 					src =
 						pkgs.fetchFromCodeberg {
 							owner = "Fireye";
@@ -20,7 +20,7 @@
 			main = {
 				font = "Pixel Code:size=13";
 			};
-			colors = {
+			colors-dark = {
 				blur = "yes";
 			};
 			cursor = {
