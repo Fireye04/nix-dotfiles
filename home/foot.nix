@@ -11,6 +11,7 @@
 							owner = "dnkl";
 							repo = "foot";
 							tag = "1.25.0";
+							hash = "sha256-s7SwIdkWhBKcq9u4V0FLKW6CA36MBvDyB9ELB0V52O0=";
 						};
 				});
 		enable = true;
