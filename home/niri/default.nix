@@ -422,7 +422,9 @@
 			window-rule {
 			match app-id=r#"^kitty$"# title="^cmatrix$"
 			opacity 0.6
-					
+			background-effect {
+			     blur true
+			}
 			}
 
 			window-rule {
