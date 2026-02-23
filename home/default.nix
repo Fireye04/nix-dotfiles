@@ -111,7 +111,17 @@
 		godotPackages.export-template-mono
 
 		compose2nix
-		niri-unstable
+		(niri-unstable.overrideAttrs
+			(oldAttrs: {
+					src =
+						pkgs.fetchFromGitHub {
+							owner = "niri-wm";
+							repo = "niri";
+							rev = "f1e4091ab1de3bfe96bc8c927a7fdcf913d88fd0";
+							hash = "sha256-YVqVfFFyAN/m96DqWWiNq83wv6BDUUuQX2yJjL3Ouog=";
+						};
+				}))
+
 		slack
 		spotify-player
 		baobab
@@ -223,7 +233,7 @@
 
 	home.file = {
 		".gitconfig-work" = {
-			text = ''					
+			text = ''						
 				[user]
 					email = kkoehler@lsst.org
 					name = Kai Koehler'';

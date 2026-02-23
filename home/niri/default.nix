@@ -5,16 +5,6 @@
 	...
 }: {
 	programs.niri = {
-		package =
-			pkgs.niri-unstable.overrideAttrs (oldAttrs: {
-					src =
-						pkgs.fetchFromGitHub {
-							owner = "niri-wm";
-							repo = "niri";
-							rev = "f1e4091ab1de3bfe96bc8c927a7fdcf913d88fd0";
-							hash = "sha256-YVqVfFFyAN/m96DqWWiNq83wv6BDUUuQX2yJjL3Ouog=";
-						};
-				});
 		config = ''
 			// This config is in the KDL format: https://kdl.dev
 			// "/-" comments out the following node.
@@ -446,7 +436,7 @@
 			match app-id=r#"^kitty$"# is-floating=true
 			opacity 0.8
 			}
-				 
+			 
 			window-rule {
 			match app-id=r#"^kitty$"# title="^peaclock$"
 			opacity 0.8
