@@ -432,9 +432,9 @@
 			window-rule {
 			match app-id=r#"^kitty$"# title="^cmatrix$"
 			opacity 0.6
-			         background-effect {
+			background-effect {
 			     blur true
-			 }
+			}
 			}
 
 			window-rule {
@@ -446,7 +446,7 @@
 			match app-id=r#"^kitty$"# is-floating=true
 			opacity 0.8
 			}
-		 
+				 
 			window-rule {
 			match app-id=r#"^kitty$"# title="^peaclock$"
 			opacity 0.8
