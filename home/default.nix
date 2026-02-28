@@ -103,6 +103,7 @@
 		xwayland-satellite
 		pwvucontrol
 		helvum
+		ghidra
 		# inputs.zen-browser.packages.${system}.default
 		inputs.fix-python.packages.${system}.default
 		# inputs.quickshell.packages.${system}.default
@@ -234,7 +235,7 @@
 
 	home.file = {
 		".gitconfig-work" = {
-			text = ''					
+			text = ''				
 				[user]
 					email = kkoehler@lsst.org
 					name = Kai Koehler'';
