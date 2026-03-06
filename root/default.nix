@@ -38,7 +38,7 @@
 	services.fwupd.enable = true;
 	services.upower.enable = true;
 
-	systemd.sleep.settings.sleep = "SuspendState=freeze";
+	systemd.sleep.settings.Sleep = "SuspendState=freeze";
 
 	# virtualisation.virtualbox.host.enable = true;
 	services.logind.settings.Login = {
