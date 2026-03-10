@@ -102,7 +102,7 @@
 		zsh-powerlevel10k
 		xwayland-satellite
 		pwvucontrol
-		helvum
+		crosspipe
 		ghidra-bin
 		# inputs.zen-browser.packages.${system}.default
 		inputs.fix-python.packages.${system}.default
@@ -235,7 +235,7 @@
 
 	home.file = {
 		".gitconfig-work" = {
-			text = ''						
+			text = ''					
 				[user]
 					email = kkoehler@lsst.org
 					name = Kai Koehler'';
