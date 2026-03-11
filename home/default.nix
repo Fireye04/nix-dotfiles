@@ -82,7 +82,7 @@
 		tor-browser
 		yt-dlp
 		vlc
-		pkgs-stable.kdePackages.kdenlive
+		pkgs.kdePackages.kdenlive
 		onboard
 		tauon
 		musescore
@@ -236,7 +236,7 @@
 
 	home.file = {
 		".gitconfig-work" = {
-			text = ''				
+			text = ''							
 				[user]
 					email = kkoehler@lsst.org
 					name = Kai Koehler'';
