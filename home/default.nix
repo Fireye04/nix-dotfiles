@@ -145,7 +145,7 @@
 
 		# Communication
 		thunderbird
-		iamb
+		# iamb
 		jellyfin-tui
 		jellyfin-desktop
 
@@ -236,7 +236,7 @@
 
 	home.file = {
 		".gitconfig-work" = {
-			text = ''							
+			text = ''						
 				[user]
 					email = kkoehler@lsst.org
 					name = Kai Koehler'';
