@@ -149,7 +149,7 @@
 		# Communication
 		thunderbird
 		# iamb
-		# jellyfin-tui
+		jellyfin-tui
 		jellyfin-desktop
 
 		# fluffychat
