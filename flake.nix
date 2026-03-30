@@ -44,14 +44,14 @@
 			# If you are not running an unstable channel of nixpkgs, select the corresponding branch of nixvim.
 			# inputs.nixpkgs.follows = "nixpkgs";
 		};
-		quickshell = {
-			# add ?ref=<tag> to track a tag
-			url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
-
-			# THIS IS IMPORTANT
-			# Mismatched system dependencies will lead to crashes and other issues.
-			inputs.nixpkgs.follows = "nixpkgs";
-		};
+		# quickshell = {
+		# 	# add ?ref=<tag> to track a tag
+		# 	url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
+		#
+		# 	# THIS IS IMPORTANT
+		# 	# Mismatched system dependencies will lead to crashes and other issues.
+		# 	inputs.nixpkgs.follows = "nixpkgs";
+		# };
 	};
 
 	outputs = {
@@ -71,7 +71,7 @@
 		home-manager,
 		zen-browser,
 		nixvim,
-		quickshell,
+		# quickshell,
 		...
 	} @ inputs: let
 		system = "x86_64-linux";
