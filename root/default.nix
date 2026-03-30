@@ -9,7 +9,6 @@
 	inputs,
 	options,
 	lib,
-	stdenv,
 	...
 }: {
 	imports = [
@@ -132,7 +131,7 @@
 		gamemode
 		alsa-utils
 		openvpn
-		inputs.nix-alien.packages.${system}.default
+		inputs.nix-alien.packages.${pkgs.stdenv.hostPlatform.system}.default
 		inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
 		# (callPackage ./utils/nirius {})
 		# (callPackage ./utils/mips {})
@@ -259,5 +258,5 @@
 	# this value at the release version of the first install of this system.
 	# Before changing this value read the documentation for this option
 	# (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-	stdenv.hostPlatform.system.stateVersion = "25.05"; # Did you read the comment?
+	pkgs.stdenv.hostPlatform.system.stateVersion = "25.05"; # Did you read the comment?
 }
