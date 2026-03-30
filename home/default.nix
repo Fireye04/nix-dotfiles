@@ -237,7 +237,7 @@
 
 	home.file = {
 		".gitconfig-work" = {
-			text = ''				
+			text = ''							
 				[user]
 					email = kkoehler@lsst.org
 					name = Kai Koehler'';
@@ -257,7 +257,7 @@
 			theme_background = false;
 		};
 	};
-
+	gtk.gtk4.theme = null;
 	# This value determines the home Manager release that your
 	# configuration is compatible with. This helps avoid breakage
 	# when a new home Manager release introduces backwards
