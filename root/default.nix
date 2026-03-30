@@ -9,6 +9,7 @@
 	inputs,
 	options,
 	lib,
+	stdenv,
 	...
 }: {
 	imports = [
