@@ -10,7 +10,7 @@
 	imports = [
 		(import ./bash.nix {inherit config pkgs;})
 		(import ./zsh {inherit lib config pkgs;})
-		(import ./swww {inherit config pkgs;})
+		(import ./awww {inherit config pkgs;})
 		(import ./waybar {inherit config pkgs;})
 
 		(import ./tofi.nix {inherit lib config pkgs;})
@@ -55,6 +55,7 @@
 	home.packages = with pkgs; [
 		# here is some command line tools I use frequently
 		# feel free to add your own or remove some of them
+		awww
 		glib
 		dos2unix
 		qmk
@@ -237,7 +238,7 @@
 
 	home.file = {
 		".gitconfig-work" = {
-			text = ''							
+			text = ''					
 				[user]
 					email = kkoehler@lsst.org
 					name = Kai Koehler'';
