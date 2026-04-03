@@ -181,7 +181,7 @@
 		x42-plugins
 		pkgs-stable.guitarix
 
-		xorg.xauth
+		xauth
 	];
 
 	fonts.packages = with pkgs; [
