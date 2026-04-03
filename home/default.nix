@@ -106,11 +106,11 @@
 		pwvucontrol
 		crosspipe
 		ghidra-bin
-		# inputs.zen-browser.packages.${system}.default
-		inputs.fix-python.packages.${system}.default
-		# inputs.quickshell.packages.${system}.default
-		inputs.nix-citizen.packages.${system}.rsi-launcher-umu
-		inputs.colmena.packages.${system}.colmena
+		# inputs.zen-browser.packages.${stdenv.hostPlatform.system}.default
+		inputs.fix-python.packages.${stdenv.hostPlatform.system}.default
+		# inputs.quickshell.packages.${stdenv.hostPlatform.system}.default
+		inputs.nix-citizen.packages.${stdenv.hostPlatform.system}.rsi-launcher-umu
+		inputs.colmena.packages.${stdenv.hostPlatform.system}.colmena
 		godot-mono
 		godotPackages.export-template-mono
 
@@ -238,7 +238,7 @@
 
 	home.file = {
 		".gitconfig-work" = {
-			text = ''					
+			text = ''						
 				[user]
 					email = kkoehler@lsst.org
 					name = Kai Koehler'';
