@@ -11,7 +11,7 @@ if [ $# -lt 1 ] || [ ! -d "$1" ]; then
 fi
 
 # See awww-img(1)
-RESIZE_TYPE="fit"
+RESIZE_TYPE="crop"
 export AWWW_TRANSITION_FPS="${AWWW_TRANSITION_FPS:-60}"
 export AWWW_TRANSITION_STEP="${AWWW_TRANSITION_STEP:-2}"
 
