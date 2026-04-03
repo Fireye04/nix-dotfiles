@@ -302,8 +302,8 @@
 			spawn-at-startup "gsettings" "set" "org.gnome.desktop.interface" "cursor-theme" "'Bibata-MC'"
 			//spawn-at-startup "wbg" "/usr/share/backgrounds/waterfall.png"
 			spawn-at-startup "awww-daemon"
-			spawn-at-startup "sleep" "1;" "awww" "img" "/etc/nixos/wallpapers/green_cabin.jpg" "--transition-type" "center"
-			spawn-at-startup "sleep" "1;" "~/.config/awww/bin/randomize_multi.sh" "/etc/nixos/wallpapers"
+			spawn-at-startup "awww" "img" "/etc/nixos/wallpapers/green_cabin.jpg" "--transition-type" "center"
+			spawn-at-startup "~/.config/awww/bin/randomize_multi.sh" "/etc/nixos/wallpapers"
 			// spawn-at-startup "kitty" "spotify_player"
 			// spawn-at-startup "thunderbird"
 
@@ -434,7 +434,7 @@
 			match app-id=r#"^kitty$"# is-floating=true
 			opacity 0.8
 			}
-				 
+			 
 			window-rule {
 			match app-id=r#"^kitty$"# title="^peaclock$"
 			opacity 0.8
