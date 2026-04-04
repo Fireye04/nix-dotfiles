@@ -198,6 +198,7 @@
 				clangd.enable = true;
 				ccls.enable = true;
 				ts_ls.enable = true;
+				ruby_lsp.enable = true;
 				# asm_lsp = {
 				# 	enable = true;
 				# 	package = pkgs.asm-lsp;
