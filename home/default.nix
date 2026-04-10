@@ -90,6 +90,7 @@
 		fire
 		dwarf-fortress
 		krita
+		kdePackages.kdeconnect-kde
 
 		hyfetch
 		pkgs-stable.anki
@@ -238,7 +239,7 @@
 
 	home.file = {
 		".gitconfig-work" = {
-			text = ''						
+			text = ''					
 				[user]
 					email = kkoehler@lsst.org
 					name = Kai Koehler'';
