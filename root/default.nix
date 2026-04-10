@@ -222,6 +222,7 @@
 		enable = true;
 	};
 	programs.steam.enable = true;
+	programs.kdeconnect.enable = true;
 
 	programs.ssh = {
 		setXAuthLocation = true;

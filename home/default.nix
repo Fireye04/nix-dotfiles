@@ -212,7 +212,6 @@
 			name = "Bibata-Modern-Classic";
 		};
 	};
-	programs.kdeconnect.enable = true;
 
 	# basic configuration of git, please change to your own
 	programs.git = {
@@ -239,7 +238,7 @@
 
 	home.file = {
 		".gitconfig-work" = {
-			text = ''				
+			text = ''							
 				[user]
 					email = kkoehler@lsst.org
 					name = Kai Koehler'';
