@@ -282,7 +282,7 @@
     "tooltipsEnabled": true,
     "scrollbarAlwaysVisible": true,
     "boxBorderEnabled": false,
-    "panelBackgroundOpacity": 0.93,
+    "panelBackgroundOpacity": 0.4,
     "translucentWidgets": false,
     "panelsAttachedToBar": true,
     "settingsPanelMode": "attached",
@@ -292,6 +292,7 @@
     "name": "Phoenix, United States",
     "weatherEnabled": true,
     "weatherShowEffects": true,
+    "weatherTaliaMascotAlways": false,
     "useFahrenheit": true,
     "use12hourFormat": true,
     "showWeekNumberInCalendar": false,
@@ -300,7 +301,8 @@
     "analogClockInCalendar": false,
     "firstDayOfWeek": -1,
     "hideWeatherTimezone": true,
-    "hideWeatherCityName": true
+    "hideWeatherCityName": true,
+    "autoLocate": false
   },
   "calendar": {
     "cards": [
@@ -327,6 +329,7 @@
     "showHiddenFiles": false,
     "viewMode": "single",
     "setWallpaperOnAllMonitors": true,
+    "linkLightAndDarkWallpapers": true,
     "fillMode": "crop",
     "fillColor": "#000000",
     "useSolidColor": false,
@@ -507,7 +510,6 @@
     "indicatorOpacity": 0.6
   },
   "network": {
-    "airplaneModeEnabled": false,
     "bluetoothRssiPollingEnabled": false,
     "bluetoothRssiPollIntervalMs": 10000,
     "networkPanelView": "wifi",
