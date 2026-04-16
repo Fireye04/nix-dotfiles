@@ -411,23 +411,7 @@
 
 			// Transparency
 			window-rule {
-			match app-id=r#"^kitty$"# title="^spotify_player.*$"
-			opacity 0.8
-			background-effect {
-			     blur true
-			 }
-			}
-
-			window-rule {
 			match app-id=r#"^kitty$"# title="^btop$"
-			opacity 0.8
-			background-effect {
-			     blur true
-			 }
-			}
-
-			window-rule {
-			match app-id=r#"^kitty$"# title="^cmatrix$"
 			opacity 0.6
 			background-effect {
 			     blur true
@@ -435,7 +419,15 @@
 			}
 
 			window-rule {
-			match app-id=r#"^kitty$"# title="^pipes-rs$"
+			match app-id=r#"^kitty$"# title="^cmatrix$"
+			opacity 0.5
+			background-effect {
+			     blur true
+			 }
+			}
+
+			window-rule {
+			match app-id=r#"^kitty$"# title="^pipes-rs.*$"
 			opacity 0.6
 			background-effect {
 			     blur true
@@ -444,14 +436,30 @@
 
 			         window-rule {
 			match app-id=r#"^kitty$"# is-floating=true
+			opacity 0.6
+			background-effect {
+			     blur true
+			 }
+			}
+		 
+			window-rule {
+			match app-id=r#"^kitty$"# title="^peaclock$"
 			opacity 0.8
 			background-effect {
 			     blur true
 			 }
 			}
-				 
+		      
 			window-rule {
-			match app-id=r#"^kitty$"# title="^peaclock$"
+			match app-id=r#"^kitty$"# title="^Close OS window$"
+			opacity 0.8
+			background-effect {
+			     blur true
+			 }
+			}
+
+			         window-rule {
+			match app-id=r#"^com.github.hluk.copyq$"#
 			opacity 0.8
 			background-effect {
 			     blur true
@@ -460,7 +468,7 @@
 
 			window-rule {
 			match app-id=r#"^signal$"# title="^Signal$"
-			opacity 0.9
+			opacity 0.7
 			background-effect {
 			     blur true
 			 }
