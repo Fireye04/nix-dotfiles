@@ -428,7 +428,7 @@
 
 			window-rule {
 			match app-id=r#"^kitty$"# title="^pipes-rs.*$"
-			opacity 0.6
+			opacity 0.5
 			background-effect {
 			     blur true
 			 }
@@ -436,7 +436,7 @@
 
 			         window-rule {
 			match app-id=r#"^kitty$"# is-floating=true
-			opacity 0.6
+			opacity 0.5
 			background-effect {
 			     blur true
 			 }
@@ -449,10 +449,10 @@
 			     blur true
 			 }
 			}
-		    
+		 
 			window-rule {
 			match app-id=r#"^kitty$"# title="^Close OS window$"
-			opacity 0.1
+			opacity 0.3
 			background-effect {
 			     blur true
 			 }
