@@ -441,7 +441,7 @@
 			     blur true
 			 }
 			}
-		 
+			 
 			window-rule {
 			match app-id=r#"^kitty$"# title="^peaclock$"
 			opacity 0.8
@@ -449,10 +449,10 @@
 			     blur true
 			 }
 			}
-		      
+		    
 			window-rule {
 			match app-id=r#"^kitty$"# title="^Close OS window$"
-			opacity 0.8
+			opacity 0.1
 			background-effect {
 			     blur true
 			 }
@@ -460,7 +460,7 @@
 
 			         window-rule {
 			match app-id=r#"^com.github.hluk.copyq$"#
-			opacity 0.8
+			opacity 0.6
 			background-effect {
 			     blur true
 			 }
