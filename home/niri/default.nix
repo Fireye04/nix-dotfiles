@@ -37,7 +37,7 @@
 				  // dwtp
 				  // drag false
 				  // drag-lock
-				  natural-scroll
+				  // natural-scroll
 				  // accel-speed 0.2
 				  // accel-profile "flat"
 				  // scroll-method "two-finger"
@@ -441,7 +441,7 @@
 			     blur true
 			 }
 			}
-		 
+				 
 			window-rule {
 			match app-id=r#"^kitty$"# title="^peaclock$"
 			opacity 0.8
@@ -449,7 +449,7 @@
 			     blur true
 			 }
 			}
-				 
+			 
 			window-rule {
 			match app-id=r#"^kitty$"# title="^Close OS window$"
 			opacity 0.5
