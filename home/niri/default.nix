@@ -442,7 +442,7 @@
 			     blur true
 			 }
 			}
-			 
+		 
 			window-rule {
 			match app-id=r#"^kitty$"# title="^peaclock$"
 			opacity 0.8
@@ -450,16 +450,7 @@
 			     blur true
 			 }
 			}
-
-			window-rule {
-			match app-id=r#"^superProductivity$"# title="^Super Productivity$"
-			opacity 0.8
-			background-effect {
-			     blur true
-			 }
-			}
-
-		 
+				 
 			window-rule {
 			match app-id=r#"^kitty$"# title="^Close OS window$"
 			opacity 0.5
