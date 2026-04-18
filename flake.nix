@@ -38,6 +38,10 @@
 			url = "github:0xc000022070/zen-browser-flake";
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
+		chiri = {
+			url = "github:SapphoSys/chiri";
+			inputs.nixpkgs.follows = "nixpkgs";
+		};
 
 		nixvim = {
 			url = "github:nix-community/nixvim";
