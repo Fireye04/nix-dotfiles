@@ -50,7 +50,6 @@
 		"Xcursor.size" = 12;
 		"Xft.dpi" = 172;
 	};
-	services.printing.enable = true;
 
 	# Packages that should be installed to the user profile.
 	home.packages = with pkgs; [
@@ -241,7 +240,7 @@
 
 	home.file = {
 		".gitconfig-work" = {
-			text = ''						
+			text = ''					
 				[user]
 					email = kkoehler@lsst.org
 					name = Kai Koehler'';

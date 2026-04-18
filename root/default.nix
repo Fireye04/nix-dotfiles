@@ -40,6 +40,7 @@
 
 	systemd.sleep.settings.Sleep = {SuspendState = "freeze";};
 
+	services.printing.enable = true;
 	# virtualisation.virtualbox.host.enable = true;
 	services.logind.settings.Login = {
 		HandleLidSwitchDocked = "suspend";
