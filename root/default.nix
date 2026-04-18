@@ -42,7 +42,7 @@
 
 	services.printing = {
 		enable = true;
-		drivers = [pkgs.hplip];
+		drivers = [pkgs.gutenprint];
 	};
 	# virtualisation.virtualbox.host.enable = true;
 	services.logind.settings.Login = {
