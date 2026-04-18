@@ -295,6 +295,7 @@
 
 			// spawn-at-startup "waybar"
 			spawn-at-startup "noctalia-shell"
+			spawn-at-startup "super-productivity"
 			spawn-at-startup "niriusd"
 			spawn-at-startup "export" "ELECTRON_OZONE_PLATFORM_HINT=auto"
 			spawn-at-startup "systemctl" "--user" "start" "plasma-polkit-agent"
@@ -441,7 +442,7 @@
 			     blur true
 			 }
 			}
-			 
+		 
 			window-rule {
 			match app-id=r#"^kitty$"# title="^peaclock$"
 			opacity 0.8
@@ -449,7 +450,7 @@
 			     blur true
 			 }
 			}
-		 
+				 
 			window-rule {
 			match app-id=r#"^kitty$"# title="^Close OS window$"
 			opacity 0.5
