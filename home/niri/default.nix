@@ -295,6 +295,8 @@
 
 			// spawn-at-startup "waybar"
 			spawn-at-startup "noctalia-shell"
+			spawn-at-startup "signal-desktop"
+			spawn-at-startup "signal-desktop"
 			spawn-at-startup "super-productivity"
 			spawn-at-startup "niriusd"
 			spawn-at-startup "export" "ELECTRON_OZONE_PLATFORM_HINT=auto"
@@ -306,7 +308,7 @@
 			spawn-at-startup "awww" "img" "/etc/nixos/wallpapers/green_cabin.jpg" "--transition-type" "center"
 			spawn-at-startup "~/.config/awww/bin/randomize_multi.sh" "/etc/nixos/wallpapers"
 			// spawn-at-startup "kitty" "spotify_player"
-			// spawn-at-startup "thunderbird"
+			spawn-at-startup "thunderbird"
 
 			environment {
 			  DISPLAY ":0"
@@ -442,7 +444,7 @@
 			     blur true
 			 }
 			}
-		 
+				 
 			window-rule {
 			match app-id=r#"^kitty$"# title="^peaclock$"
 			opacity 0.8
@@ -450,7 +452,7 @@
 			     blur true
 			 }
 			}
-				 
+			 
 			window-rule {
 			match app-id=r#"^kitty$"# title="^Close OS window$"
 			opacity 0.5
