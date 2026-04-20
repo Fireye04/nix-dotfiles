@@ -18,6 +18,8 @@
 			number = true;
 			relativenumber = false;
 			clipboard = ["unnamedplus"];
+			spell = true;
+			spelllang = "en_us";
 		};
 
 		globals = {
