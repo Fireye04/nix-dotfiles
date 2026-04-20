@@ -110,6 +110,7 @@
 						{name = "buffer";}
 						{name = "dictionary";}
 						{name = "luasnip";}
+						{name = "cmp-spell";}
 					];
 					snippet.expand = ''
 						function(args)
