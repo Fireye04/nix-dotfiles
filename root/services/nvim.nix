@@ -51,6 +51,7 @@
 			bufferline.enable = true;
 			neo-tree.enable = true;
 			markdown-preview.enable = true;
+			cmp-spell.enable = true;
 			nvim-surround = {
 				enable = true;
 			};
