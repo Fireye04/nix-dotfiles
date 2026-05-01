@@ -89,9 +89,6 @@
 					# 		asm-lsp = pkgs.callPackage ./root/utils/mips/asm-lsp.nix {};
 					# 	})
 				];
-				config.permittedInsecurePackages = [
-					"ventoy-gtk3-1.1.10"
-				];
 			};
 		pkgs-stable =
 			import nixpkgs-stable {
