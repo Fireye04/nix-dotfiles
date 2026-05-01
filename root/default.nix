@@ -116,7 +116,6 @@
 
 	# List packages installed in system profile. To search, run:
 	environment.systemPackages = with pkgs; [
-		ventoy-full-gtk
 		mangowc
 		mesa
 		mesa-gl-headers
