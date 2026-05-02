@@ -15,7 +15,6 @@
 		# 				hash = "sha256-YVqVfFFyAN/m96DqWWiNq83wv6BDUUuQX2yJjL3Ouog=";
 		# 			};
 		# 	});
-		cache.enable = true;
 
 		enable = true;
 	};
