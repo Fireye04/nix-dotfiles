@@ -6,7 +6,10 @@
 		nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
 		nixpkgs-small.url = "github:nixos/nixpkgs?ref=nixos-unstable-small";
 		nixos-hardware.url = "github:NixOS/nixos-hardware/master";
-		niri.url = "github:sodiboo/niri-flake";
+		niri = {
+			url = "github:sodiboo/niri-flake";
+			cache.enable = true;
+		};
 		fix-python.url = "github:GuillaumeDesforges/fix-python";
 		nix-alien.url = "github:thiagokokada/nix-alien";
 		nix-citizen.url = "github:LovingMelody/nix-citizen";
