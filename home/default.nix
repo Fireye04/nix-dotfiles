@@ -80,7 +80,7 @@
 		plasticscm-client-core
 		plasticscm-client-complete
 		tor-browser
-		yt-dlp
+		pkgs-stable.yt-dlp
 		vlc
 		pkgs.kdePackages.kdenlive
 		onboard
@@ -239,7 +239,7 @@
 
 	home.file = {
 		".gitconfig-work" = {
-			text = ''							
+			text = ''						
 				[user]
 					email = kkoehler@lsst.org
 					name = Kai Koehler'';
