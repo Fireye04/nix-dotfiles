@@ -1,7 +1,7 @@
 {
 	config,
 	pkgs,
-    inputs
+	inputs,
 	...
 }: {
 	# Enable niri system wide so it shows up on the greeter session menu
