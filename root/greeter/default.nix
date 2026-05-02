@@ -5,7 +5,7 @@
 	...
 }: {
 	# Enable niri system wide so it shows up on the greeter session menu
-	niri.cache.enable = true;
+	inputs.niri.cache.enable = true;
 	programs.niri = {
 		package = pkgs.niri-unstable;
 		# pkgs.niri-unstable.overrideAttrs (oldAttrs: {
