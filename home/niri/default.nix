@@ -4,7 +4,6 @@
 	inputs,
 	...
 }: {
-	inputs.niri.cache.enable = true;
 	programs.niri = {
 		config = ''
 			// This config is in the KDL format: https://kdl.dev
@@ -445,7 +444,7 @@
 			     blur true
 			 }
 			}
-		 
+				 
 			window-rule {
 			match app-id=r#"^kitty$"# title="^peaclock$"
 			opacity 0.8
@@ -453,7 +452,7 @@
 			     blur true
 			 }
 			}
-				 
+			 
 			window-rule {
 			match app-id=r#"^kitty$"# title="^Close OS window$"
 			opacity 0.5
