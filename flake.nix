@@ -8,7 +8,7 @@
 		nixos-hardware.url = "github:NixOS/nixos-hardware/master";
 		niri = {
 			url = "github:sodiboo/niri-flake";
-			cache.enable = true;
+			cache = true;
 		};
 		fix-python.url = "github:GuillaumeDesforges/fix-python";
 		nix-alien.url = "github:thiagokokada/nix-alien";
