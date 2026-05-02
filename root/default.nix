@@ -23,7 +23,6 @@
 		(import ./services/nvim.nix {inherit config pkgs pkgs-small;})
 		inputs.nixos-hardware.nixosModules.framework-16-amd-ai-300-series
 	];
-	niri.cache.enable = true;
 
 	nix.settings = {
 		substituters = ["https://nix-citizen.cachix.org"];
