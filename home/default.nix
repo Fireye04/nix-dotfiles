@@ -149,7 +149,7 @@
 		# Communication
 		thunderbird
 		# iamb
-		jellyfin-tui
+		# jellyfin-tui
 		jellyfin-desktop
 
 		# fluffychat
@@ -239,7 +239,7 @@
 
 	home.file = {
 		".gitconfig-work" = {
-			text = ''				
+			text = ''							
 				[user]
 					email = kkoehler@lsst.org
 					name = Kai Koehler'';
