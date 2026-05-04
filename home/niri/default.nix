@@ -295,7 +295,7 @@
 
 			// spawn-at-startup "waybar"
 			spawn-at-startup "noctalia-shell"
-			spawn-at-startup "signal-desktop"
+			spawn-at-startup "feishin"
 			spawn-at-startup "signal-desktop"
 			spawn-at-startup "super-productivity"
 			spawn-at-startup "niriusd"
@@ -444,7 +444,7 @@
 			     blur true
 			 }
 			}
-			 
+		 
 			window-rule {
 			match app-id=r#"^kitty$"# title="^peaclock$"
 			opacity 0.8
@@ -452,7 +452,7 @@
 			     blur true
 			 }
 			}
-		 
+				 
 			window-rule {
 			match app-id=r#"^kitty$"# title="^Close OS window$"
 			opacity 0.5
