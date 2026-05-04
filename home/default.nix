@@ -114,6 +114,7 @@
 		godot-mono
 		godotPackages.export-template-mono
 		super-productivity
+		feishin
 
 		compose2nix
 		niri-unstable
@@ -239,7 +240,7 @@
 
 	home.file = {
 		".gitconfig-work" = {
-			text = ''						
+			text = ''					
 				[user]
 					email = kkoehler@lsst.org
 					name = Kai Koehler'';
