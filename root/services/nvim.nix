@@ -53,7 +53,6 @@
 			bufferline.enable = true;
 			neo-tree.enable = true;
 			markdown-preview.enable = true;
-			cmp-spell.enable = true;
 			nvim-surround = {
 				enable = true;
 			};
@@ -112,7 +111,6 @@
 						{name = "buffer";}
 						{name = "dictionary";}
 						{name = "luasnip";}
-						{name = "cmp-spell";}
 					];
 					snippet.expand = ''
 						function(args)
