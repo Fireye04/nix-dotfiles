@@ -89,7 +89,7 @@
 		fire
 		dwarf-fortress
 		krita
-		bottles
+		pkgs-stable.bottles
 
 		hyfetch
 		pkgs-stable.anki
@@ -242,7 +242,7 @@
 
 	home.file = {
 		".gitconfig-work" = {
-			text = ''							
+			text = ''						
 				[user]
 					email = kkoehler@lsst.org
 					name = Kai Koehler'';
