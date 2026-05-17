@@ -30,9 +30,9 @@
 	};
 
 	# Use latest kernel.
-	boot = {
-		kernelPackages =
-			pkgs.linuxPackagesFor pkgs.linux_7_0.override {
+	boot = let
+		linux_7_0_6 =
+			pkgs.linux_7_0.override {
 				argsOverride = rec {
 					version = "7.0.6";
 					modDirVersion = version;
@@ -43,6 +43,8 @@
 						};
 				};
 			};
+	in {
+		kernelPackages = pkgs.linuxPackagesFor linux_7_0_6;
 		kernelParams = ["mem_sleep_default=deep"];
 	};
 	# Framework firmware
