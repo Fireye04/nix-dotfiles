@@ -18,7 +18,7 @@
 			url = "github:noctalia-dev/noctalia-shell";
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
-		multios-usb.url = "https://github.com/Mexit/MultiOS-USB";
+		multios-usb.url = "github:Mexit/MultiOS-USB";
 		# mango = {
 		# 	url = "github:DreamMaoMao/mango";
 		# 	inputs.nixpkgs.follows = "nixpkgs";
