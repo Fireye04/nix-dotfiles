@@ -108,6 +108,7 @@
 		ghidra-bin
 		# inputs.zen-browser.packages.${stdenv.hostPlatform.system}.default
 		inputs.fix-python.packages.${stdenv.hostPlatform.system}.default
+		inputs.multios-usb.packages.${stdenv.hostPlatform.system}.default
 		# inputs.quickshell.packages.${stdenv.hostPlatform.system}.default
 		inputs.nix-citizen.packages.${stdenv.hostPlatform.system}.rsi-launcher-umu
 		inputs.chiri.packages.${stdenv.hostPlatform.system}.bin
@@ -242,7 +243,7 @@
 
 	home.file = {
 		".gitconfig-work" = {
-			text = ''						
+			text = ''					
 				[user]
 					email = kkoehler@lsst.org
 					name = Kai Koehler'';
