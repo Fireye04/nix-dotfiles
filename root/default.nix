@@ -32,8 +32,7 @@
 	# Use latest kernel.
 	boot = {
 		kernelPackages =
-			pkgs.linuxPackagesFor
-			pkgs.linux_7_0.override {
+			pkgs.linuxPackagesFor pkgs.linux_7_0.override {
 				argsOverride = rec {
 					version = "7.0.6";
 					modDirVersion = version;
