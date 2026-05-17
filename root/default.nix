@@ -31,7 +31,18 @@
 
 	# Use latest kernel.
 	boot = {
-		kernelPackages = pkgs.linuxPackages_latest;
+		kernelPackages =
+			pkgs.linux_7_0.override {
+				argsOverride = rec {
+					version = "7.0.6";
+					modDirVersion = version;
+					src =
+						pkgs.fetchurl {
+							url = "mirror://kernel/linux/kernel/v7.x/linux-${version}.tar.xz";
+							hash = "sha256-y6REQKpXr/18ISQdxbwjSw31PEmfj/w+vCkN0zkKdSM=";
+						};
+				};
+			};
 		kernelParams = ["mem_sleep_default=deep"];
 	};
 	# Framework firmware
