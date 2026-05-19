@@ -24,7 +24,7 @@
 		# 	inputs.nixpkgs.follows = "nixpkgs";
 		# };
 
-		gaypanel.url = "https://codeberg.org/Fireye/gaypanel.git";
+		gaypanel.git = "https://codeberg.org/Fireye/gaypanel.git";
 
 		stylix = {
 			url = "github:nix-community/stylix";
