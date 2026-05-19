@@ -148,6 +148,7 @@
 		alsa-utils
 		openvpn
 		inputs.nix-alien.packages.${pkgs.stdenv.hostPlatform.system}.default
+		inputs.gaypanel.packages.${pkgs.stdenv.hostPlatform.system}.default
 		inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
 		# (callPackage ./utils/nirius {})
 		# (callPackage ./utils/mips {})
