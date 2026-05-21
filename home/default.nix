@@ -92,6 +92,7 @@
 		pkgs-stable.bottles
 		blanket
 		easyeffects
+		deluge
 
 		hyfetch
 		pkgs-stable.anki
@@ -245,7 +246,7 @@
 
 	home.file = {
 		".gitconfig-work" = {
-			text = ''							
+			text = ''						
 				[user]
 					email = kkoehler@lsst.org
 					name = Kai Koehler'';
