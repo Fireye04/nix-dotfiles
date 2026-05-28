@@ -33,7 +33,7 @@
 			  touchpad {
 				  // off
 				  tap
-				  //dwt
+				  dwt
 				  // dwtp
 				  // drag false
 				  // drag-lock
@@ -444,7 +444,7 @@
 			     blur true
 			 }
 			}
-				 
+			 
 			window-rule {
 			match app-id=r#"^kitty$"# title="^peaclock$"
 			opacity 0.8
@@ -452,7 +452,7 @@
 			     blur true
 			 }
 			}
-			 
+		 
 			window-rule {
 			match app-id=r#"^kitty$"# title="^Close OS window$"
 			opacity 0.5
