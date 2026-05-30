@@ -7,7 +7,7 @@
 		enable = true;
 		settings = {
 			main = {
-				font = "JetbrainsMonoNerdFont:size=12";
+				font = "JetbrainsMonoNerdFont:size=11";
 			};
 			cursor = {
 				style = "underline";
