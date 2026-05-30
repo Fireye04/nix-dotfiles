@@ -307,7 +307,7 @@
 			spawn-at-startup "awww-daemon"
 			spawn-at-startup "awww" "img" "/etc/nixos/wallpapers/green_cabin.jpg" "--transition-type" "center"
 			spawn-at-startup "~/.config/awww/bin/randomize_multi.sh" "/etc/nixos/wallpapers"
-			// spawn-at-startup "kitty" "spotify_player"
+			// spawn-at-startup "foot" "spotify_player"
 			spawn-at-startup "thunderbird"
 
 			environment {
@@ -422,7 +422,7 @@
 			}
 
 			window-rule {
-			match app-id=r#"^kitty$"# title="^cmatrix$"
+			match app-id=r#"^foot$"# title="^cmatrix$"
 			opacity 0.5
 			background-effect {
 			     blur true
@@ -430,7 +430,7 @@
 			}
 
 			window-rule {
-			match app-id=r#"^kitty$"# title="^pipes-rs.*$"
+			match app-id=r#"^foot$"# title="^pipes-rs.*$"
 			opacity 0.5
 			background-effect {
 			     blur true
@@ -438,23 +438,23 @@
 			}
 
 			window-rule {
-			match app-id=r#"^kitty$"# is-floating=true
+			match app-id=r#"^foot$"# is-floating=true
 			opacity 0.5
+			background-effect {
+			     blur true
+			 }
+			}
+		 
+			window-rule {
+			match app-id=r#"^foot$"# title="^peaclock$"
+			opacity 0.8
 			background-effect {
 			     blur true
 			 }
 			}
 				 
 			window-rule {
-			match app-id=r#"^kitty$"# title="^peaclock$"
-			opacity 0.8
-			background-effect {
-			     blur true
-			 }
-			}
-			 
-			window-rule {
-			match app-id=r#"^kitty$"# title="^Close OS window$"
+			match app-id=r#"^foot$"# title="^Close OS window$"
 			opacity 0.5
 			background-effect {
 			     blur true
@@ -539,7 +539,7 @@
 			  // Mod+J     { focus-window-down-or-top; }
 			  // Mod+K     { focus-window-up-or-bottom; }
 			  Mod+L     { focus-column-right; }
-			Mod+B {spawn "foot" "btop" "--title=btop";}
+			Mod+B {spawn "foot" "--title=btop" "btop";}
 			Mod+A {spawn "hyprpicker" "-a" "-n";}
 
 			  Mod+E { focus-window-down-or-top; }
