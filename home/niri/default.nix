@@ -414,7 +414,7 @@
 
 			// Transparency
 			window-rule {
-			match app-id=r#"^kitty$"# title="^btop$"
+			match app-id=r#"^foot$"# title="^btop$"
 			opacity 0.6
 			background-effect {
 			     blur true
@@ -493,7 +493,7 @@
 			  Mod+Shift+Slash { show-hotkey-overlay; }
 
 			  // Suggested binds for running programs: terminal, app launcher, screen locker.
-			  Mod+Q hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
+			  Mod+Q hotkey-overlay-title="Open a Terminal: foot" { spawn "foot"; }
 			  Mod+D hotkey-overlay-title="Run an Application: tofi" { spawn-sh "tofi-drun --drun-launch=true --font ${pkgs.fira-code}/share/fonts/opentype/PixelCode.otf || pkill tofi-drun"; }
 			  Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
 			            Mod+T {toggle-window-rule-opacity;}
@@ -539,7 +539,7 @@
 			  // Mod+J     { focus-window-down-or-top; }
 			  // Mod+K     { focus-window-up-or-bottom; }
 			  Mod+L     { focus-column-right; }
-			Mod+B {spawn "kitty" "btop";}
+			Mod+B {spawn "foot" "btop";}
 			Mod+A {spawn "hyprpicker" "-a" "-n";}
 
 			  Mod+E { focus-window-down-or-top; }
