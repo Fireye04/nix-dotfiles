@@ -444,7 +444,7 @@
 			     blur true
 			 }
 			}
-			 
+				 
 			window-rule {
 			match app-id=r#"^kitty$"# title="^peaclock$"
 			opacity 0.8
@@ -452,7 +452,7 @@
 			     blur true
 			 }
 			}
-		 
+			 
 			window-rule {
 			match app-id=r#"^kitty$"# title="^Close OS window$"
 			opacity 0.5
@@ -539,7 +539,7 @@
 			  // Mod+J     { focus-window-down-or-top; }
 			  // Mod+K     { focus-window-up-or-bottom; }
 			  Mod+L     { focus-column-right; }
-			Mod+B {spawn "foot" "btop";}
+			Mod+B {spawn "foot" "btop" "--title=btop";}
 			Mod+A {spawn "hyprpicker" "-a" "-n";}
 
 			  Mod+E { focus-window-down-or-top; }
