@@ -83,7 +83,7 @@
 						nix = ["alejandra"];
 						java = ["astyle"];
 						c = ["clang_format"];
-						zig = ["zig"];
+						zig = ["zigfmt"];
 					};
 					format_on_save = {
 						timeout_ms = 500;
@@ -91,9 +91,6 @@
 					formatters = {
 						clang_format = {
 							prepend_args = ["-style={BasedOnStyle: LLVM, IndentWidth: 4}" "--fallback-style=LLVM"];
-						};
-						zig = {
-							prepend_args = ["fmt ."];
 						};
 						# prettier = {
 						# 	prepend_args = { "--use-tabs", "--tab-width", "4" },
