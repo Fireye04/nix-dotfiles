@@ -46,6 +46,7 @@
 		};
 
 		plugins = {
+			zig.enable = true;
 			lualine.enable = true;
 			gitsigns.enable = true;
 			treesitter.enable = true;
