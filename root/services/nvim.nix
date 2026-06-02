@@ -83,6 +83,7 @@
 						nix = ["alejandra"];
 						java = ["astyle"];
 						c = ["clang_format"];
+						zig = ["zig fmt"];
 					};
 					format_on_save = {
 						timeout_ms = 500;
