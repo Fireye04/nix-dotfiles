@@ -46,7 +46,6 @@
 		};
 
 		plugins = {
-			zig.enable = true;
 			lualine.enable = true;
 			gitsigns.enable = true;
 			treesitter.enable = true;
@@ -179,6 +178,7 @@
 				}
 			];
 			servers = {
+				zls.enable = true;
 				nixd.enable = true;
 				ruff.enable = true;
 				pyright.enable = true;
