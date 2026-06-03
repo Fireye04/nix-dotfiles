@@ -16,11 +16,10 @@ stdenv.mkDerivation {
 	];
 
 	unpackPhase = ''
-		      ls
-		unzip build-linux.zip -d jetzig
 	'';
 
 	installPhase = ''
+		      ls
 		mkdir $out
 		mv jetzig $out/bin
 	'';
