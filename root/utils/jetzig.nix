@@ -16,6 +16,7 @@ stdenv.mkDerivation {
 	];
 
 	unpackPhase = ''
+		      ls
 		unzip build-linux.zip -d jetzig
 	'';
 
