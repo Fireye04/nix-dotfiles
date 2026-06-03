@@ -9,7 +9,7 @@ stdenv.mkDerivation {
 	src =
 		fetchurl {
 			url = "https://www.jetzig.dev/downloads/build-linux.zip";
-			hash = "";
+			hash = "sha256-IRtT/D2mx553IKCbakWbfVbMTYSEUX8OuSoha0pFV5Y=";
 		};
 	nativeBuildInputs = with pkgs; [
 		unzip
