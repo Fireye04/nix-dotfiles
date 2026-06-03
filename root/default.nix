@@ -156,7 +156,7 @@
 		jq
 		# (callPackage ./utils/waterfox {})
 		(callPackage ./utils/nvimunity {})
-		(callPackage ./utils/jetzig.nix {})
+		(callPackage ./utils/jetzig.nix {inherit pkgs stdenv fetchurl;})
 		(callPackage ./greeter/games/gamemode.nix {})
 		(callPackage ./greeter/games/no-mans-sky.nix {})
 		dxvk
