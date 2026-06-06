@@ -180,6 +180,9 @@
 			];
 			servers = {
 				zls.enable = true;
+				phpactor.enable = true;
+				html.enable = true;
+				postgres_lsp.enable = true;
 				nixd.enable = true;
 				ruff.enable = true;
 				pyright.enable = true;
