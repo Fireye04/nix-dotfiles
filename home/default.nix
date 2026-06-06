@@ -55,6 +55,7 @@
 		# here is some command line tools I use frequently
 		# feel free to add your own or remove some of them
 		awww
+		lagrange-tui
 		ripgrep
 		glib
 		dos2unix
@@ -253,7 +254,7 @@
 
 	home.file = {
 		".gitconfig-work" = {
-			text = ''					
+			text = ''				
 				[user]
 					email = kkoehler@lsst.org
 					name = Kai Koehler'';
