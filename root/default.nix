@@ -44,7 +44,7 @@
 				};
 			};
 	in {
-		kernelPackages = pkgs.linuxPackagesFor linux_7_0_6;
+		kernelPackages = pkgs.linux_latest;
 		kernelParams = ["mem_sleep_default=deep"];
 	};
 	# Framework firmware
