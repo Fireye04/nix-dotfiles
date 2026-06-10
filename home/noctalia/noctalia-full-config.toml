@@ -20,13 +20,12 @@ order = [ "default" ]
     border_width = 0.0
     capsule = true
     capsule_fill = "surface_variant"
-    capsule_group = []
     capsule_opacity = 1.0
     capsule_padding = 6.0
-    center = [ "workspaces" ]
+    center = [ "group:g1" ]
     contact_shadow = false
     enabled = true
-    end = [ "tray", "brightness", "vpn", "network", "bluetooth", "volume" ]
+    end = [ "tray", "power_profile", "brightness", "network", "bluetooth", "volume" ]
     font_weight = 500
     layer = "top"
     margin_edge = 7
@@ -42,9 +41,16 @@ order = [ "default" ]
     reserve_space = true
     scale = 1.25
     shadow = false
-    start = [ "notifications", "clock", "battery", "media" ]
+    start = [ "notifications", "clock", "battery", "media", "vpn" ]
     thickness = 42
     widget_spacing = 6
+
+        [[bar.default.capsule_group]]
+        fill = "surface_variant"
+        id = "g1"
+        members = [ "audio_visualizer", "workspaces", "audio_visualizer" ]
+        opacity = 1.0
+        padding = 10.0
 
 [battery]
 warning_threshold = 20
@@ -175,7 +181,7 @@ up = [ "Up" ]
 validate = [ "Return", "KP_Enter" ]
 
 [location]
-address = ""
+address = "Phoenix"
 auto_locate = false
 sunrise = ""
 sunset = ""
@@ -510,6 +516,11 @@ type = "spacer"
 [widget.temp]
 stat = "cpu_temp"
 type = "sysmon"
+
+[widget.tray]
+drawer = true
+pinned = [ "CopyQ_copyq" ]
+type = "tray"
 
 [widget.vpn]
 command = "nmcli connection up Personal_Fireye"
