@@ -68,6 +68,7 @@
 		rocmPackages.llvm.clang-unwrapped
 		omnisharp-roslyn
 		rustup
+		rustc
 		xdg-desktop-portal
 		xdg-desktop-portal-gtk
 		xdg-desktop-portal-gnome
@@ -254,7 +255,7 @@
 
 	home.file = {
 		".gitconfig-work" = {
-			text = ''				
+			text = ''							
 				[user]
 					email = kkoehler@lsst.org
 					name = Kai Koehler'';
