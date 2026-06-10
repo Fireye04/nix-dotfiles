@@ -11,6 +11,6 @@
 	# configure options
 	programs.noctalia = {
 		enable = true;
-		settings = ./noctalia-config.toml;
+		settings = ./noctalia-full-config.toml;
 	};
 }
