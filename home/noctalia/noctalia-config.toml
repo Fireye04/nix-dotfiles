@@ -1,0 +1,45 @@
+[bar.default]
+margin_edge = 7
+margin_ends = 18
+padding = 11
+position = "right"
+reserve_space = false
+scale = 1.25
+thickness = 42
+
+[desktop_widgets]
+enabled = false
+
+[lockscreen_widgets]
+enabled = false
+schema_version = 2
+widget_order = [ "lockscreen-login-box@eDP-1" ]
+
+    [lockscreen_widgets.grid]
+    cell_size = 16
+    major_interval = 4
+    visible = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@eDP-1"]
+    box_height = 0.0
+    box_width = 0.0
+    cx = 915.0
+    cy = 1020.0
+    output = "eDP-1"
+    rotation = 0.0
+    type = "login_box"
+
+[noctalia_state]
+setup_wizard_completed = true
+
+[shell]
+settings_show_advanced = true
+
+    [shell.panel]
+    open_near_click_control_center = true
+
+[theme]
+builtin = "Tokyo-Night"
+
+[wallpaper]
+enabled = false
