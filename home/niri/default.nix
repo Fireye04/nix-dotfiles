@@ -294,7 +294,7 @@
 			// See the binds section below for more spawn examples.
 
 			// spawn-at-startup "waybar"
-			spawn-at-startup "noctalia-shell"
+			spawn-at-startup "noctalia"
 			spawn-at-startup "feishin"
 			spawn-at-startup "signal-desktop"
 			spawn-at-startup "super-productivity"
@@ -444,7 +444,7 @@
 			     blur true
 			 }
 			}
-		 
+				 
 			window-rule {
 			match app-id=r#"^foot$"# title="^peaclock$"
 			opacity 0.8
@@ -452,7 +452,7 @@
 			     blur true
 			 }
 			}
-				 
+			 
 			window-rule {
 			match app-id=r#"^foot$"# title="^Close OS window$"
 			opacity 0.5
