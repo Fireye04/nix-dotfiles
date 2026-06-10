@@ -15,7 +15,7 @@
 		nix-flatpak.url = "github:gmodena/nix-flatpak";
 		colmena.url = "github:zhaofengli/colmena";
 		noctalia = {
-			url = "github:noctalia-dev/noctalia-shell";
+			url = "github:noctalia-dev/noctalia";
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
 		multios-usb.url = "github:Mexit/MultiOS-USB";
