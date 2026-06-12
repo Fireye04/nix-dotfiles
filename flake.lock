@@ -76,11 +76,11 @@
         "rust-overlay": "rust-overlay"
       },
       "locked": {
-        "lastModified": 1781295614,
-        "narHash": "sha256-jd7w4vW1rYVL9X0aIbq1MRAG+YNvCba7HlFgID2V6gU=",
+        "lastModified": 1781299260,
+        "narHash": "sha256-n2iX0erblQEDMNlq3FLwFBUjGPOGDQjamqoz4kI+YGk=",
         "owner": "SapphoSys",
         "repo": "chiri",
-        "rev": "9e92961121e8e6af0c6deeaf904f03b4700db599",
+        "rev": "34b60d2c9f68398fefaac9bc1f6f116ea97b3cf7",
         "type": "github"
       },
       "original": {
@@ -725,11 +725,11 @@
     },
     "nixpkgs-small": {
       "locked": {
-        "lastModified": 1781246015,
-        "narHash": "sha256-C3D5TBgght7LBaqm5oGNRf6CynGl5lGED4jcDw2ZOOk=",
+        "lastModified": 1781290684,
+        "narHash": "sha256-ObWqSJ833hfCZ4G8HoSIai8A/9CVJhrvCGUv6SNOoXE=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "7bd229cbe77d7746d64a1e8c1a6f6cc08f606fc4",
+        "rev": "6079c8387de10bcbd1ba9f802163d48a9b610f27",
         "type": "github"
       },
       "original": {
@@ -921,11 +921,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1781294027,
-        "narHash": "sha256-nlg7mXntLEv5ios6x7CmUnzk9LB0V0D8f9XML6fxIaw=",
+        "lastModified": 1781299248,
+        "narHash": "sha256-droT/PFPI14Rif4u6CODQbGR8yxTsLhcK6mVZdilhIc=",
         "owner": "noctalia-dev",
         "repo": "noctalia",
-        "rev": "473fbf36d72be159072713a6ddda147509dd7324",
+        "rev": "600e194e502a6eb352fcef35bc90d3e41666d9e0",
         "type": "github"
       },
       "original": {

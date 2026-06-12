@@ -22,6 +22,10 @@
 	# services.desktopManager.cosmic.enable = true;
 	services.greetd = {
 		enable = true;
+		settings.default_session = {
+			default_session = "dbus-run-session cage -s -mlast -d -- regreet";
+			user = "greeeter";
+		};
 	};
 	programs.regreet = {
 		enable = true;
