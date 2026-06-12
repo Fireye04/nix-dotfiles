@@ -100,6 +100,8 @@
 		deluge
 		mumble
 		mediawriter
+		sl
+		tree
 		citations
 
 		hyfetch
@@ -255,7 +257,7 @@
 
 	home.file = {
 		".gitconfig-work" = {
-			text = ''					
+			text = ''				
 				[user]
 					email = kkoehler@lsst.org
 					name = Kai Koehler'';
