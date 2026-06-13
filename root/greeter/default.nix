@@ -23,8 +23,7 @@
 	services.greetd = {
 		enable = true;
 		settings.default_session = {
-			default_session = "bash";
-			user = "greeter";
+			command = "bash";
 		};
 	};
 	# programs.regreet = {
