@@ -19,14 +19,13 @@
 		enable = true;
 	};
 	programs.sway.enable = true;
-	services.cage.enable = true;
 	# services.desktopManager.cosmic.enable = true;
-	services.greetd = {
-		enable = true;
-		settings.default_session = {
-			command = "dbus-run-session cage -s -mlast -d -- regreet";
-		};
-	};
+	#services.greetd = {
+	# 	enable = true;
+	# 	settings.default_session = {
+	# 		command = "dbus-run-session cage -s -mlast -d -- regreet";
+	# 	};
+	# };
 	programs.regreet = {
 		enable = true;
 		cageArgs = ["-s" "-m" "last"];
