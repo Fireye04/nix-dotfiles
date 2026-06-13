@@ -19,6 +19,7 @@
 		enable = true;
 	};
 	programs.sway.enable = true;
+	services.cage.enable = true;
 	# services.desktopManager.cosmic.enable = true;
 	services.greetd = {
 		enable = true;
