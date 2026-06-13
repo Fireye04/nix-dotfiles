@@ -23,7 +23,7 @@
 	services.greetd = {
 		enable = true;
 		settings.default_session = {
-			command = "bash";
+			command = "dbus-run-session cage -s -mlast -d -- regreet";
 		};
 	};
 	# programs.regreet = {
