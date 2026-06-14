@@ -29,7 +29,7 @@
 	# };
 	programs.regreet = {
 		enable = true;
-		package = ./regreet.nix;
+		package = pkgs.callPackage ./regreet.nix {};
 		cageArgs = ["-s" "-m" "-d" "last"];
 		cursorTheme = {
 			name = "Bibata-Modern-Classic";
