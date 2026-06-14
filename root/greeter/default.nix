@@ -29,19 +29,19 @@
 	programs.regreet = {
 		enable = true;
 		cageArgs = ["-s" "-m" "last"];
-		# cursorTheme = {
-		# 	name = "Bibata-Modern-Classic";
-		# 	package = pkgs.bibata-cursors;
-		# };
-		# font = {
-		# 	name = "JetBrainsMonoNerdFont";
-		# 	size = 16;
-		# 	package = pkgs.nerd-fonts.jetbrains-mono;
-		# };
-		# theme = {
-		# 	name = "Canta-dark";
-		# 	package = pkgs.canta-theme;
-		# };
+		cursorTheme = {
+			name = "Bibata-Modern-Classic";
+			package = pkgs.bibata-cursors;
+		};
+		font = {
+			name = "JetBrainsMonoNerdFont";
+			size = 16;
+			package = pkgs.nerd-fonts.jetbrains-mono;
+		};
+		theme = {
+			name = "Canta-dark";
+			package = pkgs.canta-theme;
+		};
 		# settings = {
 		# 	background = {
 		# 		# Path to the background image
