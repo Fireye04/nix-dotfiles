@@ -2,7 +2,7 @@
 	description = "My personal hell";
 
 	inputs = {
-		nixpkgs-stable.url = "github:nixos/nixpkgs?ref=nixos-25.11";
+		nixpkgs-stable.url = "github:nixos/nixpkgs?ref=nixos-26.05";
 		nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
 		nixpkgs-small.url = "github:nixos/nixpkgs?ref=nixos-unstable-small";
 		nixos-hardware.url = "github:NixOS/nixos-hardware/master";
