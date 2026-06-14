@@ -16,7 +16,7 @@
 		./hardware-configuration.nix
 		(import ./boot.nix {inherit config pkgs;})
 		(import ./network.nix {inherit config pkgs;})
-		(import ./greeter {inherit config pkgs inputs;})
+		(import ./greeter {inherit config pkgs pkgs-stable inputs;})
 		(import ./services/git.nix {inherit config pkgs;})
 		(import ./services/zsh.nix {inherit config pkgs;})
 		# (import ./services/tuned.nix {inherit config pkgs;})
