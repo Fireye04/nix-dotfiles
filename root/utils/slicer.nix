@@ -40,7 +40,7 @@
 				cp -r * $out
 
 				# automatically populate the MPI colormap into the slicer interface
-				cp ${./COLORMAP.txt} $out/share/Slicer-4.10/ColorFiles/COLORMAP.txt
+				# cp ${./COLORMAP.txt} $out/share/Slicer-4.10/ColorFiles/COLORMAP.txt
 			'';
 		};
 
