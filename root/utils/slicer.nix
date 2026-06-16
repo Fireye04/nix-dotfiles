@@ -103,14 +103,7 @@
 	# Some metadata associated with the package to assist with package lookup.
 	meta = with lib; {
 		homepage = "https://www.slicer.org/";
-		description = ''
-			3D Slicer is an open source software platform for medical image
-			informatics, image processing, and three-dimensional visualization.
-			Built over two decades through support from the National Institutes of
-			Health and a worldwide developer community, Slicer brings free, powerful
-			cross-platform processing tools to physicians, researchers, and the
-			general public.
-		'';
+		description = ''3D Slicer is gay'';
 		license = licenses.bsd3;
 		platforms = platforms.linux;
 	};
