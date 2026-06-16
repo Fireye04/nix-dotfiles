@@ -28,7 +28,7 @@
 
 			src =
 				fetchurl {
-					url = "https://download.slicer.org/bitstream/6911b598ac7b1c95e7934427";
+					url = "https://slicer-packages.kitware.com/api/v1/item/6911b598ac7b1c95e7934427/download";
 					sha256 = "sha256-aCEp2xZz3ToOvDUAXE8wfZ3T3BAdGf1/SEAxMIVPT/U=";
 				};
 
