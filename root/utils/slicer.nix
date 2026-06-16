@@ -98,7 +98,6 @@
 			comment = meta.description;
 			desktopName = "Slicer";
 			genericName = "Medical Image Viewer";
-			categories = ["MedicalSoftware"];
 		};
 
 	# Some metadata associated with the package to assist with package lookup.
