@@ -77,6 +77,7 @@
 		unzip
 		gram
 		zig
+		freecad
 		pdftk
 		img2pdf
 		udiskie
