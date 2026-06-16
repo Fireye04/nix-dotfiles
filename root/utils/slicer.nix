@@ -45,7 +45,7 @@
 		};
 
 	fhsEnv =
-		buildFHSUserEnv {
+		buildFHSEnv {
 			name = "3DSlicer-fhs-env";
 
 			targetPkgs = pkgs:
@@ -126,7 +126,7 @@ in
 		  mkdir -p $out/bin
 
 		  # The script that will run when executing this package. It merely calls the
-		  # Slicer buildFHSUserEnv environment and passes any command line arguments
+		  # Slicer buildFHSEnv environment and passes any command line arguments
 		  # to the Slicer binary.
 		  cat >$out/bin/Slicer <<EOF
 		#!${bash}/bin/bash
