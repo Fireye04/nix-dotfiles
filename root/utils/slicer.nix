@@ -1,131 +1,144 @@
-# This defines a function taking in some other packages. This type of function
-# is usually called with`callPackage`, which will automatically fill out these
-# parameters based on their name.
 {
-	pkgs,
 	stdenv,
 	lib,
-	fetchurl,
-	buildFHSEnv,
-	unzip,
+	fetchFromGitHub,
+	autoPatchelfHook,
 	makeDesktopItem,
-	runCommand,
-	bash,
+	glib,
+	fetchzip,
+	pulseaudio,
+	xorg,
+	zlib,
+	fontconfig,
+	libxkbcommon,
+	libGL,
+	libGLU,
+	freetype,
+	cups,
+	unixODBC,
+	libxcrypt-legacy,
+	alsa-lib,
+	postgresql,
+	nss,
+	nspr,
+	hwloc,
+	fetchurl,
 }: let
+	pname = "Slicer3D";
 	version = "5.10.0";
 
-	# The icon file is not included in the linux package, so we grab it from the
-	# github repository.
-	# icon = fetchurl {
-	#   url = "https://github.com/Slicer/Slicer/raw/b26a7eefc2813d04bd1005be6dd6ccc41984154a/Resources/3DSlicerLogo-app-icon.svg";
-	#   sha256 = "1gg82dwgrlbjq22s1s7lzylnhn70r4drhwi8vh4n1yy7wj6nsk2q";
-	# };
+	hwloc_old =
+		hwloc.overrideAttrs (
+			old: let
+				hwloc_version = "1.11.13";
+			in {
+				version = hwloc_version;
 
-	slicerSrc =
-		stdenv.mkDerivation rec {
-			inherit version;
-			name = "slicer-${version}-pkg";
+				src =
+					fetchFromGitHub {
+						owner = "open-mpi";
+						repo = "hwloc";
+						tag = "hwloc-${hwloc_version}";
+						hash = "sha256-dR/N3yMGT97rZgj+p3uXZKB4hxv15lJmKWXXSPa1Nlw=";
+					};
 
-			src =
-				fetchurl {
-					url = "https://slicer-packages.kitware.com/api/v1/item/6911b598ac7b1c95e7934427/download";
-					sha256 = "sha256-aCEp2xZz3ToOvDUAXE8wfZ3T3BAdGf1/SEAxMIVPT/U=";
-				};
-
-			phases = ["installPhase"];
-
-			installPhase = ''
-				# # `$out` is an input given to this stage.
-				# mkdir -p $out
-				# cp -r * $out
-				#
-				# # automatically populate the MPI colormap into the slicer interface
-			'';
-		};
-
-	fhsEnv =
-		buildFHSEnv {
-			name = "3DSlicer-fhs-env";
-
-			targetPkgs = pkgs:
-				with pkgs;
-				with xorg; [
-					alsa-lib
-					dbus
-					expat
-					ffmpeg
-					fontconfig
-					freetype
-					glib
-					libGL
-					libGLU
-					libICE
-					libSM
-					libX11
-					libXcomposite
-					libXcursor
-					libXdamage
-					libXext
-					libXfixes
-					libXi
-					libXrandr
-					libXrender
-					libXt
-					libXtst
-					libpulseaudio
-					libxcb
-					nspr
-					nss
-					zlib
+				outputs = [
+					"out"
+					"lib"
+					"dev"
+					"man"
 				];
-
-			# Call slicer from the command line with desired file to open.
-			runScript = "${slicerSrc}/Slicer";
-
-			# Slicer includes most of its own dependencies bundled in (such as Qt), so
-			# we just need to tell slice where to find the files.
-			profile = ''
-				export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/lib64:${slicerSrc}/lib
-			'';
-		};
+			}
+		);
 
 	desktopItem =
 		makeDesktopItem {
-			name = "Slicer";
-			exec = "slicer";
-			# inherit icon;
-			type = "Application";
-			comment = meta.description;
-			desktopName = "Slicer";
-			genericName = "Medical Image Viewer";
+			name = "Slicer3D";
+			exec = "../Slicer";
+			desktopName = "Slicer 3D";
+			genericName = "Multi-platform, free open source software for visualization and image computing. ";
+			categories = [
+				"Graphics"
+				"MedicalSoftware"
+				"Science"
+			];
 		};
-
-	# Some metadata associated with the package to assist with package lookup.
-	meta = with lib; {
-		homepage = "https://www.slicer.org/";
-		description = ''3D Slicer is gay'';
-		license = licenses.bsd3;
-		platforms = platforms.linux;
-	};
 in
-	# `runCommand` builds a derivation containing the script we wish to run, along
-	# with some metadata about the derivation.
-	runCommand "3DSlicer-${version}" {inherit meta;} ''
+	stdenv.mkDerivation {
+		inherit pname version;
+		src =
+			fetchzip {
+				name = "Slicer-${version}-linux-amd64.tar.gz";
+				url = "http://download.slicer.org/download?os=linux&stability=release&version=${version}";
+				hash = "sha256-TsPO/fqeNl3d0/PWrfIgRdcBRY0AjRhzdbEMo4SDfAE=";
+				extension = "tar.gz";
+			};
 
-		  # We want both a binary and a desktop item. Hence each will be placed in an
-		  # appropriate folder instead of just having the command directly.
-		  mkdir -p $out/bin
+		nativeBuildInputs = [
+			autoPatchelfHook
+		];
 
-		  # The script that will run when executing this package. It merely calls the
-		  # Slicer buildFHSEnv environment and passes any command line arguments
-		  # to the Slicer binary.
-		  cat >$out/bin/Slicer <<EOF
-		#!${bash}/bin/bash
-		exec ${fhsEnv}/bin/3DSlicer-fhs-env "\$@"
-		EOF
-		  chmod +x $out/bin/Slicer
+		buildInputs =
+			[
+				freetype
+				zlib
+				libGL
+				libGLU
+				fontconfig
+				alsa-lib
+				postgresql
+				libxkbcommon
+				glib
+				pulseaudio
+				cups
+				unixODBC
+				libxcrypt-legacy
+				nss
+				nspr
+				hwloc
+				hwloc_old
+			]
+			++ (with xorg; [
+					libSM
+					libICE
+					libXrender
+					libXext
+					libX11
+					xkbutils
+					xcbutil
+					xcbutilwm
+					xcbutilimage
+					xcbutilrenderutil
+					xcbutilkeysyms
+					libXdamage
+					libXfixes
+					libXrandr
+					libXcursor
+					libXtst
+					libXcomposite
+				]);
 
-		  # Put the desktop icon file in the right place.
-		  mkdir -p $out/share/applications
-		  cp ${desktopItem}/share/applications/* $out/share/applications/
-	''
+		installPhase = ''
+			runHook preInstall
+			mkdir $out
+			cp -r . $out
+			mkdir $out/share/applications/
+			cp ${desktopItem}/share/applications/* $out/share/applications/
+			runHook postInstall
+		'';
+
+		desktopItems = [
+			desktopItem
+		];
+
+		meta = {
+			description = "Multi-platform, free open source software for visualization and image computing";
+			sourceProvenance = [lib.sourceTypes.binaryNativeCode];
+			mainProgram = "Slicer";
+			homepage = "https://www.slicer.org";
+			license = lib.licenses.free; # Licence is a BSD style license: https://github.com/Slicer/Slicer/blob/5.6/License.txt
+			changelog = "https://discourse.slicer.org/t/slicer-${lib.versions.major version}-${lib.versions.minor version}-summary-highlights-and-changelog";
+			platforms = ["x86_64-linux"];
+			maintainers = with lib.maintainers; [purepani];
+		};
+	}
