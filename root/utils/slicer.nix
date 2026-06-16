@@ -51,7 +51,7 @@
 			targetPkgs = pkgs:
 				with pkgs;
 				with xorg; [
-					alsaLib
+					alsa-lib
 					dbus
 					expat
 					ffmpeg
