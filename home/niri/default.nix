@@ -82,6 +82,10 @@
 
 			}
 
+			         output "Dell Inc. DELL P2412H KG49T24F2HJU" {
+			           position x=-100 y=-1080
+			         }
+
 			output "eDP-1" {
 			  // Uncomment this line to disable this output.
 			  // off
@@ -444,7 +448,7 @@
 			     blur true
 			 }
 			}
-				 
+			 
 			window-rule {
 			match app-id=r#"^foot$"# title="^peaclock$"
 			opacity 0.8
@@ -452,7 +456,7 @@
 			     blur true
 			 }
 			}
-			 
+		 
 			window-rule {
 			match app-id=r#"^foot$"# title="^Close OS window$"
 			opacity 0.5
