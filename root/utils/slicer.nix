@@ -32,7 +32,7 @@
 					sha256 = "sha256-aCEp2xZz3ToOvDUAXE8wfZ3T3BAdGf1/SEAxMIVPT/U=";
 				};
 
-			phases = ["unpackPhase" "installPhase"];
+			phases = ["installPhase"];
 
 			installPhase = ''
 				# # `$out` is an input given to this stage.
