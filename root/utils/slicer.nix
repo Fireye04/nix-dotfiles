@@ -6,7 +6,7 @@
 	stdenv,
 	lib,
 	fetchurl,
-	buildFHSUserEnv,
+	buildFHSEnv,
 	unzip,
 	makeDesktopItem,
 	runCommand,
