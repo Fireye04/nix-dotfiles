@@ -29,7 +29,7 @@
 			src =
 				fetchurl {
 					url = "https://download.slicer.org/bitstream/6911b598ac7b1c95e7934427";
-					sha256 = "1x92120v055qjs6yapjjpcp9wp4ajd9qpgdzgqbnk1j2c8nl5c31";
+					sha256 = "sha256-aCEp2xZz3ToOvDUAXE8wfZ3T3BAdGf1/SEAxMIVPT/U=";
 				};
 
 			phases = ["unpackPhase" "installPhase"];
