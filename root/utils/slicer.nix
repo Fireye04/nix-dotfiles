@@ -4,6 +4,7 @@
 {
 	pkgs,
 	stdenv,
+	lib,
 	fetchurl,
 	buildFHSUserEnv,
 	unzip,
@@ -102,7 +103,7 @@
 		};
 
 	# Some metadata associated with the package to assist with package lookup.
-	meta = with stdenv.lib; {
+	meta = with lib; {
 		homepage = "https://www.slicer.org/";
 		description = ''
 			3D Slicer is an open source software platform for medical image
