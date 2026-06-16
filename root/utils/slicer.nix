@@ -12,7 +12,7 @@
 	runCommand,
 	bash,
 }: let
-	version = "4.10.2";
+	version = "5.10.0";
 
 	# The icon file is not included in the linux package, so we grab it from the
 	# github repository.
