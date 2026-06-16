@@ -151,7 +151,10 @@
 		# inputs.gaypanel.packages.${pkgs.stdenv.hostPlatform.system}.default
 		inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
 		# (callPackage ./utils/nirius {})
-		(callPackage ./utils/slicer.nix {inherit pkgs stdenv lib fetchurl buildFHSUserEnv unzip makeDesktopItem runCommand bash;})
+		(callPackage ./utils/slicer.nix {
+				inherit pkgs stdenv lib fetchurl unzip makeDesktopItem runCommand bash;
+				buildFHSUserEnv = pkgs.buildFHSUserEnv;
+			})
 
 		# (callPackage ./utils/mips {})
 		bash
