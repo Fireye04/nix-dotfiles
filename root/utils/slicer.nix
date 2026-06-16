@@ -35,11 +35,11 @@
 			phases = ["unpackPhase" "installPhase"];
 
 			installPhase = ''
-				# `$out` is an input given to this stage.
-				mkdir -p $out
-				cp -r * $out
-
-				# automatically populate the MPI colormap into the slicer interface
+				# # `$out` is an input given to this stage.
+				# mkdir -p $out
+				# cp -r * $out
+				#
+				# # automatically populate the MPI colormap into the slicer interface
 			'';
 		};
 
