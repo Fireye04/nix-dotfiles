@@ -251,7 +251,6 @@
 			includeIf."gitdir:~/Work/".path = "~/.gitconfig-work";
 		};
 	};
-	virtualisation.virtualbox.host.enable = true;
 
 	programs.gh = {
 		enable = true;
@@ -262,7 +261,7 @@
 
 	home.file = {
 		".gitconfig-work" = {
-			text = ''							
+			text = ''						
 				[user]
 					email = kkoehler@lsst.org
 					name = Kai Koehler'';
