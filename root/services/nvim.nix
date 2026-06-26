@@ -160,6 +160,7 @@
 			};
 			jdtls = {
 				enable = true;
+				package = pkgs.vimPlugins.nvim-jdtls;
 				settings = {
 					cmd = [
 						"jdtls"
