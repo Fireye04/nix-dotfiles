@@ -185,7 +185,10 @@
 			servers = {
 				zls.enable = true;
 				phpactor.enable = true;
-				html.enable = true;
+				html = {
+					enable = true;
+					package = pkgs.vscode-langservers-extracted;
+				};
 				postgres_lsp.enable = true;
 				nixd.enable = true;
 				ruff.enable = true;
