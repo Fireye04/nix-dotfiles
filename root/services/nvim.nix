@@ -5,7 +5,7 @@
 	...
 }: {
 	programs.nixvim = {
-		nixpkgs.hostPlatform = pkgs.stdenv.hostPlatform.system;
+		nixpkgs.useGlobalPackages = true;
 		enable = true;
 		defaultEditor = true;
 
