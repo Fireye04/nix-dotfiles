@@ -252,7 +252,6 @@
 		};
 	};
 	virtualisation.virtualbox.host.enable = true;
-	users.extraGroups.vboxusers.members = ["fireye"];
 
 	programs.gh = {
 		enable = true;
@@ -263,7 +262,7 @@
 
 	home.file = {
 		".gitconfig-work" = {
-			text = ''				
+			text = ''							
 				[user]
 					email = kkoehler@lsst.org
 					name = Kai Koehler'';
