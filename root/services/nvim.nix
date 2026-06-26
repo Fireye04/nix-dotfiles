@@ -5,6 +5,7 @@
 	...
 }: {
 	programs.nixvim = {
+		inherit config;
 		enable = true;
 		defaultEditor = true;
 
