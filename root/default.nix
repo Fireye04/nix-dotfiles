@@ -29,6 +29,8 @@
 		trusted-public-keys = ["nix-citizen.cachix.org-1:lPMkWc2X8XD4/7YPEEwXKKBg+SVbYTVrAaLA2wQTKCo="];
 	};
 
+	virtualisation.virtualbox.host.enable = true;
+	users.extraGroups.vboxusers.members = ["fireye"];
 	# Use latest kernel.
 	boot = let
 		linux_7_0_6 =
