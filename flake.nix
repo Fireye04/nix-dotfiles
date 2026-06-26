@@ -50,6 +50,7 @@
 
 		nixvim = {
 			url = "github:nix-community/nixvim";
+			inputs.nixpkgs.follows = "nixpkgs";
 			# If you are not running an unstable channel of nixpkgs, select the corresponding branch of nixvim.
 			# inputs.nixpkgs.follows = "nixpkgs";
 		};
