@@ -189,7 +189,10 @@
 				rust_analyzer.enable = true;
 				qmlls.enable = true;
 				gdscript.enable = true;
-				clangd.enable = true;
+				clangd = {
+					enable = true;
+					package = pkgs.clang;
+				};
 				ccls = {
 					enable = true;
 					package = pkgs.ccls;
