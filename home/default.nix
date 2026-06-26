@@ -96,6 +96,8 @@
 		fire
 		dwarf-fortress
 		krita
+		prusa-slicer
+		pkgs-stable.bambu-studio
 		pkgs-stable.bottles
 		blanket
 		easyeffects
@@ -259,7 +261,7 @@
 
 	home.file = {
 		".gitconfig-work" = {
-			text = ''						
+			text = ''					
 				[user]
 					email = kkoehler@lsst.org
 					name = Kai Koehler'';

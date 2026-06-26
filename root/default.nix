@@ -151,7 +151,7 @@
 		# inputs.gaypanel.packages.${pkgs.stdenv.hostPlatform.system}.default
 		inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
 		# (callPackage ./utils/nirius {})
-		(callPackage ./utils/slicer.nix {})
+		# (callPackage ./utils/slicer.nix {})
 
 		# (callPackage ./utils/mips {})
 		bash
