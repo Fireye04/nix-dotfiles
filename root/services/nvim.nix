@@ -190,7 +190,10 @@
 				qmlls.enable = true;
 				gdscript.enable = true;
 				clangd.enable = true;
-				ccls.enable = true;
+				ccls = {
+					enable = true;
+					package = pkgs.ccls;
+				};
 				ts_ls.enable = true;
 				ruby_lsp.enable = true;
 				# asm_lsp = {
