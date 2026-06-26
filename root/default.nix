@@ -29,8 +29,6 @@
 		trusted-public-keys = ["nix-citizen.cachix.org-1:lPMkWc2X8XD4/7YPEEwXKKBg+SVbYTVrAaLA2wQTKCo="];
 	};
 
-	virtualisation.virtualbox.host.enable = true;
-	users.extraGroups.vboxusers.members = ["fireye"];
 	# Use latest kernel.
 	boot = let
 		linux_7_0_6 =
@@ -59,7 +57,7 @@
 	# 	enable = true;
 	# 	drivers = [pkgs.gutenprint];
 	# };
-	# virtualisation.virtualbox.host.enable = true;
+	virtualisation.virtualbox.host.enable = true;
 	services.logind.settings.Login = {
 		HandleLidSwitchDocked = "suspend";
 		HandleLidSwitchExternalPower = "suspend";
