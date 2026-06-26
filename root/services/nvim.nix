@@ -5,7 +5,6 @@
 	...
 }: {
 	programs.nixvim = {
-		nixpkgs.useGlobalPackages = true;
 		enable = true;
 		defaultEditor = true;
 
@@ -69,7 +68,10 @@
 			web-devicons.enable = true;
 			telescope.enable = true;
 			mini-pairs.enable = true;
-			lspconfig.enable = true;
+			lspconfig = {
+				enable = true;
+				package = pkgs.vimPlugins.nvim-lspconfig;
+			};
 			lsp-lines.enable = true;
 			todo-comments.enable = true;
 			# nvim-ufo.enable = true;
