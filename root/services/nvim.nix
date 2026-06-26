@@ -5,6 +5,7 @@
 	...
 }: {
 	programs.nixvim = {
+		nixpkgs.pkgs = pkgs;
 		enable = true;
 		defaultEditor = true;
 
