@@ -5,6 +5,7 @@
 	...
 }: {
 	programs.nixvim = {
+		nixpkgs.useGlobalPackages = true;
 		enable = true;
 		defaultEditor = true;
 
@@ -68,10 +69,7 @@
 			web-devicons.enable = true;
 			telescope.enable = true;
 			mini-pairs.enable = true;
-			lspconfig = {
-				enable = true;
-				package = pkgs.vimPlugins.nvim-lspconfig;
-			};
+			lspconfig.enable = true;
 			lsp-lines.enable = true;
 			todo-comments.enable = true;
 			# nvim-ufo.enable = true;
@@ -161,17 +159,17 @@
 			dap-virtual-text = {
 				# enable = true;
 			};
-			# jdtls = {
-			# 	enable = true;
-			# 	package = pkgs.vimPlugins.nvim-jdtls;
-			# 	settings = {
-			# 		cmd = [
-			# 			"jdtls"
-			# 		];
-			# 		init_options = {bundles = ["${pkgs.vscode-extensions.vscjava.vscode-java-debug}"];};
-			# 		root_dir = {__raw = "require('jdtls.setup').find_root({'.git', 'flake.nix'})";};
-			# 	};
-			# };
+			jdtls = {
+				enable = true;
+				package = pkgs.vimPlugins.nvim-jdtls;
+				settings = {
+					cmd = [
+						"jdtls"
+					];
+					init_options = {bundles = ["${pkgs.vscode-extensions.vscjava.vscode-java-debug}"];};
+					root_dir = {__raw = "require('jdtls.setup').find_root({'.git', 'flake.nix'})";};
+				};
+			};
 		};
 
 		lsp = {
@@ -185,28 +183,16 @@
 			servers = {
 				zls.enable = true;
 				phpactor.enable = true;
-				html = {
-					enable = true;
-					package = pkgs.vscode-langservers-extracted;
-				};
+				html.enable = true;
 				postgres_lsp.enable = true;
-				# nixd = {
-				# 	enable = true;
-				# 	packages = pkgs.nixd;
-				# };
+				nixd.enable = true;
 				ruff.enable = true;
 				pyright.enable = true;
 				rust_analyzer.enable = true;
 				qmlls.enable = true;
 				gdscript.enable = true;
-				clangd = {
-					enable = true;
-					package = pkgs.ccls;
-				};
-				ccls = {
-					enable = true;
-					package = pkgs.ccls;
-				};
+				clangd.enable = true;
+				ccls.enable = true;
 				ts_ls.enable = true;
 				ruby_lsp.enable = true;
 				# asm_lsp = {
