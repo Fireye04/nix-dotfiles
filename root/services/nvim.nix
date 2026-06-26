@@ -190,7 +190,10 @@
 					package = pkgs.vscode-langservers-extracted;
 				};
 				postgres_lsp.enable = true;
-				nixd.enable = true;
+				nixd = {
+					enable = true;
+					packages = pkgs.nixd;
+				};
 				ruff.enable = true;
 				pyright.enable = true;
 				rust_analyzer.enable = true;
