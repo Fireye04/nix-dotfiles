@@ -157,17 +157,17 @@
 			dap-virtual-text = {
 				# enable = true;
 			};
-			jdtls = {
-				enable = true;
-				package = pkgs.vimPlugins.nvim-jdtls;
-				settings = {
-					cmd = [
-						"jdtls"
-					];
-					init_options = {bundles = ["${pkgs.vscode-extensions.vscjava.vscode-java-debug}"];};
-					root_dir = {__raw = "require('jdtls.setup').find_root({'.git', 'flake.nix'})";};
-				};
-			};
+			# jdtls = {
+			# 	enable = true;
+			# 	package = pkgs.vimPlugins.nvim-jdtls;
+			# 	settings = {
+			# 		cmd = [
+			# 			"jdtls"
+			# 		];
+			# 		init_options = {bundles = ["${pkgs.vscode-extensions.vscjava.vscode-java-debug}"];};
+			# 		root_dir = {__raw = "require('jdtls.setup').find_root({'.git', 'flake.nix'})";};
+			# 	};
+			# };
 		};
 
 		lsp = {
