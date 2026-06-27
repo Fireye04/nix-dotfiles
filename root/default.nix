@@ -203,7 +203,7 @@
 		vscode-extensions.vscjava.vscode-java-test
 		wine
 
-		pkgs-stable.surge-XT
+		pkgs-stable.surge-xt
 		x42-avldrums
 		x42-plugins
 		pkgs-stable.guitarix
