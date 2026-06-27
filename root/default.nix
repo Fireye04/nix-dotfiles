@@ -28,7 +28,14 @@
 		substituters = ["https://nix-citizen.cachix.org"];
 		trusted-public-keys = ["nix-citizen.cachix.org-1:lPMkWc2X8XD4/7YPEEwXKKBg+SVbYTVrAaLA2wQTKCo="];
 	};
-	systemd.settings.Manager = {DefaultLimitMEMLOCK = "";};
+	security.pam.loginLimits = [
+		{
+			domain = "*";
+			type = "-";
+			item = "memlock";
+			value = "infinity";
+		}
+	];
 	# Use latest kernel.
 	boot = let
 		linux_7_0_6 =
