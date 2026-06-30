@@ -1,8 +1,4 @@
-{
-	pkgs,
-	self,
-	...
-}: {
+{pkgs, ...}: {
 	packages = let
 		src = ./.;
 		php = pkgs.php;
