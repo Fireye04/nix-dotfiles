@@ -19,7 +19,7 @@
 		(import ./greeter {inherit config pkgs pkgs-stable inputs;})
 		(import ./services/git.nix {inherit config pkgs;})
 		(import ./services/zsh.nix {inherit config pkgs;})
-		(import ./services/php.nix {inherit pkgs;})
+		(import ./services/php.nix {inherit pkgs self;})
 		# (import ./services/tuned.nix {inherit config pkgs;})
 		(import ./services/nvim.nix {inherit config pkgs pkgs-small;})
 		inputs.nixos-hardware.nixosModules.framework-16-amd-ai-300-series
