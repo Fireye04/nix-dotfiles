@@ -16,7 +16,7 @@
 
 			oci-image = let
 				nginxPort = "8000";
-				nginxWebRoot = "${self.packages.app}/share/php/app-demo/public";
+				nginxWebRoot = "${self.app}/share/php/app-demo/public";
 
 				nginxConf =
 					pkgs.writeText "nginx.conf" ''
