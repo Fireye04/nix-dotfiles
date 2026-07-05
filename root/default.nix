@@ -60,6 +60,14 @@
 
 	systemd.sleep.settings.Sleep = {SuspendState = "freeze";};
 
+	# Swap file
+	swapDevices = [
+		{
+			device = "/var/lib/swapfile";
+			size = 32 * 1024; # 16 GiB
+		}
+	];
+
 	# services.printing = {
 	# 	enable = true;
 	# 	drivers = [pkgs.gutenprint];
@@ -136,7 +144,7 @@
 
 	# List packages installed in system profile. To search, run:
 	environment.systemPackages = with pkgs; [
-		mangowc
+		mango
 		mesa
 		mesa-gl-headers
 		vulkan-tools
@@ -158,7 +166,7 @@
 		# inputs.gaypanel.packages.${pkgs.stdenv.hostPlatform.system}.default
 		inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
 		# (callPackage ./utils/nirius {})
-		(callPackage ./utils/slicer.nix {})
+		# (callPackage ./utils/slicer.nix {})
 
 		# (callPackage ./utils/mips {})
 		bash
