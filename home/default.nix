@@ -57,6 +57,7 @@
 		awww
 		lagrange-tui
 		ripgrep
+		material-maker
 		glib
 		dos2unix
 		qmk
@@ -261,7 +262,7 @@
 
 	home.file = {
 		".gitconfig-work" = {
-			text = ''							
+			text = ''						
 				[user]
 					email = kkoehler@lsst.org
 					name = Kai Koehler'';
