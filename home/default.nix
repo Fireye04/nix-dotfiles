@@ -55,6 +55,7 @@
 		# here is some command line tools I use frequently
 		# feel free to add your own or remove some of them
 		awww
+		xeyes
 		lagrange-tui
 		ripgrep
 		material-maker
@@ -262,7 +263,7 @@
 
 	home.file = {
 		".gitconfig-work" = {
-			text = ''					
+			text = ''				
 				[user]
 					email = kkoehler@lsst.org
 					name = Kai Koehler'';
