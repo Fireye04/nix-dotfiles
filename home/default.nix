@@ -131,7 +131,7 @@
 		inputs.nix-citizen.packages.${stdenv.hostPlatform.system}.rsi-launcher-umu
 		inputs.chiri.packages.${stdenv.hostPlatform.system}.bin
 		inputs.colmena.packages.${stdenv.hostPlatform.system}.colmena
-		godotPackages_4_7.godot-mono
+		godot-mono
 		godotPackages.export-template-mono
 		super-productivity
 		feishin
@@ -262,7 +262,7 @@
 
 	home.file = {
 		".gitconfig-work" = {
-			text = ''						
+			text = ''					
 				[user]
 					email = kkoehler@lsst.org
 					name = Kai Koehler'';
