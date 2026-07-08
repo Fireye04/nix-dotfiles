@@ -33,6 +33,11 @@
 		compositor = "niri"; # or "cagebreak", "sway", "hyprland" (deprecated)
 	};
 
+	services.sysc-greet.settings.initial_session = {
+		command = "niri-session";
+		user = "fireye";
+	};
+
 	# programs.regreet = {
 	# 	enable = true;
 	# 	package = pkgs-stable.regreet;
