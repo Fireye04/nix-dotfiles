@@ -57,6 +57,10 @@
 		# 	# Mismatched system dependencies will lead to crashes and other issues.
 		# 	inputs.nixpkgs.follows = "nixpkgs";
 		# };
+		sysc-greet = {
+			url = "github:Nomadcxx/sysc-greet";
+			inputs.nixpkgs.follows = "nixpkgs";
+		};
 	};
 
 	outputs = {
@@ -76,6 +80,7 @@
 		home-manager,
 		zen-browser,
 		nixvim,
+		sysc-greet,
 		# quickshell,
 		...
 	} @ inputs: let
@@ -127,6 +132,7 @@
 						nixvim.nixosModules.nixvim
 						nix-flatpak.nixosModules.nix-flatpak
 
+						sysc-greet.nixosModules.default
 						home-manager.nixosModules.home-manager
 						{
 							home-manager.backupFileExtension = "backup";
