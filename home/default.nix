@@ -130,7 +130,6 @@
 		inputs.multios-usb.packages.${stdenv.hostPlatform.system}.default
 		# inputs.quickshell.packages.${stdenv.hostPlatform.system}.default
 		inputs.nix-citizen.packages.${stdenv.hostPlatform.system}.rsi-launcher-umu
-		inputs.chiri.packages.${stdenv.hostPlatform.system}.bin
 		inputs.colmena.packages.${stdenv.hostPlatform.system}.colmena
 		godot-mono
 		godotPackages.export-template-mono
@@ -263,7 +262,7 @@
 
 	home.file = {
 		".gitconfig-work" = {
-			text = ''				
+			text = ''							
 				[user]
 					email = kkoehler@lsst.org
 					name = Kai Koehler'';

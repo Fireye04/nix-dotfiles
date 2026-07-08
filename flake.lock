@@ -68,27 +68,6 @@
         "type": "github"
       }
     },
-    "chiri": {
-      "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ],
-        "rust-overlay": "rust-overlay"
-      },
-      "locked": {
-        "lastModified": 1783446726,
-        "narHash": "sha256-Wq1+/VrVKs2lf4+6PxuC+Uz+cvFlzfjw+5ulxYEN/Mw=",
-        "owner": "SapphoSys",
-        "repo": "chiri",
-        "rev": "442b527a6425f927ffd41cce1ae0ff63f9ede065",
-        "type": "github"
-      },
-      "original": {
-        "owner": "SapphoSys",
-        "repo": "chiri",
-        "type": "github"
-      }
-    },
     "colmena": {
       "inputs": {
         "flake-compat": "flake-compat",
@@ -416,11 +395,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1783525612,
-        "narHash": "sha256-OEFYdbtG6Qy04KGteknnrx15Uo2XXkYVuUvBvFNEn+Q=",
+        "lastModified": 1783550008,
+        "narHash": "sha256-qbbZUk9IG9dLNwCPwdPBs6I5clxwugRpP+1YU+GPK20=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "1aac8895fea6fcabc6a0184c63a80fb2f99fd208",
+        "rev": "f4d01c1d87c7c2ec909549165d5a8338f1bd3315",
         "type": "github"
       },
       "original": {
@@ -894,11 +873,11 @@
         "systems": "systems_3"
       },
       "locked": {
-        "lastModified": 1783349931,
-        "narHash": "sha256-aYE76ATiGBg7/cQ2dHASRq97WvNum4OOIPgZ8xIK0QI=",
+        "lastModified": 1783544129,
+        "narHash": "sha256-qN9Z9Tw6sPp1vLeEz0RfrsiBOYS1yP+3919S+Gy8sYQ=",
         "owner": "nix-community",
         "repo": "nixvim",
-        "rev": "4fd45857deecb90d2732c87e0315daa48505515e",
+        "rev": "6d1424cefd041c595a517ee9f46adcb250938e24",
         "type": "github"
       },
       "original": {
@@ -914,11 +893,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1783539356,
-        "narHash": "sha256-zZw90c4SRCrnNR2nwUigywYAFA78wsjpmKKMpVD3EOI=",
+        "lastModified": 1783547526,
+        "narHash": "sha256-FY8+x1FBd7ipU36ax6C2ca+t/xjcvH7he0oXECCpbVo=",
         "owner": "noctalia-dev",
         "repo": "noctalia",
-        "rev": "14ec268fc5833fa34e4b1e25ffc8762545bbdf5f",
+        "rev": "0b91292d8e3998ce53948e046f3b37b004af9598",
         "type": "github"
       },
       "original": {
@@ -954,7 +933,6 @@
     },
     "root": {
       "inputs": {
-        "chiri": "chiri",
         "colmena": "colmena",
         "fix-python": "fix-python",
         "home-manager": "home-manager",
@@ -971,27 +949,6 @@
         "noctalia": "noctalia",
         "stylix": "stylix",
         "zen-browser": "zen-browser"
-      }
-    },
-    "rust-overlay": {
-      "inputs": {
-        "nixpkgs": [
-          "chiri",
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1781580018,
-        "narHash": "sha256-BlTedbM77FmesD2ZqR73vhFy+y77UrhefV7IYw1pDsk=",
-        "owner": "oxalica",
-        "repo": "rust-overlay",
-        "rev": "8bceba21a1ebea535c27c4dc723a0d5a4db9e386",
-        "type": "github"
-      },
-      "original": {
-        "owner": "oxalica",
-        "repo": "rust-overlay",
-        "type": "github"
       }
     },
     "stable": {
