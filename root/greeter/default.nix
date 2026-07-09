@@ -31,11 +31,12 @@
 	services.sysc-greet = {
 		enable = true;
 		compositor = "niri"; # or "cagebreak", "sway", "hyprland" (deprecated)
-	};
-
-	services.sysc-greet.settings.initial_session = {
-		command = "niri-session";
-		user = "fireye";
+		settings = {
+			initial_session = {
+				command = "niri-session";
+				user = "fireye";
+			};
+		};
 	};
 
 	# programs.regreet = {
