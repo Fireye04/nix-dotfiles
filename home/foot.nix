@@ -12,6 +12,9 @@
 			cursor = {
 				style = "underline";
 			};
+			colors-dark = {
+				blur = true;
+			};
 		};
 	};
 }
