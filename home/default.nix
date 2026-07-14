@@ -80,7 +80,7 @@
 		gram
 		gparted
 		zig
-		freecad
+		pkgs-stable.freecad
 		pdftk
 		img2pdf
 		udiskie
@@ -263,7 +263,7 @@
 
 	home.file = {
 		".gitconfig-work" = {
-			text = ''				
+			text = ''							
 				[user]
 					email = kkoehler@lsst.org
 					name = Kai Koehler'';
