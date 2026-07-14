@@ -100,7 +100,7 @@
 		krita
 		prusa-slicer
 		# pkgs-stable.bambu-studio
-		bottles
+		pkgs-stable.bottles
 		blanket
 		easyeffects
 		deluge
@@ -263,7 +263,7 @@
 
 	home.file = {
 		".gitconfig-work" = {
-			text = ''					
+			text = ''				
 				[user]
 					email = kkoehler@lsst.org
 					name = Kai Koehler'';
