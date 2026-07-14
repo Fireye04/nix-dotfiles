@@ -135,7 +135,6 @@
 		godotPackages.export-template-mono
 		super-productivity
 		feishin
-		cloudcompare
 		picard
 
 		compose2nix
@@ -263,7 +262,7 @@
 
 	home.file = {
 		".gitconfig-work" = {
-			text = ''							
+			text = ''						
 				[user]
 					email = kkoehler@lsst.org
 					name = Kai Koehler'';
