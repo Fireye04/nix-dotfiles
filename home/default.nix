@@ -17,6 +17,7 @@
 		(import ./zen.nix {inherit config pkgs inputs;})
 		(import ./kitty.nix {inherit config pkgs;})
 		(import ./foot.nix {inherit config pkgs pkgs-stable;})
+		(import ./wayle.nix {inherit config pkgs inputs;})
 		(import ./niri {inherit config pkgs inputs;})
 		(import ./noctalia {inherit config pkgs inputs;})
 		(import ./godot {inherit config pkgs;})
@@ -262,7 +263,7 @@
 
 	home.file = {
 		".gitconfig-work" = {
-			text = ''						
+			text = ''					
 				[user]
 					email = kkoehler@lsst.org
 					name = Kai Koehler'';
