@@ -32,10 +32,10 @@
 		enable = true;
 		compositor = "niri"; # or "cagebreak", "sway", "hyprland" (deprecated)
 		settings = {
-			initial_session = {
-				command = "niri-session";
-				user = "fireye";
-			};
+			# initial_session = {
+			# 	command = "niri-session";
+			# 	user = "fireye";
+			# };
 		};
 	};
 
