@@ -91,7 +91,7 @@
 		plasticscm-client-complete
 		tor-browser
 		pkgs-stable.yt-dlp
-		rstudio
+		pkgs-stable.rstudio
 		vlc
 		pkgs.kdePackages.kdenlive
 		onboard
@@ -264,7 +264,7 @@
 
 	home.file = {
 		".gitconfig-work" = {
-			text = ''					
+			text = ''				
 				[user]
 					email = kkoehler@lsst.org
 					name = Kai Koehler'';
