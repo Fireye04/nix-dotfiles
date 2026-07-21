@@ -1,6 +1,7 @@
 {
 	config,
 	pkgs,
+	pkgs-stable,
 	...
 }: {
 	# Enable niri system wide so it shows up on the greeter session menu
@@ -19,50 +20,66 @@
 		enable = true;
 	};
 	programs.sway.enable = true;
-	services.desktopManager.cosmic.enable = true;
-	services.greetd = {
+	# services.desktopManager.cosmic.enable = true;
+	#services.greetd = {
+	# 	enable = true;
+	# 	settings.default_session = {
+	# 		command = "dbus-run-session cage -s -mlast -d -- regreet";
+	# 	};
+	# };
+
+	services.sysc-greet = {
 		enable = true;
-	};
-	programs.regreet = {
-		enable = true;
-		cageArgs = ["-s" "-m" "last"];
-		cursorTheme = {
-			name = "Bibata-Modern-Classic";
-			package = pkgs.bibata-cursors;
-		};
-		font = {
-			name = "JetBrainsMonoNerdFont";
-			size = 16;
-			package = pkgs.nerd-fonts.jetbrains-mono;
-		};
-		theme = {
-			name = "Canta-dark";
-			package = pkgs.canta-theme;
-		};
+		compositor = "niri"; # or "cagebreak", "sway", "hyprland" (deprecated)
 		settings = {
-			background = {
-				# Path to the background image
-				path = "/etc/nixos/wallpapers/green_cabin.jpg";
-
-				# How the background image covers the screen if the aspect ratio doesn't match
-				# Available values: "Fill", "Contain", "Cover", "ScaleDown"
-				# Refer to: https://docs.gtk.org/gtk4/enum.ContentFit.html
-				# NOTE: This is ignored if ReGreet isn't compiled with GTK v4.8 support.
-				fit = "Contain";
-			};
-			gtk = {
-				application_prefer_dark_theme = true;
-			};
-			appearance = {
-				greeting_msg = "Climb a tree! :3";
-			};
-
-			commands = {
-				#BREAKS x11 SESSIONS (probably)
-				x11_prefix = [""];
-			};
+			# initial_session = {
+			# 	command = "niri-session";
+			# 	user = "fireye";
+			# };
 		};
 	};
+
+	# programs.regreet = {
+	# 	enable = true;
+	# 	package = pkgs-stable.regreet;
+	# 	cageArgs = ["-s" "-m" "-d" "last"];
+	# 	cursorTheme = {
+	# 		name = "Bibata-Modern-Classic";
+	# 		package = pkgs.bibata-cursors;
+	# 	};
+	# 	font = {
+	# 		name = "JetBrainsMonoNerdFont";
+	# 		size = 16;
+	# 		package = pkgs.nerd-fonts.jetbrains-mono;
+	# 	};
+	# 	theme = {
+	# 		name = "Canta-dark";
+	# 		package = pkgs.canta-theme;
+	# 	};
+	# 	settings = {
+	# 		background = {
+	# 			# Path to the background image
+	# 			path = "/etc/nixos/wallpapers/green_cabin.jpg";
+	#
+	# 			# How the background image covers the screen if the aspect ratio doesn't match
+	# 			# Available values: "Fill", "Contain", "Cover", "ScaleDown"
+	# 			# Refer to: https://docs.gtk.org/gtk4/enum.ContentFit.html
+	# 			# NOTE: This is ignored if ReGreet isn't compiled with GTK v4.8 support.
+	# 			fit = "Contain";
+	# 		};
+	# 		gtk = {
+	# 			application_prefer_dark_theme = true;
+	# 		};
+	# 		appearance = {
+	# 			greeting_msg = "Climb a tree! :3";
+	# 		};
+	#
+	# 		commands = {
+	# 			#BREAKS x11 SESSIONS (probably)
+	# 			x11_prefix = [""];
+	# 		};
+	# 	};
+	# };
 
 	services.xserver.displayManager.session = [
 		# {

@@ -5,6 +5,7 @@
 	...
 }: {
 	programs.nixvim = {
+		nixpkgs.useGlobalPackages = true;
 		enable = true;
 		defaultEditor = true;
 
@@ -84,6 +85,7 @@
 						nix = ["alejandra"];
 						java = ["astyle"];
 						c = ["clang_format"];
+						zig = ["zigfmt"];
 					};
 					format_on_save = {
 						timeout_ms = 500;
@@ -161,6 +163,7 @@
 			};
 			jdtls = {
 				enable = true;
+				package = pkgs.vimPlugins.nvim-jdtls;
 				settings = {
 					cmd = [
 						"jdtls"
@@ -180,6 +183,10 @@
 				}
 			];
 			servers = {
+				zls.enable = true;
+				phpactor.enable = true;
+				html.enable = true;
+				postgres_lsp.enable = true;
 				nixd.enable = true;
 				ruff.enable = true;
 				pyright.enable = true;

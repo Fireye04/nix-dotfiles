@@ -9,8 +9,8 @@
 	];
 
 	# configure options
-	programs.noctalia-shell = {
+	programs.noctalia = {
 		enable = true;
-		settings = ./config.json;
+		settings = ./noctalia-full-config.toml;
 	};
 }

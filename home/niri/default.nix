@@ -82,6 +82,10 @@
 
 			}
 
+			         output "Dell Inc. DELL P2412H KG49T24F2HJU" {
+			           position x=-50 y=-1080
+			         }
+
 			output "eDP-1" {
 			  // Uncomment this line to disable this output.
 			  // off
@@ -294,7 +298,7 @@
 			// See the binds section below for more spawn examples.
 
 			// spawn-at-startup "waybar"
-			spawn-at-startup "noctalia-shell"
+			spawn-at-startup "noctalia"
 			spawn-at-startup "feishin"
 			spawn-at-startup "signal-desktop"
 			spawn-at-startup "super-productivity"
@@ -307,7 +311,7 @@
 			spawn-at-startup "awww-daemon"
 			spawn-at-startup "awww" "img" "/etc/nixos/wallpapers/green_cabin.jpg" "--transition-type" "center"
 			spawn-at-startup "~/.config/awww/bin/randomize_multi.sh" "/etc/nixos/wallpapers"
-			// spawn-at-startup "kitty" "spotify_player"
+			// spawn-at-startup "foot" "spotify_player"
 			spawn-at-startup "thunderbird"
 
 			environment {
@@ -414,7 +418,7 @@
 
 			// Transparency
 			window-rule {
-			match app-id=r#"^kitty$"# title="^btop$"
+			match app-id=r#"^foot$"# title="^btop$"
 			opacity 0.6
 			background-effect {
 			     blur true
@@ -422,7 +426,7 @@
 			}
 
 			window-rule {
-			match app-id=r#"^kitty$"# title="^cmatrix$"
+			match app-id=r#"^foot$"# title="^cmatrix$"
 			opacity 0.5
 			background-effect {
 			     blur true
@@ -430,7 +434,7 @@
 			}
 
 			window-rule {
-			match app-id=r#"^kitty$"# title="^pipes-rs.*$"
+			match app-id=r#"^foot$"# title="^pipes-rs.*$"
 			opacity 0.5
 			background-effect {
 			     blur true
@@ -438,7 +442,7 @@
 			}
 
 			window-rule {
-			match app-id=r#"^kitty$"# is-floating=true
+			match app-id=r#"^foot$"# is-floating=true
 			opacity 0.5
 			background-effect {
 			     blur true
@@ -446,7 +450,7 @@
 			}
 		 
 			window-rule {
-			match app-id=r#"^kitty$"# title="^peaclock$"
+			match app-id=r#"^foot$"# title="^peaclock$"
 			opacity 0.8
 			background-effect {
 			     blur true
@@ -454,7 +458,7 @@
 			}
 				 
 			window-rule {
-			match app-id=r#"^kitty$"# title="^Close OS window$"
+			match app-id=r#"^foot$"# title="^Close OS window$"
 			opacity 0.5
 			background-effect {
 			     blur true
@@ -493,7 +497,7 @@
 			  Mod+Shift+Slash { show-hotkey-overlay; }
 
 			  // Suggested binds for running programs: terminal, app launcher, screen locker.
-			  Mod+Q hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
+			  Mod+Q hotkey-overlay-title="Open a Terminal: foot" { spawn "foot"; }
 			  Mod+D hotkey-overlay-title="Run an Application: tofi" { spawn-sh "tofi-drun --drun-launch=true --font ${pkgs.fira-code}/share/fonts/opentype/PixelCode.otf || pkill tofi-drun"; }
 			  Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
 			            Mod+T {toggle-window-rule-opacity;}
@@ -539,7 +543,7 @@
 			  // Mod+J     { focus-window-down-or-top; }
 			  // Mod+K     { focus-window-up-or-bottom; }
 			  Mod+L     { focus-column-right; }
-			Mod+B {spawn "kitty" "btop";}
+			Mod+B {spawn "foot" "--title=btop" "btop";}
 			Mod+A {spawn "hyprpicker" "-a" "-n";}
 
 			  Mod+E { focus-window-down-or-top; }

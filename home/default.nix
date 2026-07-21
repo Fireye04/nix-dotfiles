@@ -17,6 +17,7 @@
 		(import ./zen.nix {inherit config pkgs inputs;})
 		(import ./kitty.nix {inherit config pkgs;})
 		(import ./foot.nix {inherit config pkgs pkgs-stable;})
+		# (import ./wayle.nix {inherit config pkgs lib;})
 		(import ./niri {inherit config pkgs inputs;})
 		(import ./noctalia {inherit config pkgs inputs;})
 		(import ./godot {inherit config pkgs;})
@@ -55,6 +56,10 @@
 		# here is some command line tools I use frequently
 		# feel free to add your own or remove some of them
 		awww
+		xeyes
+		lagrange-tui
+		ripgrep
+		material-maker
 		glib
 		dos2unix
 		qmk
@@ -66,12 +71,17 @@
 		rocmPackages.llvm.clang-unwrapped
 		omnisharp-roslyn
 		rustup
+		rustc
 		xdg-desktop-portal
 		xdg-desktop-portal-gtk
 		xdg-desktop-portal-gnome
 		libgnome-keyring
 		nautilus
 		unzip
+		gram
+		gparted
+		zig
+		pkgs-stable.freecad
 		pdftk
 		img2pdf
 		udiskie
@@ -81,6 +91,7 @@
 		plasticscm-client-complete
 		tor-browser
 		pkgs-stable.yt-dlp
+		pkgs-stable.rstudio
 		vlc
 		pkgs.kdePackages.kdenlive
 		onboard
@@ -89,6 +100,17 @@
 		fire
 		dwarf-fortress
 		krita
+		prusa-slicer
+		# pkgs-stable.bambu-studio
+		pkgs-stable.bottles
+		blanket
+		easyeffects
+		deluge
+		mumble
+		mediawriter
+		sl
+		tree
+		citations
 
 		hyfetch
 		pkgs-stable.anki
@@ -107,9 +129,9 @@
 		ghidra-bin
 		# inputs.zen-browser.packages.${stdenv.hostPlatform.system}.default
 		inputs.fix-python.packages.${stdenv.hostPlatform.system}.default
+		inputs.multios-usb.packages.${stdenv.hostPlatform.system}.default
 		# inputs.quickshell.packages.${stdenv.hostPlatform.system}.default
 		inputs.nix-citizen.packages.${stdenv.hostPlatform.system}.rsi-launcher-umu
-		inputs.chiri.packages.${stdenv.hostPlatform.system}.bin
 		inputs.colmena.packages.${stdenv.hostPlatform.system}.colmena
 		godot-mono
 		godotPackages.export-template-mono
@@ -147,11 +169,12 @@
 		nmap
 		ardour
 		cardinal
+		mindustry
 
 		# Communication
 		thunderbird
 		# iamb
-		# jellyfin-tui
+		jellyfin-tui
 		jellyfin-desktop
 
 		# fluffychat
@@ -180,7 +203,7 @@
 
 		# productivity
 		hugo # static site generator
-		pkgs-stable.python313
+		pkgs-stable.python314
 
 		ruff
 		gnumake

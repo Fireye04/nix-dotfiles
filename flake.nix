@@ -2,7 +2,7 @@
 	description = "My personal hell";
 
 	inputs = {
-		nixpkgs-stable.url = "github:nixos/nixpkgs?ref=nixos-25.11";
+		nixpkgs-stable.url = "github:nixos/nixpkgs?ref=nixos-26.05";
 		nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
 		nixpkgs-small.url = "github:nixos/nixpkgs?ref=nixos-unstable-small";
 		nixos-hardware.url = "github:NixOS/nixos-hardware/master";
@@ -15,13 +15,16 @@
 		nix-flatpak.url = "github:gmodena/nix-flatpak";
 		colmena.url = "github:zhaofengli/colmena";
 		noctalia = {
-			url = "github:noctalia-dev/noctalia-shell";
+			url = "github:noctalia-dev/noctalia";
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
+		multios-usb.url = "github:Mexit/MultiOS-USB";
 		# mango = {
 		# 	url = "github:DreamMaoMao/mango";
 		# 	inputs.nixpkgs.follows = "nixpkgs";
 		# };
+
+		# gaypanel.url = "git+https://codeberg.org/Fireye/gaypanel";
 
 		stylix = {
 			url = "github:nix-community/stylix";
@@ -58,6 +61,10 @@
 		# 	# Mismatched system dependencies will lead to crashes and other issues.
 		# 	inputs.nixpkgs.follows = "nixpkgs";
 		# };
+		sysc-greet = {
+			url = "github:Nomadcxx/sysc-greet";
+			inputs.nixpkgs.follows = "nixpkgs";
+		};
 	};
 
 	outputs = {
@@ -77,6 +84,7 @@
 		home-manager,
 		zen-browser,
 		nixvim,
+		sysc-greet,
 		# quickshell,
 		...
 	} @ inputs: let
@@ -128,6 +136,7 @@
 						nixvim.nixosModules.nixvim
 						nix-flatpak.nixosModules.nix-flatpak
 
+						sysc-greet.nixosModules.default
 						home-manager.nixosModules.home-manager
 						{
 							home-manager.backupFileExtension = "backup";

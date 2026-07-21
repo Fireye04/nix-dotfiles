@@ -16,7 +16,7 @@
 		./hardware-configuration.nix
 		(import ./boot.nix {inherit config pkgs;})
 		(import ./network.nix {inherit config pkgs;})
-		(import ./greeter {inherit config pkgs inputs;})
+		(import ./greeter {inherit config pkgs pkgs-stable inputs;})
 		(import ./services/git.nix {inherit config pkgs;})
 		(import ./services/zsh.nix {inherit config pkgs;})
 		# (import ./services/tuned.nix {inherit config pkgs;})
@@ -28,10 +28,30 @@
 		substituters = ["https://nix-citizen.cachix.org"];
 		trusted-public-keys = ["nix-citizen.cachix.org-1:lPMkWc2X8XD4/7YPEEwXKKBg+SVbYTVrAaLA2wQTKCo="];
 	};
-
+	security.pam.loginLimits = [
+		{
+			domain = "*";
+			type = "-";
+			item = "memlock";
+			value = "infinity";
+		}
+	];
 	# Use latest kernel.
-	boot = {
-		kernelPackages = pkgs.linuxPackages_latest;
+	boot = let
+		linux_7_0_6 =
+			pkgs.linux_7_0.override {
+				argsOverride = rec {
+					version = "7.0.6";
+					modDirVersion = version;
+					src =
+						pkgs.fetchurl {
+							url = "mirror://kernel/linux/kernel/v7.x/linux-${version}.tar.xz";
+							hash = "sha256-y6REQKpXr/18ISQdxbwjSw31PEmfj/w+vCkN0zkKdSM=";
+						};
+				};
+			};
+	in {
+		kernelPackages = pkgs.linuxPackagesFor pkgs.linux_latest;
 		kernelParams = ["mem_sleep_default=deep"];
 	};
 	# Framework firmware
@@ -40,11 +60,19 @@
 
 	systemd.sleep.settings.Sleep = {SuspendState = "freeze";};
 
+	# Swap file
+	swapDevices = [
+		{
+			device = "/var/lib/swapfile";
+			size = 32 * 1024; # 16 GiB
+		}
+	];
+
 	# services.printing = {
 	# 	enable = true;
 	# 	drivers = [pkgs.gutenprint];
 	# };
-	# virtualisation.virtualbox.host.enable = true;
+	virtualisation.virtualbox.host.enable = true;
 	services.logind.settings.Login = {
 		HandleLidSwitchDocked = "suspend";
 		HandleLidSwitchExternalPower = "suspend";
@@ -116,7 +144,7 @@
 
 	# List packages installed in system profile. To search, run:
 	environment.systemPackages = with pkgs; [
-		mangowc
+		mango
 		mesa
 		mesa-gl-headers
 		vulkan-tools
@@ -135,13 +163,17 @@
 		alsa-utils
 		openvpn
 		inputs.nix-alien.packages.${pkgs.stdenv.hostPlatform.system}.default
+		# inputs.gaypanel.packages.${pkgs.stdenv.hostPlatform.system}.default
 		inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
 		# (callPackage ./utils/nirius {})
+		# (callPackage ./utils/slicer.nix {})
+
 		# (callPackage ./utils/mips {})
 		bash
 		jq
 		# (callPackage ./utils/waterfox {})
 		(callPackage ./utils/nvimunity {})
+		# (callPackage ./utils/jetzig.nix {inherit pkgs stdenv fetchurl;})
 		(callPackage ./greeter/games/gamemode.nix {})
 		(callPackage ./greeter/games/no-mans-sky.nix {})
 		dxvk
@@ -179,7 +211,7 @@
 		vscode-extensions.vscjava.vscode-java-test
 		wine
 
-		pkgs-stable.surge-XT
+		pkgs-stable.surge-xt
 		x42-avldrums
 		x42-plugins
 		pkgs-stable.guitarix
