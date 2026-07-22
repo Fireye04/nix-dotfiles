@@ -467,7 +467,7 @@
 			     blur true
 			 }
 			}
-				 
+			 
 			window-rule {
 			match app-id=r#"^foot$"# title="^peaclock$"
 			opacity 0.8
@@ -475,7 +475,7 @@
 			     blur true
 			 }
 			}
-			 
+		 
 			window-rule {
 			match app-id=r#"^foot$"# title="^Close OS window$"
 			opacity 0.5
