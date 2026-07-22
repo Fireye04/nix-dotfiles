@@ -353,6 +353,25 @@
 
 			  // Slow down all animations by this factor. Values below 1 speed them up instead.
 			  // slowdown 3.0
+			           window-open {
+			             duration-ms 500
+			             curve "linear"
+			             custom-shader r"
+			             vec4 open_color(vec3 coords_geo, vec3 size_geo) {
+			             vec4 color = vec4(0.0);
+
+			             if (0.0 <= coords_geo.x && coords_geo.x <= 1.0
+			                     && 0.0 <= coords_geo.y && coords_geo.y <= 1.0)
+			             {
+			                 vec4 from = vec4(1.0, 0.0, 0.0, 1.0);
+			                 vec4 to = vec4(0.0, 1.0, 0.0, 1.0);
+			                 color = mix(from, to, coords_geo.y);
+			             }
+
+			             return color * niri_clamped_progress;
+			         }
+			             "
+			           }
 			}
 
 			// Window rules let you adjust behavior for individual windows.
@@ -448,7 +467,7 @@
 			     blur true
 			 }
 			}
-		 
+				 
 			window-rule {
 			match app-id=r#"^foot$"# title="^peaclock$"
 			opacity 0.8
@@ -456,7 +475,7 @@
 			     blur true
 			 }
 			}
-				 
+			 
 			window-rule {
 			match app-id=r#"^foot$"# title="^Close OS window$"
 			opacity 0.5
